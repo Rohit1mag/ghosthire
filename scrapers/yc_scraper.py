@@ -76,6 +76,18 @@ class YCScraper:
         
         return None
     
+    def extract_company_from_url(self, url: str) -> Optional[str]:
+        """Extract company name from YC job URL format: /companies/company-name/jobs/..."""
+        match = re.search(r'/companies/([^/]+)/jobs/', url)
+        if match:
+            company_slug = match.group(1)
+            # Convert slug to readable name (e.g., 'camber-2' -> 'Camber')
+            # Remove trailing numbers and dashes, capitalize
+            company_name = re.sub(r'-\d+$', '', company_slug)
+            company_name = company_name.replace('-', ' ').title()
+            return company_name
+        return None
+    
     def fetch_job_details(self, job_url: str) -> Optional[dict]:
         """Fetch detailed information from a single job posting page"""
         soup = self.fetch_page(job_url)
@@ -85,26 +97,56 @@ class YCScraper:
         try:
             details = {}
             
-            # Try to find job title
+            # First, try to extract company from URL
+            company_from_url = self.extract_company_from_url(job_url)
+            
+            # Try to find job title - YC uses various structures
             title_elem = soup.find(['h1', 'h2'], class_=re.compile(r'title|heading|job-title', re.I))
             if not title_elem:
                 title_elem = soup.find('h1')
+            if not title_elem:
+                # Look for title in breadcrumbs or navigation
+                title_elem = soup.find('span', class_=re.compile(r'job-title|position', re.I))
             details['title'] = title_elem.get_text(strip=True) if title_elem else None
             
-            # Try to find company name
-            company_elem = soup.find(['div', 'span', 'a'], class_=re.compile(r'company', re.I))
-            if not company_elem:
-                # Look for company in metadata
+            # Try to find company name - check multiple locations
+            company = None
+            
+            # 1. Look for company link or element
+            company_elem = soup.find(['a', 'div', 'span'], class_=re.compile(r'company', re.I))
+            if company_elem:
+                company = company_elem.get_text(strip=True)
+            
+            # 2. Look in breadcrumbs or navigation
+            if not company:
+                breadcrumb = soup.find('nav') or soup.find('ol', class_=re.compile(r'breadcrumb', re.I))
+                if breadcrumb:
+                    company_links = breadcrumb.find_all('a', href=re.compile(r'/companies/'))
+                    if company_links:
+                        company = company_links[-1].get_text(strip=True)
+            
+            # 3. Look for company name in header or hero section
+            if not company:
+                header = soup.find('header') or soup.find(['div', 'section'], class_=re.compile(r'header|hero', re.I))
+                if header:
+                    company_elem = header.find(['a', 'h2', 'h3'], href=re.compile(r'/companies/'))
+                    if company_elem:
+                        company = company_elem.get_text(strip=True)
+            
+            # 4. Extract from URL if still not found
+            if not company:
+                company = company_from_url
+            
+            # 5. Fallback to meta tags
+            if not company:
                 company_elem = soup.find('meta', property='og:site_name')
                 if company_elem:
-                    details['company'] = company_elem.get('content', '').strip()
-                else:
-                    details['company'] = None
-            else:
-                details['company'] = company_elem.get_text(strip=True)
+                    company = company_elem.get('content', '').strip()
+            
+            details['company'] = company
             
             # Get full job description
-            description_elem = soup.find(['div', 'section'], class_=re.compile(r'description|content|body|details', re.I))
+            description_elem = soup.find(['div', 'section'], class_=re.compile(r'description|content|body|details|job-description', re.I))
             if not description_elem:
                 # Fallback to finding the largest text block
                 description_elem = soup.find('main') or soup.find('article') or soup.find('body')
@@ -150,7 +192,7 @@ class YCScraper:
         processed_count = 0
         
         for link in job_links:
-            if processed_count >= 30:  # Limit to avoid too many requests
+            if processed_count >= 50:  # Limit to avoid too many requests
                 break
             
             try:
@@ -159,7 +201,17 @@ class YCScraper:
                     continue
                 
                 # Skip internal navigation and non-job links
-                if any(skip in job_url.lower() for skip in ['#', 'javascript:', 'mailto:', '/companies?', 'login', 'signup']):
+                skip_patterns = ['#', 'javascript:', 'mailto:', '/companies?', 'login', 'signup']
+                if any(skip in job_url.lower() for skip in skip_patterns):
+                    continue
+                
+                # CRITICAL: Skip role category pages (e.g., /jobs/role/software-engineer)
+                # These are not individual job postings
+                if '/jobs/role/' in job_url.lower():
+                    continue
+                
+                # Skip location category pages
+                if '/jobs/location/' in job_url.lower():
                     continue
                 
                 # Make full URL
@@ -171,63 +223,75 @@ class YCScraper:
                     continue
                 visited_urls.add(job_url)
                 
+                # Only process actual job posting URLs (company job pages)
+                # Must contain /companies/.../jobs/ pattern
+                if '/companies/' not in job_url or '/jobs/' not in job_url:
+                    # Skip if it's not a company job page
+                    continue
+                
+                # Extract company name from URL first
+                company = self.extract_company_from_url(job_url)
+                
                 # Extract company and title from the link card/element
                 parent = link.find_parent(['div', 'article', 'li', 'section'])
                 link_text = link.get_text(strip=True)
                 parent_text = parent.get_text(separator=' ', strip=True) if parent else ''
                 
-                # Basic extraction from listing
-                company = None
+                # Extract title from listing
                 title = None
                 
-                # Try to find company and title in parent element
+                # Try to find title in parent element
                 if parent:
-                    company_elem = parent.find(['h3', 'h4', 'strong', 'div'], class_=re.compile(r'company|name', re.I))
-                    title_elem = parent.find(['h2', 'h3', 'span'], class_=re.compile(r'title|role|position', re.I))
-                    
-                    if company_elem:
-                        company = company_elem.get_text(strip=True)
+                    title_elem = parent.find(['h2', 'h3', 'h4', 'span', 'div'], class_=re.compile(r'title|role|position|job', re.I))
                     if title_elem:
                         title = title_elem.get_text(strip=True)
+                    
+                    # Also try to find company name from listing
+                    if not company:
+                        company_elem = parent.find(['h3', 'h4', 'strong', 'div', 'a'], class_=re.compile(r'company|name', re.I))
+                        if company_elem:
+                            company = company_elem.get_text(strip=True)
                 
-                # If we don't have enough info, try fetching the actual job page (rate limit)
-                if not company or not title:
-                    # Only fetch details if the link looks promising
-                    if 'job' in job_url.lower() or 'careers' in job_url.lower() or 'companies/' in job_url:
-                        print(f"Fetching details from: {job_url}")
-                        details = self.fetch_job_details(job_url)
-                        if details:
-                            company = details.get('company') or company or "Unknown"
-                            title = details.get('title') or title or link_text
-                            location = details.get('location')
-                            tech_stack = details.get('tech_stack', [])
-                            description = details.get('description', '')
-                            
-                            # Rate limiting
-                            time.sleep(0.5)
-                        else:
-                            continue
-                    else:
-                        # Use what we have from the listing
-                        company = company or link_text.split('|')[0].strip() if '|' in link_text else "Unknown"
-                        title = title or link_text or "Software Engineer"
-                        location = self.extract_location_from_text(parent_text)
-                        tech_stack = self.extract_tech_stack(parent_text + " " + link_text)
-                        description = parent_text
+                # Always fetch details from job page to get accurate info
+                print(f"Fetching details from: {job_url}")
+                details = self.fetch_job_details(job_url)
+                
+                if details:
+                    # Use fetched details, with fallbacks
+                    company = details.get('company') or company or "Unknown"
+                    title = details.get('title') or title or link_text
+                    location = details.get('location')
+                    tech_stack = details.get('tech_stack', [])
+                    description = details.get('description', '')
+                    
+                    # Rate limiting
+                    time.sleep(0.5)
                 else:
-                    # Use listing info
+                    # If fetch failed, try to use what we have
+                    if not company:
+                        company = self.extract_company_from_url(job_url) or "Unknown"
+                    if not title:
+                        title = link_text or "Software Engineer"
                     location = self.extract_location_from_text(parent_text)
                     tech_stack = self.extract_tech_stack(parent_text + " " + link_text)
                     description = parent_text
                 
                 # Skip if we don't have minimum required info
-                if company == "Unknown" and title == "Software Engineer":
+                if company == "Unknown" and not title:
                     continue
+                
+                # Clean up title - remove "Jobs" suffix if present
+                if title and title.endswith('Jobs'):
+                    title = title[:-4].strip()
+                
+                # Clean up company - remove "Jobs by Role" if present
+                if company and "Jobs by Role" in company:
+                    company = "Unknown"
                 
                 # Create job posting
                 job = JobPosting(
-                    company=company[:100],
-                    title=title[:100],
+                    company=company[:100] if company else "Unknown",
+                    title=title[:100] if title else "Software Engineer",
                     location=location,
                     tech_stack=tech_stack,
                     raw_text=description[:500] if description else link_text,
@@ -241,7 +305,7 @@ class YCScraper:
                 jobs.append(job)
                 processed_count += 1
                 
-                print(f"Processed {processed_count}/30: {company} - {title}")
+                print(f"Processed {processed_count}/50: {company} - {title}")
                 
             except Exception as e:
                 print(f"Error processing link: {e}")
