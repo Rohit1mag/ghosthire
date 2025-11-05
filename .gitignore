@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+*.db
+*.sqlite
+*.sqlite3
+data/
+# Allow jobs.json (needed for frontend) but ignore other JSON files
+*.json
+!jobs.json
+!frontend/jobs.json
+.DS_Store
+.idea/
+.vscode/
+

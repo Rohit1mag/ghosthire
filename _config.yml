@@ -1,0 +1,22 @@
+# GitHub Pages configuration
+# This file is optional - GitHub Pages will work with just the static files
+
+# Jekyll settings (if using Jekyll)
+# If you're deploying static HTML, you can disable Jekyll
+# by creating a .nojekyll file in the frontend directory
+
+# For static site deployment, create .nojekyll file
+# touch frontend/.nojekyll
+
+# Or configure Jekyll if needed
+# theme: minima
+# plugins:
+#   - jekyll-feed
+
+# Exclude unnecessary files from build
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor
+
