@@ -77,7 +77,7 @@ For the daily scraper to work, you need to enable write permissions:
    - Update jobs.json
    - Commit and push changes
 
-## Step 7: Deploy to Vercel (Optional)
+## Step 7: Deploy to Vercel
 
 ### Option A: GitHub Integration (Recommended)
 
