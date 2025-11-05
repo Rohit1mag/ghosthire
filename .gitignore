@@ -11,10 +11,12 @@ ENV/
 *.sqlite
 *.sqlite3
 data/
-# Allow jobs.json (needed for frontend) but ignore other JSON files
+# Allow jobs.json (needed for frontend) and vercel.json (needed for deployment) but ignore other JSON files
 *.json
 !jobs.json
 !frontend/jobs.json
+!vercel.json
+!config.json
 .DS_Store
 .idea/
 .vscode/
