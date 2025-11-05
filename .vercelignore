@@ -1,0 +1,20 @@
+# Ignore these files/directories for Vercel deployment
+_config.yml
+data/
+scrapers/
+utils/
+*.py
+requirements.txt
+.gitignore
+DEPLOYMENT.md
+FILE_STRUCTURE.md
+deploy.sh
+README.md
+models.py
+scraper.py
+config.json
+frontend/
+venv/
+__pycache__/
+*.pyc
+
