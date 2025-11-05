@@ -3,53 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hidden SWE Jobs - Job Aggregator</title>
+    <meta name="description" content="Find hidden software engineering jobs with fewer applicants. Discover great opportunities at startups and tech companies.">
+    <title>Hidden SWE Jobs | Find Less Competitive Engineering Roles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <!-- Force GitHub Pages rebuild -->
 </head>
 <body>
     <header>
         <div class="container">
             <h1>🔍 Hidden SWE Jobs</h1>
-            <p class="subtitle">Find "hidden" software engineering roles with fewer applicants</p>
+            <p class="subtitle">Discover software engineering roles with fewer applicants and better chances</p>
         </div>
     </header>
 
     <main class="container">
         <div class="main-layout">
-            <div class="sidebar">
+            <aside class="sidebar" aria-label="Filters">
                 <div class="filters">
+                    <h2 class="filters-title">Filter Jobs</h2>
+                    
                     <div class="filter-group">
-                        <label for="search">Search:</label>
-                        <input type="text" id="search" placeholder="Company or job title...">
+                        <label for="search">Search</label>
+                        <div class="search-input-wrapper">
+                            <i class="fas fa-search search-icon"></i>
+                            <input type="text" id="search" placeholder="Company, title, or keywords..." aria-label="Search jobs">
+                        </div>
                     </div>
                     
                     <div class="filter-group">
-                        <label for="location">Location:</label>
-                        <select id="location">
-                            <option value="">All Locations</option>
-                        </select>
+                        <label for="location">Location</label>
+                        <div class="select-wrapper">
+                            <i class="fas fa-map-marker-alt select-icon"></i>
+                            <select id="location" aria-label="Filter by location">
+                                <option value="">All Locations</option>
+                                <option value="remote">🌍 Remote</option>
+                                <option value="us">🇺🇸 United States</option>
+                                <option value="europe">🇪🇺 Europe</option>
+                                <option value="asia">🌏 Asia</option>
+                            </select>
+                            <i class="fas fa-chevron-down select-arrow"></i>
+                        </div>
                     </div>
                     
                     <div class="filter-group full-width">
-                        <label>Tech Stack:</label>
-                        <div id="tech-filter" class="tech-tags"></div>
+                        <label>Tech Stack</label>
+                        <div id="tech-filter" class="tech-tags" role="listbox" aria-label="Filter by technology">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
                     </div>
                     
-                    <div class="filter-group">
-                        <button id="clear-filters">Clear Filters</button>
+                    <div class="filter-actions">
+                        <button id="apply-filters" class="primary-button">
+                            <i class="fas fa-filter"></i> Apply Filters
+                        </button>
+                        <button id="clear-filters" class="secondary-button">
+                            <i class="fas fa-undo"></i> Clear All
+                        </button>
                     </div>
                 </div>
-            </div>
+                
+                <div class="newsletter-card">
+                    <h3>💌 Get Job Alerts</h3>
+                    <p>Get the best hidden jobs delivered to your inbox weekly</p>
+                    <form class="newsletter-form" aria-label="Subscribe to job alerts">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="primary-button">Subscribe</button>
+                    </form>
+                </div>
+            </aside>
             
             <div class="content-area">
-                <div class="stats">
-                    <span id="job-count">0 jobs found</span>
-                    <span id="sort-info">Sorted by Hidden Score</span>
+                <div class="content-header">
+                    <div class="stats">
+                        <span id="job-count" class="job-count">0 jobs found</span>
+                        <div class="sort-options">
+                            <span class="sort-label">Sort by:</span>
+                            <button class="sort-option active" data-sort="score">Hidden Score</button>
+                            <button class="sort-option" data-sort="date">Most Recent</button>
+                        </div>
+                    </div>
+                    
+                    <div class="view-options">
+                        <button class="view-option active" data-view="grid" aria-label="Grid view">
+                            <i class="fas fa-th-large"></i>
+                        </button>
+                        <button class="view-option" data-view="list" aria-label="List view">
+                            <i class="fas fa-list"></i>
+                        </button>
+                    </div>
                 </div>
 
                 <div id="jobs-container" class="jobs-container">
-                    <div class="loading">Loading jobs...</div>
+                    <!-- Loading state -->
+                    <div class="loading-state">
+                        <div class="spinner"></div>
+                        <p>Loading jobs...</p>
+                    </div>
+                    
+                    <!-- Empty state (will be hidden when jobs are loaded) -->
+                    <div class="empty-state" style="display: none;">
+                        <div class="empty-state-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3 class="empty-state-title">No jobs found</h3>
+                        <p class="empty-state-description">Try adjusting your filters or check back later for new postings.</p>
+                        <button id="reset-filters" class="primary-button">
+                            <i class="fas fa-undo"></i> Reset Filters
+                        </button>
+                    </div>
+                    
+                    <!-- Job cards will be inserted here by JavaScript -->
+                </div>
+                
+                <div class="pagination" style="display: none;">
+                    <button class="pagination-button" id="prev-page" disabled>
+                        <i class="fas fa-chevron-left"></i> Previous
+                    </button>
+                    <div class="page-indicator">
+                        Page <span id="current-page">1</span> of <span id="total-pages">1</span>
+                    </div>
+                    <button class="pagination-button" id="next-page">
+                        Next <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -57,12 +135,47 @@
 
     <footer>
         <div class="container">
-            <p>Data sourced from HN Who's Hiring, YC Jobs, Wellfound, RemoteOK, and We Work Remotely</p>
-            <p>Last updated: <span id="last-updated">-</span></p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Hidden SWE Jobs</h3>
+                    <p>We surface the best software engineering roles that don't get thousands of applications.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Data Sources</h3>
+                    <ul class="sources-list">
+                        <li><a href="https://news.ycombinator.com/jobs" target="_blank" rel="noopener noreferrer">HN Who's Hiring</a></li>
+                        <li><a href="https://www.ycombinator.com/jobs" target="_blank" rel="noopener noreferrer">YC Jobs</a></li>
+                        <li><a href="https://wellfound.com" target="_blank" rel="noopener noreferrer">Wellfound (AngelList)</a></li>
+                        <li><a href="https://remoteok.com" target="_blank" rel="noopener noreferrer">RemoteOK</a></li>
+                        <li><a href="https://weworkremotely.com" target="_blank" rel="noopener noreferrer">We Work Remotely</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Last Updated</h3>
+                    <p id="last-updated">-</p>
+                    <button id="refresh-data" class="text-button">
+                        <i class="fas fa-sync-alt"></i> Refresh Data
+                    </button>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Hidden SWE Jobs. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#" class="text-link">Privacy Policy</a>
+                    <span class="divider">•</span>
+                    <a href="#" class="text-link">Terms of Service</a>
+                    <span class="divider">•</span>
+                    <a href="#" class="text-link">Contact</a>
+                </div>
+            </div>
         </div>
     </footer>
 
     <script src="app.js"></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
 
