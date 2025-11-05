@@ -5,6 +5,7 @@ from typing import List, Optional
 from datetime import datetime
 import sys
 import os
+import time
 
 # Add parent directory to path for imports
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -37,12 +38,15 @@ class YCScraper:
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
         })
     
-    def fetch_jobs_page(self, url: str = None) -> BeautifulSoup:
-        """Fetch and parse the YC jobs page"""
-        url = url or self.JOBS_URL
-        response = self.session.get(url)
-        response.raise_for_status()
-        return BeautifulSoup(response.content, 'lxml')
+    def fetch_page(self, url: str) -> Optional[BeautifulSoup]:
+        """Fetch and parse a page"""
+        try:
+            response = self.session.get(url, timeout=10)
+            response.raise_for_status()
+            return BeautifulSoup(response.content, 'lxml')
+        except Exception as e:
+            print(f"Error fetching {url}: {e}")
+            return None
     
     def extract_tech_stack(self, text: str) -> List[str]:
         """Extract tech stack mentions from text"""
@@ -56,177 +60,192 @@ class YCScraper:
         
         return list(set(found_tech))
     
-    def parse_posted_date(self, date_str: str) -> Optional[datetime]:
-        """Parse posted date from various formats"""
-        if not date_str:
-            return None
+    def extract_location_from_text(self, text: str) -> Optional[str]:
+        """Extract location from job description text"""
+        from utils.location_validator import validate_and_normalize_location, VALID_LOCATIONS
         
-        # Common formats: "2 days ago", "1 week ago", "2024-11-15"
-        date_str_lower = date_str.lower().strip()
+        text_lower = text.lower()
         
-        # Try parsing relative dates
-        if 'day' in date_str_lower or 'hour' in date_str_lower:
-            # Very recent, use current time
-            return datetime.now()
-        elif 'week' in date_str_lower:
-            # About a week ago
-            return datetime.now()
-        elif 'month' in date_str_lower:
-            # About a month ago
-            return datetime.now()
-        
-        # Try parsing ISO format
-        try:
-            return datetime.fromisoformat(date_str)
-        except:
-            pass
+        # Try to find location in text
+        for location in VALID_LOCATIONS:
+            pattern = r'\b' + re.escape(location) + r'\b'
+            if re.search(pattern, text_lower):
+                candidate = validate_and_normalize_location(location)
+                if candidate:
+                    return candidate
         
         return None
+    
+    def fetch_job_details(self, job_url: str) -> Optional[dict]:
+        """Fetch detailed information from a single job posting page"""
+        soup = self.fetch_page(job_url)
+        if not soup:
+            return None
+        
+        try:
+            details = {}
+            
+            # Try to find job title
+            title_elem = soup.find(['h1', 'h2'], class_=re.compile(r'title|heading|job-title', re.I))
+            if not title_elem:
+                title_elem = soup.find('h1')
+            details['title'] = title_elem.get_text(strip=True) if title_elem else None
+            
+            # Try to find company name
+            company_elem = soup.find(['div', 'span', 'a'], class_=re.compile(r'company', re.I))
+            if not company_elem:
+                # Look for company in metadata
+                company_elem = soup.find('meta', property='og:site_name')
+                if company_elem:
+                    details['company'] = company_elem.get('content', '').strip()
+                else:
+                    details['company'] = None
+            else:
+                details['company'] = company_elem.get_text(strip=True)
+            
+            # Get full job description
+            description_elem = soup.find(['div', 'section'], class_=re.compile(r'description|content|body|details', re.I))
+            if not description_elem:
+                # Fallback to finding the largest text block
+                description_elem = soup.find('main') or soup.find('article') or soup.find('body')
+            
+            description_text = description_elem.get_text(separator=' ', strip=True) if description_elem else ''
+            details['description'] = description_text
+            
+            # Extract location from description
+            details['location'] = self.extract_location_from_text(description_text)
+            
+            # Extract tech stack from description
+            details['tech_stack'] = self.extract_tech_stack(description_text)
+            
+            return details
+            
+        except Exception as e:
+            print(f"Error parsing job details from {job_url}: {e}")
+            return None
     
     def scrape_jobs(self) -> List[JobPosting]:
         """Scrape all job postings from YC Jobs"""
         print(f"Fetching YC Jobs: {self.JOBS_URL}")
-        soup = self.fetch_jobs_page()
+        soup = self.fetch_page(self.JOBS_URL)
+        
+        if not soup:
+            print("Failed to fetch YC jobs page")
+            return []
         
         jobs = []
         
-        # YC jobs page structure may vary, try multiple selectors
-        # Look for job listings - common patterns
-        job_cards = soup.find_all(['div', 'article', 'section'], class_=re.compile(r'job|listing|posting', re.I))
+        # Find all job links on the main page
+        # YC jobs typically link to company/job pages or external application pages
+        job_links = soup.find_all('a', href=re.compile(r'(companies/|jobs/|apply)', re.I))
         
-        if not job_cards:
-            # Try alternative: look for links that might be job listings
-            job_links = soup.find_all('a', href=re.compile(r'/jobs/|/careers/|/company/'))
-            for link in job_links[:50]:  # Limit to avoid too many
-                try:
-                    job_url = link.get('href', '')
-                    if not job_url.startswith('http'):
-                        job_url = self.BASE_URL + job_url
+        if not job_links:
+            # Fallback: find any links that might be jobs
+            job_links = soup.find_all('a', href=True)
+        
+        print(f"Found {len(job_links)} potential job links")
+        
+        # Track visited URLs to avoid duplicates
+        visited_urls = set()
+        processed_count = 0
+        
+        for link in job_links:
+            if processed_count >= 30:  # Limit to avoid too many requests
+                break
+            
+            try:
+                job_url = link.get('href', '')
+                if not job_url:
+                    continue
+                
+                # Skip internal navigation and non-job links
+                if any(skip in job_url.lower() for skip in ['#', 'javascript:', 'mailto:', '/companies?', 'login', 'signup']):
+                    continue
+                
+                # Make full URL
+                if not job_url.startswith('http'):
+                    job_url = self.BASE_URL + job_url
+                
+                # Skip if already visited
+                if job_url in visited_urls:
+                    continue
+                visited_urls.add(job_url)
+                
+                # Extract company and title from the link card/element
+                parent = link.find_parent(['div', 'article', 'li', 'section'])
+                link_text = link.get_text(strip=True)
+                parent_text = parent.get_text(separator=' ', strip=True) if parent else ''
+                
+                # Basic extraction from listing
+                company = None
+                title = None
+                
+                # Try to find company and title in parent element
+                if parent:
+                    company_elem = parent.find(['h3', 'h4', 'strong', 'div'], class_=re.compile(r'company|name', re.I))
+                    title_elem = parent.find(['h2', 'h3', 'span'], class_=re.compile(r'title|role|position', re.I))
                     
-                    # Extract company and title from link text
-                    link_text = link.get_text(strip=True)
-                    if not link_text or len(link_text) < 5:
-                        continue
-                    
-                    # Try to parse company and title
-                    parts = link_text.split('|')
-                    if len(parts) >= 2:
-                        company = parts[0].strip()
-                        title = parts[1].strip()
-                    else:
-                        # Try to extract from parent elements
-                        parent = link.find_parent(['div', 'article'])
-                        if parent:
-                            company = parent.find(['h3', 'h4', 'strong'])
-                            company = company.get_text(strip=True) if company else "Unknown"
-                            title = link_text
+                    if company_elem:
+                        company = company_elem.get_text(strip=True)
+                    if title_elem:
+                        title = title_elem.get_text(strip=True)
+                
+                # If we don't have enough info, try fetching the actual job page (rate limit)
+                if not company or not title:
+                    # Only fetch details if the link looks promising
+                    if 'job' in job_url.lower() or 'careers' in job_url.lower() or 'companies/' in job_url:
+                        print(f"Fetching details from: {job_url}")
+                        details = self.fetch_job_details(job_url)
+                        if details:
+                            company = details.get('company') or company or "Unknown"
+                            title = details.get('title') or title or link_text
+                            location = details.get('location')
+                            tech_stack = details.get('tech_stack', [])
+                            description = details.get('description', '')
+                            
+                            # Rate limiting
+                            time.sleep(0.5)
                         else:
-                            company = "Unknown"
-                            title = link_text
-                    
-                    # Extract tech stack from surrounding text
-                    parent_text = ""
-                    parent = link.find_parent(['div', 'article', 'section'])
-                    if parent:
-                        parent_text = parent.get_text()
-                    
+                            continue
+                    else:
+                        # Use what we have from the listing
+                        company = company or link_text.split('|')[0].strip() if '|' in link_text else "Unknown"
+                        title = title or link_text or "Software Engineer"
+                        location = self.extract_location_from_text(parent_text)
+                        tech_stack = self.extract_tech_stack(parent_text + " " + link_text)
+                        description = parent_text
+                else:
+                    # Use listing info
+                    location = self.extract_location_from_text(parent_text)
                     tech_stack = self.extract_tech_stack(parent_text + " " + link_text)
-                    
-                    # Try to find location using whitelist validation
-                    location = None
-                    from utils.location_validator import validate_and_normalize_location
-                    
-                    # Try common location patterns
-                    location_patterns = [
-                        r'\b(remote|onsite|hybrid|anywhere)\b',
-                        r'\b(san francisco|sf|bay area|new york|nyc|seattle|austin|boston|chicago|los angeles|la)\b',
-                        r'\b(usa|united states|us|canada|uk|united kingdom|london|berlin|paris|amsterdam)\b',
-                    ]
-                    
-                    for pattern in location_patterns:
-                        match = re.search(pattern, parent_text.lower(), re.I)
-                        if match:
-                            candidate = validate_and_normalize_location(match.group(1))
-                            if candidate:
-                                location = candidate
-                                break
-                    
-                    job = JobPosting(
-                        company=company[:100],
-                        title=title[:100],
-                        location=location,
-                        tech_stack=tech_stack,
-                        raw_text=parent_text[:500] if parent_text else link_text,
-                        source='YC',
-                        source_url=job_url,
-                        scraped_at=datetime.now(),
-                        url=job_url,
-                        posted_date=None  # YC may not show exact dates
-                    )
-                    
-                    jobs.append(job)
-                except Exception as e:
-                    print(f"Error parsing job link: {e}")
+                    description = parent_text
+                
+                # Skip if we don't have minimum required info
+                if company == "Unknown" and title == "Software Engineer":
                     continue
-        
-        else:
-            # Parse structured job cards
-            for card in job_cards:
-                try:
-                    # Extract company
-                    company_elem = card.find(['h2', 'h3', 'h4', 'strong', 'span'], class_=re.compile(r'company|name', re.I))
-                    company = company_elem.get_text(strip=True) if company_elem else "Unknown"
-                    
-                    # Extract title
-                    title_elem = card.find(['h2', 'h3', 'h4', 'a'], class_=re.compile(r'title|position|role', re.I))
-                    if not title_elem:
-                        title_elem = card.find('a')
-                    title = title_elem.get_text(strip=True) if title_elem else "Software Engineer"
-                    
-                    # Extract URL
-                    url_elem = card.find('a', href=True)
-                    url = url_elem.get('href') if url_elem else None
-                    if url and not url.startswith('http'):
-                        url = self.BASE_URL + url
-                    
-                    # Extract location using whitelist validation
-                    location = None
-                    from utils.location_validator import validate_and_normalize_location
-                    
-                    location_elem = card.find(string=re.compile(r'remote|onsite|hybrid|location', re.I))
-                    if location_elem:
-                        candidate = validate_and_normalize_location(location_elem.strip())
-                        if candidate:
-                            location = candidate
-                    
-                    # Extract tech stack
-                    card_text = card.get_text()
-                    tech_stack = self.extract_tech_stack(card_text)
-                    
-                    # Extract posted date
-                    date_elem = card.find(string=re.compile(r'day|week|month|ago', re.I))
-                    posted_date = None
-                    if date_elem:
-                        posted_date = self.parse_posted_date(date_elem)
-                    
-                    job = JobPosting(
-                        company=company[:100],
-                        title=title[:100],
-                        location=location,
-                        tech_stack=tech_stack,
-                        raw_text=card_text[:500],
-                        source='YC',
-                        source_url=url or self.JOBS_URL,
-                        scraped_at=datetime.now(),
-                        url=url,
-                        posted_date=posted_date
-                    )
-                    
-                    jobs.append(job)
-                except Exception as e:
-                    print(f"Error parsing job card: {e}")
-                    continue
+                
+                # Create job posting
+                job = JobPosting(
+                    company=company[:100],
+                    title=title[:100],
+                    location=location,
+                    tech_stack=tech_stack,
+                    raw_text=description[:500] if description else link_text,
+                    source='YC',
+                    source_url=self.JOBS_URL,
+                    scraped_at=datetime.now(),
+                    url=job_url,
+                    posted_date=datetime.now()  # YC doesn't show exact dates
+                )
+                
+                jobs.append(job)
+                processed_count += 1
+                
+                print(f"Processed {processed_count}/30: {company} - {title}")
+                
+            except Exception as e:
+                print(f"Error processing link: {e}")
+                continue
         
         print(f"Extracted {len(jobs)} jobs from YC")
         return jobs
-
