@@ -1,21 +1,32 @@
 [
   {
+    "id": "6fe0252a28ac3f60b82457c2d62fdda0",
+    "company": "Plush",
+    "title": "Software Engineer",
+    "location": "Remote",
+    "tech_stack": [],
+    "url": "https://news.ycombinator.com/item?id=45800465",
+    "source": "hn who's hiring",
+    "posted_date": "2025-11-05T10:46:30.578706",
+    "hidden_score": 100
+  },
+  {
     "id": "27101e3296bf4e13fb803030103db9b8",
     "company": "Location",
     "title": "partly overlapping etc.)",
     "location": "Remote",
     "tech_stack": [
-      "react",
       "javascript",
-      "css",
-      "html",
+      "python",
       "tailwind",
+      "html",
+      "react",
       "php",
-      "python"
+      "css"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.363650",
+    "posted_date": "2025-11-05T10:46:30.580426",
     "hidden_score": 100
   },
   {
@@ -24,18 +35,18 @@
     "title": "Full-stack Software Engineer | $140K–$290K + Equity | REMOTE (US/Canada)",
     "location": "Remote",
     "tech_stack": [
-      "react",
-      "aws",
-      "graphql",
       "node",
+      "aws",
       "typescript",
-      "docker",
       "postgresql",
-      "terraform"
+      "terraform",
+      "graphql",
+      "react",
+      "docker"
     ],
     "url": "https://matcha.fm/apply/se",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.364603",
+    "posted_date": "2025-11-05T10:46:30.581316",
     "hidden_score": 100
   },
   {
@@ -48,7 +59,7 @@
     ],
     "url": "https://zed.dev/jobs/backend-engineer",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.365896",
+    "posted_date": "2025-11-05T10:46:30.582644",
     "hidden_score": 100
   },
   {
@@ -59,7 +70,7 @@
     "tech_stack": [],
     "url": "https://jobs.ongoody.com/swe",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.366971",
+    "posted_date": "2025-11-05T10:46:30.583751",
     "hidden_score": 100
   },
   {
@@ -73,7 +84,7 @@
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.368699",
+    "posted_date": "2025-11-05T10:46:30.585656",
     "hidden_score": 100
   },
   {
@@ -84,22 +95,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.369666",
-    "hidden_score": 100
-  },
-  {
-    "id": "ab9153cf3d5c5c79b54463a883452732",
-    "company": "HomeVision",
-    "title": "Multiple Roles - Eng, SRE, Analytics | Hybrid SF & Remote | Full-Time | $100k-$220k + equity",
-    "location": "Hybrid",
-    "tech_stack": [
-      "aws",
-      "python",
-      "terraform"
-    ],
-    "url": "https://jobs.ashbyhq.com/homevision/a3f79d43-5d9e-46bf-a43f-f9425f062ef2?utm_source=hnv",
-    "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.370601",
+    "posted_date": "2025-11-05T10:46:30.586971",
     "hidden_score": 100
   },
   {
@@ -108,22 +104,37 @@
     "title": "Senior DevOps Engineer | Full-Time | Remote | 115k - 180k USD -",
     "location": "Remote",
     "tech_stack": [
+      "mysql",
+      "redis",
       "vue",
       "kubernetes",
+      "typescript",
+      "tailwind",
+      "postgresql",
+      "terraform",
+      "html",
       "css",
       "rails",
-      "rust",
-      "redis",
-      "html",
-      "tailwind",
-      "typescript",
-      "postgresql",
-      "mysql",
-      "terraform"
+      "rust"
     ],
     "url": "https://fetlife.com/jobs/devops-engineer",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.372620",
+    "posted_date": "2025-11-05T10:46:30.588293",
+    "hidden_score": 100
+  },
+  {
+    "id": "ab9153cf3d5c5c79b54463a883452732",
+    "company": "HomeVision",
+    "title": "Multiple Roles - Eng, SRE, Analytics | Hybrid SF & Remote | Full-Time | $100k-$220k + equity",
+    "location": "Hybrid",
+    "tech_stack": [
+      "terraform",
+      "aws",
+      "python"
+    ],
+    "url": "https://jobs.ashbyhq.com/homevision/a3f79d43-5d9e-46bf-a43f-f9425f062ef2?utm_source=hnv",
+    "source": "hn who's hiring",
+    "posted_date": "2025-11-05T10:46:30.589582",
     "hidden_score": 100
   },
   {
@@ -134,7 +145,7 @@
     "tech_stack": [],
     "url": "https://www.dittowords.com/careers/product-designer",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.374145",
+    "posted_date": "2025-11-05T10:46:30.590853",
     "hidden_score": 100
   },
   {
@@ -143,14 +154,14 @@
     "title": "Senior Fullstack Engineer | Remote (CET ±3) | Full-Time | Go / TypeScript / WebRTC | Open Source",
     "location": "Remote",
     "tech_stack": [
-      "react",
       "go",
-      "node",
-      "typescript"
+      "typescript",
+      "react",
+      "node"
     ],
     "url": "https://jetkvm.com/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.375178",
+    "posted_date": "2025-11-05T10:46:30.591789",
     "hidden_score": 100
   },
   {
@@ -163,7 +174,7 @@
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.376187",
+    "posted_date": "2025-11-05T10:46:30.592841",
     "hidden_score": 100
   },
   {
@@ -174,7 +185,7 @@
     "tech_stack": [],
     "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Senior-Deep-Learning-Software-Engineer--Inference_JR2003655",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.377787",
+    "posted_date": "2025-11-05T10:46:30.594483",
     "hidden_score": 100
   },
   {
@@ -185,7 +196,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.378263",
+    "posted_date": "2025-11-05T10:46:30.594792",
     "hidden_score": 100
   },
   {
@@ -196,18 +207,18 @@
     "tech_stack": [],
     "url": "https://www.captain-of-industry.com/jobs",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.379877",
+    "posted_date": "2025-11-05T10:46:30.596561",
     "hidden_score": 100
   },
   {
     "id": "d1e51f0ca609313d191a6013a5b20b54",
     "company": "N26 SE",
     "title": "Sr. SREs, Sr. Cloud Security Engineers, Sr. JVM Backend Engineers | Berlin, Barcelona |",
-    "location": "Europe",
+    "location": "Usa",
     "tech_stack": [],
     "url": "https://n26.com/en-eu/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.381903",
+    "posted_date": "2025-11-05T10:46:30.598414",
     "hidden_score": 100
   },
   {
@@ -218,7 +229,7 @@
     "tech_stack": [],
     "url": "https://www.hetzner-cloud.de/en/jobs/1945594",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.382591",
+    "posted_date": "2025-11-05T10:46:30.599134",
     "hidden_score": 100
   },
   {
@@ -227,12 +238,12 @@
     "title": "Commerce Platform Engineer - Brazil or Columbia (Remote)",
     "location": "Remote",
     "tech_stack": [
-      "node",
-      "typescript"
+      "typescript",
+      "node"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.383842",
+    "posted_date": "2025-11-05T10:46:30.600415",
     "hidden_score": 100
   },
   {
@@ -241,14 +252,14 @@
     "title": "Remote (Europe) | Full-time | Senior Software Engineer | $80k-$110k+ (can go higher)",
     "location": "Remote",
     "tech_stack": [
+      "kubernetes",
       "go",
       "aws",
-      "kubernetes",
       "terraform"
     ],
     "url": "https://careers.spacelift.io/jobs/3006934-software-engineer-remote-europe-mid-and-senior",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.385593",
+    "posted_date": "2025-11-05T10:46:30.602272",
     "hidden_score": 100
   },
   {
@@ -259,21 +270,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.387250",
-    "hidden_score": 100
-  },
-  {
-    "id": "008bef84e20c5e2a950a6ba3dd280ab3",
-    "company": "Nexufend",
-    "title": "UX/UI Frontend designer + developer | Hybrid/REMOTE Europe (within 5h travel time to VIE)",
-    "location": "Hybrid",
-    "tech_stack": [
-      "react",
-      "svelte"
-    ],
-    "url": "https://news.ycombinator.com/item?id=45800465",
-    "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.388079",
+    "posted_date": "2025-11-05T10:46:30.603919",
     "hidden_score": 100
   },
   {
@@ -282,25 +279,39 @@
     "title": "Remote (US, Colombia, Argentina) | Staff Software Engineer, AI & Automation | $60k–$215k + Equity |",
     "location": "Remote",
     "tech_stack": [
-      "react",
       "go",
-      "postgres",
-      "typescript"
+      "typescript",
+      "react",
+      "postgres"
     ],
     "url": "https://www.gladly.ai/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.389565",
+    "posted_date": "2025-11-05T10:46:30.605402",
+    "hidden_score": 100
+  },
+  {
+    "id": "008bef84e20c5e2a950a6ba3dd280ab3",
+    "company": "Nexufend",
+    "title": "UX/UI Frontend designer + developer | Hybrid/REMOTE Europe (within 5h travel time to VIE)",
+    "location": "Hybrid",
+    "tech_stack": [
+      "svelte",
+      "react"
+    ],
+    "url": "https://news.ycombinator.com/item?id=45800465",
+    "source": "hn who's hiring",
+    "posted_date": "2025-11-05T10:46:30.606395",
     "hidden_score": 100
   },
   {
     "id": "1ac50983d8cc665cf51dfba3bf0150b4",
     "company": "Loop",
     "title": "loop.com | Engineering | On-site San Francisco, CA, Chicago, IL",
-    "location": "Chicago",
+    "location": "Il",
     "tech_stack": [],
     "url": "https://job-boards.greenhouse.io/loop/jobs/4102236004",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.392370",
+    "posted_date": "2025-11-05T10:46:30.610579",
     "hidden_score": 100
   },
   {
@@ -311,7 +322,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.395771",
+    "posted_date": "2025-11-05T10:46:30.613318",
     "hidden_score": 100
   },
   {
@@ -322,7 +333,7 @@
     "tech_stack": [],
     "url": "https://jobs.ashbyhq.com/terraai?utm_source=ankjvVkzlx",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.396449",
+    "posted_date": "2025-11-05T10:46:30.614012",
     "hidden_score": 100
   },
   {
@@ -331,18 +342,18 @@
     "title": "Backend Mid-Senior/Senior | Remote( +-2 EU CET) |  Full Time |",
     "location": "Remote",
     "tech_stack": [
-      "kubernetes",
-      "angular",
       "aws",
-      "postgres",
-      "typescript",
       "python",
-      "java",
-      "terraform"
+      "angular",
+      "kubernetes",
+      "typescript",
+      "postgres",
+      "terraform",
+      "java"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.398261",
+    "posted_date": "2025-11-05T10:46:30.615827",
     "hidden_score": 100
   },
   {
@@ -353,7 +364,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.399489",
+    "posted_date": "2025-11-05T10:46:30.617047",
     "hidden_score": 100
   },
   {
@@ -366,7 +377,7 @@
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.400479",
+    "posted_date": "2025-11-05T10:46:30.618281",
     "hidden_score": 100
   },
   {
@@ -380,7 +391,7 @@
     ],
     "url": "https://jobs.lever.co/getduranta",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.402054",
+    "posted_date": "2025-11-05T10:46:30.620118",
     "hidden_score": 100
   },
   {
@@ -391,7 +402,7 @@
     "tech_stack": [],
     "url": "https://apply.workable.com/modash/j/96C4941FE6/",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.403202",
+    "posted_date": "2025-11-05T10:46:30.621361",
     "hidden_score": 100
   },
   {
@@ -402,7 +413,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.404275",
+    "posted_date": "2025-11-05T10:46:30.622530",
     "hidden_score": 100
   },
   {
@@ -413,7 +424,7 @@
     "tech_stack": [],
     "url": "https://jobs.justice.gov.uk/careers/JobDetail/11367-Deputy-Director-AI-Engineering-Justice-AI-Unit/11367",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.405081",
+    "posted_date": "2025-11-05T10:46:30.623392",
     "hidden_score": 100
   },
   {
@@ -424,7 +435,7 @@
     "tech_stack": [],
     "url": "https://careers.qweebi.com/jobs/Gw1ihJushe4x/senior-backend-engineer-remote",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.405933",
+    "posted_date": "2025-11-05T10:46:30.624251",
     "hidden_score": 100
   },
   {
@@ -438,7 +449,7 @@
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.406685",
+    "posted_date": "2025-11-05T10:46:30.624979",
     "hidden_score": 100
   },
   {
@@ -448,15 +459,15 @@
     "location": "Remote",
     "tech_stack": [
       "javascript",
-      "aws",
-      "rails",
       "ruby",
+      "aws",
       "postgres",
-      "docker"
+      "docker",
+      "rails"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.407721",
+    "posted_date": "2025-11-05T10:46:30.626148",
     "hidden_score": 100
   },
   {
@@ -467,7 +478,7 @@
     "tech_stack": [],
     "url": "https://ko-br.com/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.409089",
+    "posted_date": "2025-11-05T10:46:30.627707",
     "hidden_score": 100
   },
   {
@@ -478,30 +489,47 @@
     "tech_stack": [
       "redis",
       "python",
-      "azure",
+      "postgresql",
       "docker",
-      "postgresql"
+      "azure"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.412985",
+    "posted_date": "2025-11-05T10:46:30.632978",
     "hidden_score": 100
   },
   {
     "id": "e4c8c46e8a7811af6f99d8f176739602",
     "company": "Tandem Health",
     "title": "Senior/Staff Software Engineers | On-site in Stockholm, Sweden | Full time",
-    "location": "Europe",
+    "location": "Usa",
     "tech_stack": [
-      "react",
+      "python",
       "kubernetes",
       "typescript",
-      "python",
+      "react",
       "azure"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.415125",
+    "posted_date": "2025-11-05T10:46:30.635131",
+    "hidden_score": 100
+  },
+  {
+    "id": "d95c593e34e67bd79a9b656c315b8f61",
+    "company": "Stellar Science",
+    "title": "Hybrid (USA) Albuquerque NM, Washington DC (Tysons VA), Dayton OH | Full time, interns/co-ops | U.S.",
+    "location": "Hybrid",
+    "tech_stack": [
+      "python",
+      "typescript",
+      "react",
+      "c++",
+      "java"
+    ],
+    "url": "https://www.stellarscience.com/careers/",
+    "source": "hn who's hiring",
+    "posted_date": "2025-11-05T10:46:30.636456",
     "hidden_score": 100
   },
   {
@@ -512,24 +540,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.418682",
-    "hidden_score": 100
-  },
-  {
-    "id": "d95c593e34e67bd79a9b656c315b8f61",
-    "company": "Stellar Science",
-    "title": "Hybrid (USA) Albuquerque NM, Washington DC (Tysons VA), Dayton OH | Full time, interns/co-ops | U.S.",
-    "location": "Hybrid",
-    "tech_stack": [
-      "react",
-      "c++",
-      "typescript",
-      "python",
-      "java"
-    ],
-    "url": "https://www.stellarscience.com/careers/",
-    "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.419815",
+    "posted_date": "2025-11-05T10:46:30.639593",
     "hidden_score": 100
   },
   {
@@ -538,16 +549,16 @@
     "title": "Zurich, Switzerland | Full Stack |",
     "location": "Remote",
     "tech_stack": [
-      "react",
+      "go",
       "aws",
       "typescript",
-      "go",
       "gcp",
-      "terraform"
+      "terraform",
+      "react"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.420792",
+    "posted_date": "2025-11-05T10:46:30.640664",
     "hidden_score": 100
   },
   {
@@ -556,15 +567,15 @@
     "title": "Staff Engineer | Onsite 3 days (New York City) |",
     "location": "Onsite",
     "tech_stack": [
+      "aws",
+      "python",
       "react",
       "django",
-      "aws",
-      "rails",
-      "python"
+      "rails"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.421917",
+    "posted_date": "2025-11-05T10:46:30.641917",
     "hidden_score": 100
   },
   {
@@ -577,7 +588,7 @@
     ],
     "url": "https://replicainc.applytojob.com/apply/7njkiRsLA2/Software-Engineer-Execution-Focused",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.423330",
+    "posted_date": "2025-11-05T10:46:30.643287",
     "hidden_score": 100
   },
   {
@@ -591,7 +602,7 @@
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.424710",
+    "posted_date": "2025-11-05T10:46:30.644786",
     "hidden_score": 100
   },
   {
@@ -605,7 +616,7 @@
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.425623",
+    "posted_date": "2025-11-05T10:46:30.645743",
     "hidden_score": 100
   },
   {
@@ -615,13 +626,13 @@
     "location": "Usa",
     "tech_stack": [
       "go",
+      "rest",
       "postgresql",
-      "python",
-      "rest"
+      "python"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.428582",
+    "posted_date": "2025-11-05T10:46:30.647629",
     "hidden_score": 100
   },
   {
@@ -632,7 +643,7 @@
     "tech_stack": [],
     "url": "https://www.quobyte.com/company/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.430070",
+    "posted_date": "2025-11-05T10:46:30.649197",
     "hidden_score": 100
   },
   {
@@ -647,7 +658,7 @@
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.431187",
+    "posted_date": "2025-11-05T10:46:30.650350",
     "hidden_score": 100
   },
   {
@@ -656,27 +667,27 @@
     "title": "Engineering & Product | REMOTE (US) | Full-Time |",
     "location": "Remote",
     "tech_stack": [
-      "react",
       "aws",
-      "graphql",
-      "postgres",
       "typescript",
-      "postgresql"
+      "postgres",
+      "postgresql",
+      "graphql",
+      "react"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.432137",
+    "posted_date": "2025-11-05T10:46:30.651458",
     "hidden_score": 100
   },
   {
     "id": "955f72057bdf65b7848f4326107f1b91",
     "company": "Uncountable",
     "title": "NY, SF, London & Munich (In-Person) | Full-Stack Engineering",
-    "location": "New York",
+    "location": "London",
     "tech_stack": [],
     "url": "https://www.uncountable.com/hiring/hn",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.433113",
+    "posted_date": "2025-11-05T10:46:30.653258",
     "hidden_score": 100
   },
   {
@@ -687,7 +698,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.434332",
+    "posted_date": "2025-11-05T10:46:30.654628",
     "hidden_score": 100
   },
   {
@@ -698,7 +709,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.435686",
+    "posted_date": "2025-11-05T10:46:30.656104",
     "hidden_score": 100
   },
   {
@@ -709,7 +720,7 @@
     "tech_stack": [],
     "url": "https://www.openrent.co.uk/jobs",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.436663",
+    "posted_date": "2025-11-05T10:46:30.657196",
     "hidden_score": 100
   },
   {
@@ -720,7 +731,7 @@
     "tech_stack": [],
     "url": "https://www.kadoa.com/careers/web-scraping-engineer",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.437886",
+    "posted_date": "2025-11-05T10:46:30.658432",
     "hidden_score": 100
   },
   {
@@ -729,15 +740,15 @@
     "title": "Senior Java Engineer, Senior Security Engineer, Documentation Engineer, Sr Developer Advocate | Vari",
     "location": "Remote",
     "tech_stack": [
+      "mysql",
       "kubernetes",
-      "docker",
-      "java",
       "postgresql",
-      "mysql"
+      "docker",
+      "java"
     ],
     "url": "https://fusionauth.io/careers/",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.439073",
+    "posted_date": "2025-11-05T10:46:30.659900",
     "hidden_score": 100
   },
   {
@@ -750,7 +761,7 @@
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.439976",
+    "posted_date": "2025-11-05T10:46:30.660940",
     "hidden_score": 100
   },
   {
@@ -761,7 +772,7 @@
     "tech_stack": [],
     "url": "https://adastrak.com/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.440831",
+    "posted_date": "2025-11-05T10:46:30.661860",
     "hidden_score": 100
   },
   {
@@ -770,15 +781,15 @@
     "title": "Adora AI [",
     "location": "Onsite",
     "tech_stack": [
-      "react",
+      "mysql",
       "aws",
-      "typescript",
       "python",
-      "mysql"
+      "typescript",
+      "react"
     ],
     "url": "https://jobs.lever.co/adora/eef89ae9-11fe-425d-bcf7-7aef53decea9",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.441966",
+    "posted_date": "2025-11-05T10:46:30.662987",
     "hidden_score": 100
   },
   {
@@ -789,18 +800,18 @@
     "tech_stack": [],
     "url": "https://column.com/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.442953",
+    "posted_date": "2025-11-05T10:46:30.664037",
     "hidden_score": 100
   },
   {
     "id": "8049eb2908d23d21d170b0830a9f8426",
     "company": "Carefeed",
     "title": "Senior Software Engineer and Senior Data Engineer | Chicago, IL",
-    "location": "Chicago",
+    "location": "Usa",
     "tech_stack": [],
     "url": "https://job-boards.greenhouse.io/carefeed/jobs/4972304008",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.444097",
+    "posted_date": "2025-11-05T10:46:30.665076",
     "hidden_score": 100
   },
   {
@@ -811,7 +822,7 @@
     "tech_stack": [],
     "url": "https://www.linkedin.com/jobs/view/4319438984/",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.444847",
+    "posted_date": "2025-11-05T10:46:30.665842",
     "hidden_score": 100
   },
   {
@@ -820,12 +831,12 @@
     "title": "Software Engineer",
     "location": "Remote",
     "tech_stack": [
-      "react",
-      "typescript"
+      "typescript",
+      "react"
     ],
     "url": "https://coder.com/careers?utm_source=O2n5Ew72WD",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.446712",
+    "posted_date": "2025-11-05T10:46:30.668284",
     "hidden_score": 100
   },
   {
@@ -838,7 +849,7 @@
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.448385",
+    "posted_date": "2025-11-05T10:46:30.669545",
     "hidden_score": 100
   },
   {
@@ -849,7 +860,7 @@
     "tech_stack": [],
     "url": "https://www.linkedin.com/jobs/view/4332175835/",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.449662",
+    "posted_date": "2025-11-05T10:46:30.670941",
     "hidden_score": 100
   },
   {
@@ -863,7 +874,7 @@
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.450879",
+    "posted_date": "2025-11-05T10:46:30.672336",
     "hidden_score": 100
   },
   {
@@ -876,7 +887,7 @@
     ],
     "url": "https://job-boards.greenhouse.io/dittoliveincorporated",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.451925",
+    "posted_date": "2025-11-05T10:46:30.673323",
     "hidden_score": 100
   },
   {
@@ -891,7 +902,7 @@
     ],
     "url": "https://jobs.ashbyhq.com/stream?utm_source=5rrpvObp3r",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.453637",
+    "posted_date": "2025-11-05T10:46:30.675046",
     "hidden_score": 100
   },
   {
@@ -902,7 +913,7 @@
     "tech_stack": [],
     "url": "https://jobs.ashbyhq.com/matterworks/abd91496-f8dc-4a14-aa80-e3677f23e8a5?utm_source=JnQPzYampK",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.454431",
+    "posted_date": "2025-11-05T10:46:30.675884",
     "hidden_score": 100
   },
   {
@@ -913,7 +924,7 @@
     "tech_stack": [],
     "url": "https://jobs.ashbyhq.com/norm-ai?utm_source=7ow8wN5o3g",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.455686",
+    "posted_date": "2025-11-05T10:46:30.678306",
     "hidden_score": 100
   },
   {
@@ -924,7 +935,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.456650",
+    "posted_date": "2025-11-05T10:46:30.679321",
     "hidden_score": 100
   },
   {
@@ -935,7 +946,7 @@
     "tech_stack": [],
     "url": "https://www.framer.com/careers/senior-product-engineer",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.457380",
+    "posted_date": "2025-11-05T10:46:30.680051",
     "hidden_score": 100
   },
   {
@@ -944,13 +955,13 @@
     "title": "Onsite, Chicago/Seattle (5 days/week) | Full-time | Salary+Equity",
     "location": "Onsite",
     "tech_stack": [
+      "typescript",
       "react",
-      "aws",
-      "typescript"
+      "aws"
     ],
     "url": "https://jobs.gem.com/silkline/am9icG9zdDrLwsEQTKKa02Ut_F9kgzby",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.458198",
+    "posted_date": "2025-11-05T10:46:30.680982",
     "hidden_score": 100
   },
   {
@@ -961,7 +972,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.459397",
+    "posted_date": "2025-11-05T10:46:30.682230",
     "hidden_score": 100
   },
   {
@@ -972,7 +983,7 @@
     "tech_stack": [],
     "url": "https://www.cse-cst.gc.ca/en/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.461890",
+    "posted_date": "2025-11-05T10:46:30.683731",
     "hidden_score": 100
   },
   {
@@ -983,7 +994,7 @@
     "tech_stack": [],
     "url": "https://apply.workable.com/askdragonfly/j/11ADB3CB35/",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.462914",
+    "posted_date": "2025-11-05T10:46:30.684879",
     "hidden_score": 100
   },
   {
@@ -994,7 +1005,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.464982",
+    "posted_date": "2025-11-05T10:46:30.687067",
     "hidden_score": 100
   },
   {
@@ -1003,13 +1014,13 @@
     "title": "Bay Area | Full-Time",
     "location": "San Francisco",
     "tech_stack": [
+      "graphql",
       "java",
-      "rust",
-      "graphql"
+      "rust"
     ],
     "url": "https://careers-jobyaviation.icims.com/jobs/4324/senior-software-engineer/job",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.466903",
+    "posted_date": "2025-11-05T10:46:30.688223",
     "hidden_score": 100
   },
   {
@@ -1020,7 +1031,7 @@
     "tech_stack": [],
     "url": "https://www.equipmentshare.com/careers/openings/7232798/senior-software-engineer-at-columbia-mo-corporate?requestId=9e165100-6c1c-4610-8d1d-6f3907d8f617%3AAPAb7IRDuyc9FGUTKBfkinwHc02A%2FzXFRg%3D%3D",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.467535",
+    "posted_date": "2025-11-05T10:46:30.688927",
     "hidden_score": 100
   },
   {
@@ -1031,7 +1042,7 @@
     "tech_stack": [],
     "url": "https://jobs.ashbyhq.com/cruxclimate?utm_source=mr",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.468237",
+    "posted_date": "2025-11-05T10:46:30.689727",
     "hidden_score": 100
   },
   {
@@ -1042,7 +1053,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.469151",
+    "posted_date": "2025-11-05T10:46:30.690754",
     "hidden_score": 100
   },
   {
@@ -1055,7 +1066,7 @@
     ],
     "url": "https://jobs.ashbyhq.com/category-labs/bdfe89a6-83f6-4ab3-b642-180b7e2814a9",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.470122",
+    "posted_date": "2025-11-05T10:46:30.691842",
     "hidden_score": 100
   },
   {
@@ -1071,7 +1082,7 @@
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.471038",
+    "posted_date": "2025-11-05T10:46:30.692939",
     "hidden_score": 100
   },
   {
@@ -1084,7 +1095,7 @@
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.472073",
+    "posted_date": "2025-11-05T10:46:30.693985",
     "hidden_score": 100
   },
   {
@@ -1093,16 +1104,16 @@
     "title": "Full Stack Engineer | Onsite (Austin, TX, 3 days/week) | Full-time |",
     "location": "Onsite",
     "tech_stack": [
-      "react",
-      "aws",
       "serverless",
-      "typescript",
+      "aws",
       "python",
+      "typescript",
+      "react",
       "docker"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.473190",
+    "posted_date": "2025-11-05T10:46:30.695026",
     "hidden_score": 100
   },
   {
@@ -1113,18 +1124,18 @@
     "tech_stack": [],
     "url": "https://stainless.com/jobs?utm_source=YlRQ8pvARO",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.474219",
+    "posted_date": "2025-11-05T10:46:30.696068",
     "hidden_score": 100
   },
   {
     "id": "2e0cca52baebfd4acfdc563456c83521",
     "company": "Germany",
     "title": "Looking for ambitious engineers in Berlin, Germany.",
-    "location": "Europe",
+    "location": "Usa",
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.474984",
+    "posted_date": "2025-11-05T10:46:30.696850",
     "hidden_score": 100
   },
   {
@@ -1133,17 +1144,17 @@
     "title": "Software Engineer",
     "location": "Remote",
     "tech_stack": [
-      "react",
       "javascript",
-      "aws",
-      "tailwind",
       "node",
+      "aws",
       "typescript",
-      "postgresql"
+      "tailwind",
+      "postgresql",
+      "react"
     ],
     "url": "https://jobs.gem.com/snout",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.476345",
+    "posted_date": "2025-11-05T10:46:30.698428",
     "hidden_score": 100
   },
   {
@@ -1154,7 +1165,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.478098",
+    "posted_date": "2025-11-05T10:46:30.700099",
     "hidden_score": 100
   },
   {
@@ -1169,7 +1180,7 @@
     ],
     "url": "https://terrateam.io/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.479382",
+    "posted_date": "2025-11-05T10:46:30.701547",
     "hidden_score": 100
   },
   {
@@ -1178,12 +1189,12 @@
     "title": "Software Engineer",
     "location": "Remote",
     "tech_stack": [
-      "react",
-      "typescript"
+      "typescript",
+      "react"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.480102",
+    "posted_date": "2025-11-05T10:46:30.702351",
     "hidden_score": 100
   },
   {
@@ -1192,16 +1203,16 @@
     "title": "Software Engineer",
     "location": "Remote",
     "tech_stack": [
-      "kubernetes",
-      "aws",
       "node",
+      "aws",
       "python",
-      "docker",
-      "terraform"
+      "kubernetes",
+      "terraform",
+      "docker"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.480993",
+    "posted_date": "2025-11-05T10:46:30.703317",
     "hidden_score": 100
   },
   {
@@ -1210,15 +1221,15 @@
     "title": "Senior Backend Developer | ONSITE in Zurich (Switzerland) | Full-time | Competitive salary + stock o",
     "location": "Onsite",
     "tech_stack": [
-      "react",
       "aws",
-      "typescript",
       "python",
-      "postgresql"
+      "typescript",
+      "postgresql",
+      "react"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.482627",
+    "posted_date": "2025-11-05T10:46:30.704899",
     "hidden_score": 100
   },
   {
@@ -1227,14 +1238,14 @@
     "title": "Software Engineer",
     "location": "Remote",
     "tech_stack": [
-      "react",
       "go",
-      "postgresql",
-      "typescript"
+      "typescript",
+      "react",
+      "postgresql"
     ],
     "url": "https://www.ycombinator.com/companies/hatchet-run/jobs",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.483915",
+    "posted_date": "2025-11-05T10:46:30.706318",
     "hidden_score": 100
   },
   {
@@ -1250,7 +1261,7 @@
     ],
     "url": "https://www.ycombinator.com/companies/careforce-prev-helpcare-ai/jobs/Hjx9nA3-senior-fullstack-engineer",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.486069",
+    "posted_date": "2025-11-05T10:46:30.708543",
     "hidden_score": 100
   },
   {
@@ -1259,13 +1270,13 @@
     "title": "Software Engineer",
     "location": null,
     "tech_stack": [
-      "react",
       "node",
+      "react",
       "python"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.489178",
+    "posted_date": "2025-11-05T10:46:30.712053",
     "hidden_score": 100
   },
   {
@@ -1276,7 +1287,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.489975",
+    "posted_date": "2025-11-05T10:46:30.712852",
     "hidden_score": 100
   },
   {
@@ -1290,7 +1301,7 @@
     ],
     "url": "https://jobs.ashbyhq.com/griffin/8d98eb78-e281-4860-b578-fc1bc8b62abd",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.490732",
+    "posted_date": "2025-11-05T10:46:30.713615",
     "hidden_score": 100
   },
   {
@@ -1303,7 +1314,7 @@
     ],
     "url": "https://rootly.com/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.491757",
+    "posted_date": "2025-11-05T10:46:30.714705",
     "hidden_score": 100
   },
   {
@@ -1313,15 +1324,15 @@
     "location": "Usa",
     "tech_stack": [
       "javascript",
-      "django",
       "aws",
-      "typescript",
+      "fastapi",
       "python",
-      "fastapi"
+      "typescript",
+      "django"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.492916",
+    "posted_date": "2025-11-05T10:46:30.715815",
     "hidden_score": 100
   },
   {
@@ -1332,18 +1343,18 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.494342",
+    "posted_date": "2025-11-05T10:46:30.717297",
     "hidden_score": 100
   },
   {
     "id": "0db4902050029c849a3f449b16052d5e",
     "company": "Opendoor (",
     "title": "yan at [our domain].com :D",
-    "location": "Ca",
+    "location": "San Francisco",
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.495796",
+    "posted_date": "2025-11-05T10:46:30.718969",
     "hidden_score": 100
   },
   {
@@ -1354,7 +1365,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.497012",
+    "posted_date": "2025-11-05T10:46:30.720253",
     "hidden_score": 100
   },
   {
@@ -1363,18 +1374,18 @@
     "title": "SRE/Platform Engineer | REMOTE (US Pacific hours) | Full-time",
     "location": "Remote",
     "tech_stack": [
-      "kubernetes",
+      "go",
       "aws",
       "python",
-      "azure",
-      "go",
-      "java",
+      "kubernetes",
       "gcp",
-      "terraform"
+      "terraform",
+      "azure",
+      "java"
     ],
     "url": "https://virtasant.teamtailor.com/jobs/6703434-platform-engineer?promotion=1699526-trackable-share-link-037b7373-518c-45e4-b3e5-cd08bb922935",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.497654",
+    "posted_date": "2025-11-05T10:46:30.720978",
     "hidden_score": 100
   },
   {
@@ -1387,7 +1398,7 @@
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.499766",
+    "posted_date": "2025-11-05T10:46:30.723078",
     "hidden_score": 100
   },
   {
@@ -1400,7 +1411,7 @@
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.501514",
+    "posted_date": "2025-11-05T10:46:30.725420",
     "hidden_score": 100
   },
   {
@@ -1409,15 +1420,15 @@
     "title": "Senior Product Engineer | REMOTE (UK only)  | Full time flexible, 1 (initial) year contract",
     "location": "Remote",
     "tech_stack": [
-      "react",
-      "graphql",
       "node",
       "python",
-      "postgresql"
+      "postgresql",
+      "graphql",
+      "react"
     ],
     "url": "https://www.hardianhealth.com/careers-list/product-engineer",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.502137",
+    "posted_date": "2025-11-05T10:46:30.726159",
     "hidden_score": 100
   },
   {
@@ -1428,18 +1439,18 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.503396",
+    "posted_date": "2025-11-05T10:46:30.727525",
     "hidden_score": 100
   },
   {
     "id": "c122c93973f37e03db36f235ffce180d",
     "company": "EQTY Lab",
     "title": "Software Engineers (Fullstack / AI ), or DevRel | SF, LA (looking for local, but wfh if cool) | Full",
-    "location": "Los Angeles",
+    "location": "Usa",
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.505003",
+    "posted_date": "2025-11-05T10:46:30.729106",
     "hidden_score": 100
   },
   {
@@ -1450,7 +1461,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.505656",
+    "posted_date": "2025-11-05T10:46:30.729845",
     "hidden_score": 100
   },
   {
@@ -1459,16 +1470,16 @@
     "title": "Remote (US) | Full-time | Founding Software Engineer (Interop) |",
     "location": "Remote",
     "tech_stack": [
-      "react",
-      "django",
       "aws",
-      "graphql",
+      "python",
       "typescript",
-      "python"
+      "graphql",
+      "react",
+      "django"
     ],
     "url": "https://app.dover.com/apply/altirahealth/862317ca-7c42-4dc1-b163-ba79f43252d5",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.506740",
+    "posted_date": "2025-11-05T10:46:30.730941",
     "hidden_score": 100
   },
   {
@@ -1477,26 +1488,26 @@
     "title": "Austin, TX | ONSITE | Full-time",
     "location": "Onsite",
     "tech_stack": [
-      "react",
+      "go",
       "aws",
       "python",
-      "go",
-      "postgresql"
+      "postgresql",
+      "react"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.507609",
+    "posted_date": "2025-11-05T10:46:30.731791",
     "hidden_score": 100
   },
   {
     "id": "b649f4ae47164f799392c41208146d57",
     "company": "Rover",
     "title": "Barcelona, Spain & Seattle, USA | Software Engineers (Multiple Roles) | Full-time",
-    "location": "Seattle",
+    "location": "Barcelona",
     "tech_stack": [],
     "url": "https://www.rover.com/careers/engineering",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.508682",
+    "posted_date": "2025-11-05T10:46:30.733311",
     "hidden_score": 100
   },
   {
@@ -1507,7 +1518,7 @@
     "tech_stack": [],
     "url": "https://www.happyscribe.com/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.509843",
+    "posted_date": "2025-11-05T10:46:30.734567",
     "hidden_score": 100
   },
   {
@@ -1518,7 +1529,7 @@
     "tech_stack": [],
     "url": "https://jobs.ashbyhq.com/poesis?utm_source=7B1zo0bVXD",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.511616",
+    "posted_date": "2025-11-05T10:46:30.738162",
     "hidden_score": 100
   },
   {
@@ -1529,7 +1540,7 @@
     "tech_stack": [],
     "url": "https://jobs.ashbyhq.com/checkly?utm_source=hn",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.512358",
+    "posted_date": "2025-11-05T10:46:30.738959",
     "hidden_score": 100
   },
   {
@@ -1540,7 +1551,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.513841",
+    "posted_date": "2025-11-05T10:46:30.740525",
     "hidden_score": 100
   },
   {
@@ -1549,14 +1560,14 @@
     "title": "Senior Fullstack Engineer (Frontend focused) | Enterprise Fraud & Risk Management | Remote (GMT+11 –",
     "location": "Remote",
     "tech_stack": [
+      "typescript",
       "react",
       "rust",
-      "node",
-      "typescript"
+      "node"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.515297",
+    "posted_date": "2025-11-05T10:46:30.741908",
     "hidden_score": 100
   },
   {
@@ -1569,18 +1580,18 @@
     ],
     "url": "https://www.monumental.co/jobs",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.516382",
+    "posted_date": "2025-11-05T10:46:30.743210",
     "hidden_score": 100
   },
   {
     "id": "e8717366ed0f8bad29f57c44932db850",
     "company": "Silk Hedge Fund",
     "title": "Software Engineer",
-    "location": "New York",
+    "location": "Co",
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.517700",
+    "posted_date": "2025-11-05T10:46:30.745098",
     "hidden_score": 100
   },
   {
@@ -1591,7 +1602,7 @@
     "tech_stack": [],
     "url": "https://jobs.lever.co/shieldai/7952271c-8578-42d8-a587-4707c3eb9d0d",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.518307",
+    "posted_date": "2025-11-05T10:46:30.745726",
     "hidden_score": 100
   },
   {
@@ -1600,13 +1611,13 @@
     "title": "Software Engineers (Fullstack / AI / SRE / iOS / ML), Product Design, Product Manager | ONSITE SF |",
     "location": "Onsite",
     "tech_stack": [
+      "typescript",
       "react",
-      "node",
-      "typescript"
+      "node"
     ],
     "url": "https://www.getfreed.ai/careers?utm_source=AOxjbOpE3X",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.519342",
+    "posted_date": "2025-11-05T10:46:30.746887",
     "hidden_score": 100
   },
   {
@@ -1620,7 +1631,7 @@
     ],
     "url": "https://jobs.ashbyhq.com/P-1%20AI/75c853db-4a8d-4f23-b28f-05a2231e70e6",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.520805",
+    "posted_date": "2025-11-05T10:46:30.748394",
     "hidden_score": 100
   },
   {
@@ -1631,7 +1642,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.522405",
+    "posted_date": "2025-11-05T10:46:30.750174",
     "hidden_score": 100
   },
   {
@@ -1642,7 +1653,7 @@
     "tech_stack": [],
     "url": "https://jobs.ashbyhq.com/speckle",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.523845",
+    "posted_date": "2025-11-05T10:46:30.751776",
     "hidden_score": 100
   },
   {
@@ -1651,19 +1662,19 @@
     "title": "Various Software Engineering Roles | US – Remote and Hybrid | English fluency required | Full-time |",
     "location": "Remote",
     "tech_stack": [
+      "ruby",
+      "aws",
+      "python",
+      "typescript",
+      "graphql",
       "react",
       "nextjs",
-      "aws",
       "rails",
-      "graphql",
-      "ruby",
-      "typescript",
-      "python",
       "java"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.525512",
+    "posted_date": "2025-11-05T10:46:30.753400",
     "hidden_score": 100
   },
   {
@@ -1672,17 +1683,17 @@
     "title": "XSELL Technologies",
     "location": "Hybrid",
     "tech_stack": [
-      "aws",
-      "node",
-      "python",
-      "azure",
       "go",
-      "java",
-      "gcp"
+      "node",
+      "aws",
+      "python",
+      "gcp",
+      "azure",
+      "java"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.527006",
+    "posted_date": "2025-11-05T10:46:30.754927",
     "hidden_score": 100
   },
   {
@@ -1693,18 +1704,18 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.528089",
+    "posted_date": "2025-11-05T10:46:30.756021",
     "hidden_score": 100
   },
   {
     "id": "b3f4667011f9a81f65a62061cc3f4366",
     "company": "Songscription",
     "title": "Founding Engineer, Mobile App Developer & More | San Francisco, CA",
-    "location": "Ca",
+    "location": "San Francisco",
     "tech_stack": [],
     "url": "https://songscription.ai/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.529368",
+    "posted_date": "2025-11-05T10:46:30.757306",
     "hidden_score": 100
   },
   {
@@ -1715,7 +1726,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.529941",
+    "posted_date": "2025-11-05T10:46:30.757928",
     "hidden_score": 100
   },
   {
@@ -1724,16 +1735,30 @@
     "title": "Python + TypeScript Engineers | United States| Full-time | REMOTE (Legal to work in the US)",
     "location": "Remote",
     "tech_stack": [
-      "react",
       "rest",
-      "django",
-      "typescript",
       "python",
-      "postgresql"
+      "typescript",
+      "postgresql",
+      "react",
+      "django"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.530958",
+    "posted_date": "2025-11-05T10:46:30.759078",
+    "hidden_score": 100
+  },
+  {
+    "id": "846b24fda968af91905ed31b33668939",
+    "company": "Onton.com",
+    "title": "Fullstack & Research Engineers | San Francisco, CA | Hybrid",
+    "location": "Hybrid",
+    "tech_stack": [
+      "typescript",
+      "react"
+    ],
+    "url": "https://onton.com/careers",
+    "source": "hn who's hiring",
+    "posted_date": "2025-11-05T10:46:30.760285",
     "hidden_score": 100
   },
   {
@@ -1744,21 +1769,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.531924",
-    "hidden_score": 100
-  },
-  {
-    "id": "846b24fda968af91905ed31b33668939",
-    "company": "Onton.com",
-    "title": "Fullstack & Research Engineers | San Francisco, CA | Hybrid",
-    "location": "Hybrid",
-    "tech_stack": [
-      "react",
-      "typescript"
-    ],
-    "url": "https://onton.com/careers",
-    "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.532960",
+    "posted_date": "2025-11-05T10:46:30.761139",
     "hidden_score": 100
   },
   {
@@ -1767,16 +1778,16 @@
     "title": "Senior Full Stack/Backend Engineer + Engineering Manager | Onsite in Philadelphia, Full-Time",
     "location": "Onsite",
     "tech_stack": [
-      "react",
-      "django",
       "aws",
-      "postgres",
+      "python",
       "typescript",
-      "python"
+      "postgres",
+      "react",
+      "django"
     ],
     "url": "https://perpay.com/careers#open-roles",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.534670",
+    "posted_date": "2025-11-05T10:46:30.762910",
     "hidden_score": 100
   },
   {
@@ -1787,7 +1798,7 @@
     "tech_stack": [],
     "url": "https://jobs.lever.co/LuminDigital/8a7a9d0c-1a64-48f7-ac2c-d871f6e8b56e",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.536017",
+    "posted_date": "2025-11-05T10:46:30.764327",
     "hidden_score": 100
   },
   {
@@ -1796,15 +1807,15 @@
     "title": ".NET Engineer Roles | Remote (US) | Full-time",
     "location": "Remote",
     "tech_stack": [
-      "kubernetes",
       "angular",
+      "kubernetes",
       "postgresql",
       "gcp",
       "terraform"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.536616",
+    "posted_date": "2025-11-05T10:46:30.764978",
     "hidden_score": 100
   },
   {
@@ -1818,7 +1829,7 @@
     ],
     "url": "https://www.vantage.sh/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.537480",
+    "posted_date": "2025-11-05T10:46:30.765931",
     "hidden_score": 100
   },
   {
@@ -1832,7 +1843,7 @@
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.539016",
+    "posted_date": "2025-11-05T10:46:30.767735",
     "hidden_score": 100
   },
   {
@@ -1847,7 +1858,7 @@
     ],
     "url": "https://fa-ewto-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/jobs/preview/24156/?lastSelectedFacet=LOCATIONS&mode=location&selectedLocationsFacet=300000000460621",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.540528",
+    "posted_date": "2025-11-05T10:46:30.769174",
     "hidden_score": 100
   },
   {
@@ -1863,7 +1874,7 @@
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.542105",
+    "posted_date": "2025-11-05T10:46:30.771670",
     "hidden_score": 100
   },
   {
@@ -1872,16 +1883,16 @@
     "title": "Remote (US, Canada)",
     "location": "Remote",
     "tech_stack": [
-      "react",
-      "aws",
       "node",
-      "typescript",
+      "aws",
       "python",
-      "postgresql"
+      "typescript",
+      "postgresql",
+      "react"
     ],
     "url": "https://job-boards.greenhouse.io/novacredit",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.542853",
+    "posted_date": "2025-11-05T10:46:30.772491",
     "hidden_score": 100
   },
   {
@@ -1890,14 +1901,14 @@
     "title": "San Francisco, NYC, Remote - USA ONLY with Work Authorization | Software Engineer (mid career - Staf",
     "location": "Remote",
     "tech_stack": [
+      "typescript",
       "react",
       "gcp",
-      "typescript",
       "terraform"
     ],
     "url": "https://www.pomelocare.com/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.543850",
+    "posted_date": "2025-11-05T10:46:30.773591",
     "hidden_score": 100
   },
   {
@@ -1906,28 +1917,28 @@
     "title": "Remote | Full-time | Senior/Staff Backend Engineer | $190k–$225k | 0.10%–0.50% Equity",
     "location": "Remote",
     "tech_stack": [
-      "mongodb",
+      "typescript",
       "postgres",
       "aws",
-      "typescript"
+      "mongodb"
     ],
     "url": "https://www.ycombinator.com/companies/rally-uxr/jobs/Ku40MR7-senior-software-engineer-backend",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.545306",
+    "posted_date": "2025-11-05T10:46:30.775143",
     "hidden_score": 100
   },
   {
     "id": "1e35e3291322cee4f97d9b3fe04e544f",
     "company": "VIVA Finance",
     "title": "Atlanta, GA (In Person)| Front-End Developer",
-    "location": "Atlanta",
+    "location": "Ga",
     "tech_stack": [
       "react",
       "aws"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.546921",
+    "posted_date": "2025-11-05T10:46:30.777523",
     "hidden_score": 100
   },
   {
@@ -1940,18 +1951,7 @@
     ],
     "url": "https://zetier.com/careers/",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.548196",
-    "hidden_score": 100
-  },
-  {
-    "id": "6a19d81f4f1060a8132480fe845907e5",
-    "company": "Radical AI",
-    "title": "Radical AI |",
-    "location": "Onsite",
-    "tech_stack": [],
-    "url": "https://jobs.lever.co/RadicalAI/2885cd8e-f208-4bbc-86c2-d7b4d890fba0",
-    "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.549294",
+    "posted_date": "2025-11-05T10:46:30.778923",
     "hidden_score": 100
   },
   {
@@ -1960,16 +1960,16 @@
     "title": "Senior Software Engineer | REMOTE within UK/Europe/US East Coast | Full-time |",
     "location": "Remote",
     "tech_stack": [
-      "react",
-      "kubernetes",
-      "serverless",
       "node",
+      "serverless",
+      "python",
+      "kubernetes",
       "typescript",
-      "python"
+      "react"
     ],
     "url": "https://jobs.ashbyhq.com/count",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.550422",
+    "posted_date": "2025-11-05T10:46:30.780044",
     "hidden_score": 100
   },
   {
@@ -1980,7 +1980,18 @@
     "tech_stack": [],
     "url": "https://jobs.ashbyhq.com/dialogueai/687b6d39-cf6d-4767-bc83-",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.551323",
+    "posted_date": "2025-11-05T10:46:30.781013",
+    "hidden_score": 100
+  },
+  {
+    "id": "6a19d81f4f1060a8132480fe845907e5",
+    "company": "Radical AI",
+    "title": "Radical AI |",
+    "location": "Onsite",
+    "tech_stack": [],
+    "url": "https://jobs.lever.co/RadicalAI/2885cd8e-f208-4bbc-86c2-d7b4d890fba0",
+    "source": "hn who's hiring",
+    "posted_date": "2025-11-05T10:46:30.782235",
     "hidden_score": 100
   },
   {
@@ -1991,7 +2002,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.552454",
+    "posted_date": "2025-11-05T10:46:30.783459",
     "hidden_score": 100
   },
   {
@@ -2002,7 +2013,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.554121",
+    "posted_date": "2025-11-05T10:46:30.785297",
     "hidden_score": 100
   },
   {
@@ -2012,13 +2023,13 @@
     "location": "Onsite",
     "tech_stack": [
       "go",
-      "aws",
       "typescript",
+      "aws",
       "kubernetes"
     ],
     "url": "https://www.conductorone.com/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.555415",
+    "posted_date": "2025-11-05T10:46:30.786665",
     "hidden_score": 100
   },
   {
@@ -2029,7 +2040,7 @@
     "tech_stack": [],
     "url": "https://job-boards.greenhouse.io/baton/jobs/4870381007",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.557029",
+    "posted_date": "2025-11-05T10:46:30.788190",
     "hidden_score": 100
   },
   {
@@ -2040,7 +2051,7 @@
     "tech_stack": [],
     "url": "https://ats.rippling.com/vouch-inc/jobs/94026821-80f8-4344-bfe1-3f4d844de999",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.558360",
+    "posted_date": "2025-11-05T10:46:30.789551",
     "hidden_score": 100
   },
   {
@@ -2051,7 +2062,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.560559",
+    "posted_date": "2025-11-05T10:46:30.791711",
     "hidden_score": 100
   },
   {
@@ -2067,7 +2078,7 @@
     ],
     "url": "https://moment.com/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.561844",
+    "posted_date": "2025-11-05T10:46:30.793076",
     "hidden_score": 100
   },
   {
@@ -2078,7 +2089,23 @@
     "tech_stack": [],
     "url": "https://betterstack.com/careers/fullstack-engineer",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.562900",
+    "posted_date": "2025-11-05T10:46:30.794232",
+    "hidden_score": 100
+  },
+  {
+    "id": "dbc4d2dedc93ca4578bf5f7be8225fb2",
+    "company": "Oneleet (YC S22)",
+    "title": "Multiple Roles | US & NATO Countries | Remote | Full-time",
+    "location": "Remote",
+    "tech_stack": [
+      "go",
+      "typescript",
+      "react",
+      "kubernetes"
+    ],
+    "url": "https://jobs.ashbyhq.com/oneleet",
+    "source": "hn who's hiring",
+    "posted_date": "2025-11-05T10:46:30.795413",
     "hidden_score": 100
   },
   {
@@ -2089,23 +2116,7 @@
     "tech_stack": [],
     "url": "https://apply.workable.com/forge-sports/j/22AA0BCD71/",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.563724",
-    "hidden_score": 100
-  },
-  {
-    "id": "dbc4d2dedc93ca4578bf5f7be8225fb2",
-    "company": "Oneleet (YC S22)",
-    "title": "Multiple Roles | US & NATO Countries | Remote | Full-time",
-    "location": "Remote",
-    "tech_stack": [
-      "react",
-      "go",
-      "typescript",
-      "kubernetes"
-    ],
-    "url": "https://jobs.ashbyhq.com/oneleet",
-    "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.564861",
+    "posted_date": "2025-11-05T10:46:30.796264",
     "hidden_score": 100
   },
   {
@@ -2116,7 +2127,7 @@
     "tech_stack": [],
     "url": "https://careers.nothing.tech/",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.565900",
+    "posted_date": "2025-11-05T10:46:30.797304",
     "hidden_score": 100
   },
   {
@@ -2129,7 +2140,7 @@
     ],
     "url": "https://job-boards.greenhouse.io/materialize/jobs/5550315004",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.566914",
+    "posted_date": "2025-11-05T10:46:30.798452",
     "hidden_score": 100
   },
   {
@@ -2140,7 +2151,7 @@
     "tech_stack": [],
     "url": "https://coplane.com/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.567872",
+    "posted_date": "2025-11-05T10:46:30.799546",
     "hidden_score": 100
   },
   {
@@ -2151,7 +2162,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.568667",
+    "posted_date": "2025-11-05T10:46:30.800423",
     "hidden_score": 100
   },
   {
@@ -2165,18 +2176,18 @@
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.569358",
+    "posted_date": "2025-11-05T10:46:30.801188",
     "hidden_score": 100
   },
   {
     "id": "7b672d702b96093ea46b46125efc5abd",
     "company": "Annex",
     "title": "Backend + Data Engineer | Bay Area, Austin | Full-time",
-    "location": "Austin",
+    "location": "San Francisco",
     "tech_stack": [],
     "url": "https://wellfound.com/jobs/3509845-software-engineer-data-engineer",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.570776",
+    "posted_date": "2025-11-05T10:46:30.802609",
     "hidden_score": 100
   },
   {
@@ -2185,18 +2196,18 @@
     "title": "Product Engineers (Full-stack), Infrastructure Engineers, AI Associates | Berlin, Germany ONSITE |",
     "location": "Onsite",
     "tech_stack": [
-      "react",
-      "nextjs",
       "aws",
       "redis",
       "postgres",
-      "azure",
       "gcp",
-      "terraform"
+      "terraform",
+      "react",
+      "azure",
+      "nextjs"
     ],
     "url": "https://jobs.ashbyhq.com/langdock",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.572323",
+    "posted_date": "2025-11-05T10:46:30.804335",
     "hidden_score": 100
   },
   {
@@ -2209,7 +2220,7 @@
     ],
     "url": "https://www.teleskope.ai/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.573559",
+    "posted_date": "2025-11-05T10:46:30.805523",
     "hidden_score": 100
   },
   {
@@ -2222,7 +2233,7 @@
     ],
     "url": "https://www.ycombinator.com/companies/thunder-compute/jobs",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.575590",
+    "posted_date": "2025-11-05T10:46:30.806991",
     "hidden_score": 100
   },
   {
@@ -2231,15 +2242,15 @@
     "title": "Senior Software Engineer | REMOTE (US time zones) |",
     "location": "Remote",
     "tech_stack": [
-      "react",
-      "aws",
       "node",
+      "aws",
       "typescript",
-      "postgresql"
+      "postgresql",
+      "react"
     ],
     "url": "https://jobs.ashbyhq.com/schoolhouse-world/4a6b99f6-9f70-4f1f-8704-bf2f3d41fd8e",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.576835",
+    "posted_date": "2025-11-05T10:46:30.808268",
     "hidden_score": 100
   },
   {
@@ -2250,18 +2261,7 @@
     "tech_stack": [],
     "url": "https://surgehq.ai/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.578385",
-    "hidden_score": 100
-  },
-  {
-    "id": "8a23b6cd47e7e949861fc46954ad7af0",
-    "company": "Flint",
-    "title": "Multiple positions | San Francisco, CA",
-    "location": "Ca",
-    "tech_stack": [],
-    "url": "https://flintai.notion.site/Jobs-Board-1a18be5fbfd680fd9501f6b88d740389",
-    "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.579473",
+    "posted_date": "2025-11-05T10:46:30.809963",
     "hidden_score": 100
   },
   {
@@ -2272,7 +2272,18 @@
     "tech_stack": [],
     "url": "https://www.coveragecat.com/careers/engineering/software-engineer",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.580268",
+    "posted_date": "2025-11-05T10:46:30.810910",
+    "hidden_score": 100
+  },
+  {
+    "id": "8a23b6cd47e7e949861fc46954ad7af0",
+    "company": "Flint",
+    "title": "Multiple positions | San Francisco, CA",
+    "location": "San Francisco",
+    "tech_stack": [],
+    "url": "https://flintai.notion.site/Jobs-Board-1a18be5fbfd680fd9501f6b88d740389",
+    "source": "hn who's hiring",
+    "posted_date": "2025-11-05T10:46:30.812056",
     "hidden_score": 100
   },
   {
@@ -2283,7 +2294,7 @@
     "tech_stack": [],
     "url": "https://jobs.ashbyhq.com/konvu/403ecd3d-7845-47d7-b24c-1fe1877fde8d",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.581729",
+    "posted_date": "2025-11-05T10:46:30.813421",
     "hidden_score": 100
   },
   {
@@ -2292,20 +2303,20 @@
     "title": "Full-Stack Engineers (All Levels), Mobile Engineers, Devops Engineers | Hyderabad, India | ONSITE | ",
     "location": "Onsite",
     "tech_stack": [
-      "react",
-      "angular",
-      "docker",
-      "aws",
-      "redis",
-      "postgres",
       "node",
-      "typescript",
+      "aws",
       "fastapi",
-      "gcp"
+      "redis",
+      "angular",
+      "typescript",
+      "postgres",
+      "gcp",
+      "react",
+      "docker"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.582836",
+    "posted_date": "2025-11-05T10:46:30.814549",
     "hidden_score": 100
   },
   {
@@ -2316,7 +2327,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.583404",
+    "posted_date": "2025-11-05T10:46:30.815097",
     "hidden_score": 100
   },
   {
@@ -2326,17 +2337,17 @@
     "location": "Onsite",
     "tech_stack": [
       "rest",
-      "vue",
-      "docker",
+      "fastapi",
       "redis",
-      "postgres",
-      "typescript",
+      "vue",
       "python",
-      "fastapi"
+      "typescript",
+      "postgres",
+      "docker"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.584751",
+    "posted_date": "2025-11-05T10:46:30.816495",
     "hidden_score": 100
   },
   {
@@ -2349,7 +2360,7 @@
     ],
     "url": "https://apply.workable.com/sumble-inc/",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.592344",
+    "posted_date": "2025-11-05T10:46:30.824672",
     "hidden_score": 100
   },
   {
@@ -2359,13 +2370,13 @@
     "location": "Hybrid",
     "tech_stack": [
       "typescript",
+      "react",
       "aws",
-      "python",
-      "react"
+      "python"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.593856",
+    "posted_date": "2025-11-05T10:46:30.826240",
     "hidden_score": 100
   },
   {
@@ -2376,7 +2387,7 @@
     "tech_stack": [],
     "url": "https://job-boards.greenhouse.io/houseaccount/jobs/4959782007",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.595026",
+    "posted_date": "2025-11-05T10:46:30.827647",
     "hidden_score": 100
   },
   {
@@ -2387,7 +2398,7 @@
     "tech_stack": [],
     "url": "https://workmind.cloud/jobs/reliability-eng/",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.595688",
+    "posted_date": "2025-11-05T10:46:30.828397",
     "hidden_score": 100
   },
   {
@@ -2398,7 +2409,7 @@
     "tech_stack": [],
     "url": "https://www.linkedin.com/jobs/view/4319165179",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.596679",
+    "posted_date": "2025-11-05T10:46:30.829439",
     "hidden_score": 100
   },
   {
@@ -2408,14 +2419,14 @@
     "location": "Remote",
     "tech_stack": [
       "aws",
-      "rust",
-      "typescript",
       "python",
-      "terraform"
+      "typescript",
+      "terraform",
+      "rust"
     ],
     "url": "https://radar.com/jobs#jobs",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.597654",
+    "posted_date": "2025-11-05T10:46:30.830531",
     "hidden_score": 100
   },
   {
@@ -2424,15 +2435,15 @@
     "title": "Founding Engineers & Interns | Full-Time + 6-Month Internships | Onsite Bangalore | Location flexibl",
     "location": "Onsite",
     "tech_stack": [
-      "docker",
       "aws",
-      "golang",
       "python",
+      "golang",
+      "docker",
       "java"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.599050",
+    "posted_date": "2025-11-05T10:46:30.831844",
     "hidden_score": 100
   },
   {
@@ -2443,7 +2454,7 @@
     "tech_stack": [],
     "url": "https://jwpconnatix.com/careers/job-posting/?gh_jid=7257043",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.600383",
+    "posted_date": "2025-11-05T10:46:30.833293",
     "hidden_score": 100
   },
   {
@@ -2452,13 +2463,13 @@
     "title": "Senior Software Engineer | Remote (US Eastern Time ± 2 hrs) | Full-time",
     "location": "Remote",
     "tech_stack": [
-      "django",
       "postgres",
+      "django",
       "python"
     ],
     "url": "https://wellfound.com/jobs/3537806-senior-software-engineer-full-stack-remote",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.601434",
+    "posted_date": "2025-11-05T10:46:30.834504",
     "hidden_score": 100
   },
   {
@@ -2469,7 +2480,7 @@
     "tech_stack": [],
     "url": "https://www.renaissancephilanthropy.org/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.602771",
+    "posted_date": "2025-11-05T10:46:30.835926",
     "hidden_score": 100
   },
   {
@@ -2480,31 +2491,7 @@
     "tech_stack": [],
     "url": "https://www.sphinxdefense.com/#careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.604190",
-    "hidden_score": 100
-  },
-  {
-    "id": "ab8d6bec9ea83ba84231a999931067e4",
-    "company": "pod network",
-    "title": "Competitive salary + equity | Remote | Multiple roles",
-    "location": "Remote",
-    "tech_stack": [],
-    "url": "https://pod.network/hiring",
-    "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.604974",
-    "hidden_score": 100
-  },
-  {
-    "id": "baa930bfec467a7cd02b9efe83ee39f2",
-    "company": "Aqora",
-    "title": "Quantum Computing Expert | Full-time | Paris (HQ) or Remote (Europe)",
-    "location": "Remote",
-    "tech_stack": [
-      "go"
-    ],
-    "url": "https://quantum.jobs/jobs/85500519-quantum-computing-expert",
-    "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.606421",
+    "posted_date": "2025-11-05T10:46:30.837389",
     "hidden_score": 100
   },
   {
@@ -2518,7 +2505,31 @@
     ],
     "url": "https://www.frequenz.com/jobs/senior-rust-engineer",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.607359",
+    "posted_date": "2025-11-05T10:46:30.838350",
+    "hidden_score": 100
+  },
+  {
+    "id": "baa930bfec467a7cd02b9efe83ee39f2",
+    "company": "Aqora",
+    "title": "Quantum Computing Expert | Full-time | Paris (HQ) or Remote (Europe)",
+    "location": "Remote",
+    "tech_stack": [
+      "go"
+    ],
+    "url": "https://quantum.jobs/jobs/85500519-quantum-computing-expert",
+    "source": "hn who's hiring",
+    "posted_date": "2025-11-05T10:46:30.839718",
+    "hidden_score": 100
+  },
+  {
+    "id": "ab8d6bec9ea83ba84231a999931067e4",
+    "company": "pod network",
+    "title": "Competitive salary + equity | Remote | Multiple roles",
+    "location": "Remote",
+    "tech_stack": [],
+    "url": "https://pod.network/hiring",
+    "source": "hn who's hiring",
+    "posted_date": "2025-11-05T10:46:30.840525",
     "hidden_score": 100
   },
   {
@@ -2527,15 +2538,15 @@
     "title": "https://artificialanalysis.ai",
     "location": "Onsite",
     "tech_stack": [
-      "react",
       "javascript",
       "node",
+      "python",
       "typescript",
-      "python"
+      "react"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.608589",
+    "posted_date": "2025-11-05T10:46:30.841903",
     "hidden_score": 100
   },
   {
@@ -2544,16 +2555,16 @@
     "title": "San Francisco Bay Area (Mountain View, CA) | Full-Time",
     "location": "Onsite",
     "tech_stack": [
-      "react",
       "javascript",
-      "rails",
       "ruby",
+      "python",
       "typescript",
-      "python"
+      "react",
+      "rails"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.609814",
+    "posted_date": "2025-11-05T10:46:30.843396",
     "hidden_score": 100
   },
   {
@@ -2564,7 +2575,7 @@
     "tech_stack": [],
     "url": "https://jobs.ashbyhq.com/unto-labs/13df6bea-b253-4c80-ae05-5899022c3471",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.611298",
+    "posted_date": "2025-11-05T10:46:30.844971",
     "hidden_score": 100
   },
   {
@@ -2575,7 +2586,7 @@
     "tech_stack": [],
     "url": "https://brilliant.org/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.612485",
+    "posted_date": "2025-11-05T10:46:30.846202",
     "hidden_score": 100
   },
   {
@@ -2584,16 +2595,16 @@
     "title": "ONSITE | San Francisco, CA",
     "location": "Onsite",
     "tech_stack": [
-      "react",
-      "redis",
-      "graphql",
-      "postgres",
       "node",
-      "typescript"
+      "redis",
+      "typescript",
+      "postgres",
+      "graphql",
+      "react"
     ],
     "url": "https://shepherdinsurance.com/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.613798",
+    "posted_date": "2025-11-05T10:46:30.847575",
     "hidden_score": 100
   },
   {
@@ -2602,14 +2613,14 @@
     "title": "London (ONSITE) | Full-time |",
     "location": "Onsite",
     "tech_stack": [
+      "typescript",
       "postgres",
-      "node",
       "gcp",
-      "typescript"
+      "node"
     ],
     "url": "https://freetrade.io/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.614895",
+    "posted_date": "2025-11-05T10:46:30.848721",
     "hidden_score": 100
   },
   {
@@ -2620,7 +2631,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.615530",
+    "posted_date": "2025-11-05T10:46:30.849415",
     "hidden_score": 100
   },
   {
@@ -2629,14 +2640,14 @@
     "title": "Software Engineer",
     "location": "Remote",
     "tech_stack": [
-      "react",
       "javascript",
-      "java",
-      "typescript"
+      "react",
+      "typescript",
+      "java"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.617847",
+    "posted_date": "2025-11-05T10:46:30.851870",
     "hidden_score": 100
   },
   {
@@ -2650,7 +2661,7 @@
     ],
     "url": "https://shorebird.dev/jobs",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.618833",
+    "posted_date": "2025-11-05T10:46:30.852883",
     "hidden_score": 100
   },
   {
@@ -2659,16 +2670,16 @@
     "title": "NYC only, hybrid 4 days a week in office | Senior Software Engineer (mid career - Staff)",
     "location": "Hybrid",
     "tech_stack": [
-      "react",
+      "go",
       "aws",
-      "postgres",
-      "typescript",
       "python",
-      "go"
+      "typescript",
+      "postgres",
+      "react"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.620602",
+    "posted_date": "2025-11-05T10:46:30.854732",
     "hidden_score": 100
   },
   {
@@ -2679,7 +2690,7 @@
     "tech_stack": [],
     "url": "https://www.float.tech/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.621504",
+    "posted_date": "2025-11-05T10:46:30.855704",
     "hidden_score": 100
   },
   {
@@ -2688,15 +2699,15 @@
     "title": "Founding Engineer, Full Stack | Remote (USA only; Bay Area / CA preferred) | Full-time | $150–200k +",
     "location": "Remote",
     "tech_stack": [
-      "react",
-      "vite",
-      "python",
       "go",
-      "fastapi"
+      "fastapi",
+      "python",
+      "react",
+      "vite"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.623125",
+    "posted_date": "2025-11-05T10:46:30.857315",
     "hidden_score": 100
   },
   {
@@ -2705,16 +2716,16 @@
     "title": "Full-Stack Engineer & Energy Modeling Engineer | Remote (US) | Full-Time*",
     "location": "Remote",
     "tech_stack": [
-      "react",
       "aws",
-      "tailwind",
-      "postgres",
+      "python",
       "typescript",
-      "python"
+      "postgres",
+      "tailwind",
+      "react"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.624422",
+    "posted_date": "2025-11-05T10:46:30.858634",
     "hidden_score": 100
   },
   {
@@ -2727,7 +2738,7 @@
     ],
     "url": "https://careers.monadical.com/",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.626246",
+    "posted_date": "2025-11-05T10:46:30.860781",
     "hidden_score": 100
   },
   {
@@ -2740,7 +2751,7 @@
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.628403",
+    "posted_date": "2025-11-05T10:46:30.862937",
     "hidden_score": 100
   },
   {
@@ -2751,7 +2762,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.630140",
+    "posted_date": "2025-11-05T10:46:30.864721",
     "hidden_score": 100
   },
   {
@@ -2766,7 +2777,7 @@
     ],
     "url": "https://jobs.ashbyhq.com/wirescreen/89e08ab3-01ed-4296-9459-abc96e850aec?utm_source=xgRXlw271G",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.631847",
+    "posted_date": "2025-11-05T10:46:30.866412",
     "hidden_score": 100
   },
   {
@@ -2777,7 +2788,7 @@
     "tech_stack": [],
     "url": "https://www.sanity.io/careers/senior-applied-scientist-ai-ml-new-venture",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.632591",
+    "posted_date": "2025-11-05T10:46:30.867162",
     "hidden_score": 100
   },
   {
@@ -2786,16 +2797,16 @@
     "title": "AI Fullstack Engineer | San Diego, CA (On-Site/Hybrid) | Full-Time | Starting $80K + Competitive Equ",
     "location": "Hybrid",
     "tech_stack": [
-      "svelte",
-      "docker",
-      "python",
       "go",
       "fastapi",
-      "postgresql"
+      "python",
+      "postgresql",
+      "svelte",
+      "docker"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.634470",
+    "posted_date": "2025-11-05T10:46:30.869192",
     "hidden_score": 100
   },
   {
@@ -2809,7 +2820,7 @@
     ],
     "url": "https://idinsight.bamboohr.com/careers/13",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.635476",
+    "posted_date": "2025-11-05T10:46:30.871061",
     "hidden_score": 100
   },
   {
@@ -2818,12 +2829,12 @@
     "title": "Senior Software Engineers, TypeScript Engineers, Fullstack Engineers, Product Manager | Remote |",
     "location": "Remote",
     "tech_stack": [
-      "postgres",
-      "typescript"
+      "typescript",
+      "postgres"
     ],
     "url": "https://jobs.ashbyhq.com/kilocode",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.636820",
+    "posted_date": "2025-11-05T10:46:30.872210",
     "hidden_score": 100
   },
   {
@@ -2834,18 +2845,18 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.640193",
+    "posted_date": "2025-11-05T10:46:30.874845",
     "hidden_score": 100
   },
   {
     "id": "ae150a7f5e91f62b6df7ef9732b00dd1",
     "company": "Sesame",
     "title": "Full-time | SF/NYC/Bellevue | On-site |",
-    "location": "New York",
+    "location": "Usa",
     "tech_stack": [],
     "url": "https://jobs.ashbyhq.com/sesame",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.641254",
+    "posted_date": "2025-11-05T10:46:30.876279",
     "hidden_score": 100
   },
   {
@@ -2855,24 +2866,24 @@
     "location": "Hybrid",
     "tech_stack": [
       "typescript",
+      "react",
       "gcp",
-      "python",
-      "react"
+      "python"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.642850",
+    "posted_date": "2025-11-05T10:46:30.877981",
     "hidden_score": 100
   },
   {
     "id": "42fd5d38b02a5ab102e27153cd6b872d",
     "company": "SPREAD",
     "title": "https://www.spread.ai/",
-    "location": "Germany",
+    "location": "Berlin",
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.644213",
+    "posted_date": "2025-11-05T10:46:30.880007",
     "hidden_score": 100
   },
   {
@@ -2882,13 +2893,13 @@
     "location": "Onsite",
     "tech_stack": [
       "azure",
+      "docker",
       "aws",
-      "java",
-      "docker"
+      "java"
     ],
     "url": "https://careers.adobe.com/us/en/job/ADOBUSR160198EXTERNALENUS/Software-Engineer---Adobe-Experience-Platform",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.645315",
+    "posted_date": "2025-11-05T10:46:30.881156",
     "hidden_score": 100
   },
   {
@@ -2899,7 +2910,7 @@
     "tech_stack": [],
     "url": "https://smarterdx.com/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.646665",
+    "posted_date": "2025-11-05T10:46:30.882632",
     "hidden_score": 100
   },
   {
@@ -2910,7 +2921,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.648997",
+    "posted_date": "2025-11-05T10:46:30.883969",
     "hidden_score": 100
   },
   {
@@ -2919,12 +2930,12 @@
     "title": "Senior Software Engineer | NYC, SF, or Remote (US) | Full-time",
     "location": "Remote",
     "tech_stack": [
-      "rust",
-      "typescript"
+      "typescript",
+      "rust"
     ],
     "url": "https://www.arcol.io/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.649799",
+    "posted_date": "2025-11-05T10:46:30.885033",
     "hidden_score": 100
   },
   {
@@ -2937,7 +2948,7 @@
     ],
     "url": "https://joindomos.com/careers/software-engineer",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.650844",
+    "posted_date": "2025-11-05T10:46:30.886932",
     "hidden_score": 100
   },
   {
@@ -2948,7 +2959,7 @@
     "tech_stack": [],
     "url": "https://jobs.ashbyhq.com/atomic-financial/7e781781-c559-4dde-a006-32f6da25937f?utm_source=1lKr5aj5QZ",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.651672",
+    "posted_date": "2025-11-05T10:46:30.887824",
     "hidden_score": 100
   },
   {
@@ -2957,31 +2968,31 @@
     "title": "Founding Engineer (Co-Founder Track) | Remote (US Based)",
     "location": "Remote",
     "tech_stack": [
-      "react",
       "aws",
-      "typescript",
       "python",
-      "postgresql"
+      "typescript",
+      "postgresql",
+      "react"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.652766",
+    "posted_date": "2025-11-05T10:46:30.888968",
     "hidden_score": 100
   },
   {
     "id": "d2195feba2168d34c28327d7c8661bbd",
     "company": "Findigs",
     "title": "Full-time | NYC | 3x/week in office M,T, Th) | findigs.com",
-    "location": "New York",
+    "location": "Co",
     "tech_stack": [
       "typescript",
-      "node",
+      "react",
       "python",
-      "react"
+      "node"
     ],
     "url": "https://jobs.lever.co/findigs/3b39616d-223f-4326-a500-f804c3e18dcf?lever-origin=applied&lever-source%5B%5D=Hacker%20News",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.653898",
+    "posted_date": "2025-11-05T10:46:30.890580",
     "hidden_score": 100
   },
   {
@@ -2991,13 +3002,13 @@
     "location": "Onsite",
     "tech_stack": [
       "typescript",
-      "fastapi",
       "vue",
-      "python"
+      "python",
+      "fastapi"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.654600",
+    "posted_date": "2025-11-05T10:46:30.891362",
     "hidden_score": 100
   },
   {
@@ -3006,15 +3017,15 @@
     "title": "Full Stack Engineer | On-site (NYC)",
     "location": "New York",
     "tech_stack": [
-      "vue",
       "aws",
-      "typescript",
+      "vue",
       "python",
+      "typescript",
       "postgresql"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.656171",
+    "posted_date": "2025-11-05T10:46:30.894504",
     "hidden_score": 100
   },
   {
@@ -3023,48 +3034,14 @@
     "title": "Founding Engineer, Founding UX Designer, Founding GTM | SF, CA ONSITE | Full-time",
     "location": "Onsite",
     "tech_stack": [
-      "react",
       "go",
-      "postgresql",
-      "typescript"
+      "typescript",
+      "react",
+      "postgresql"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.658070",
-    "hidden_score": 100
-  },
-  {
-    "id": "280cb38df3abf460ccb25db037861ab0",
-    "company": "The project",
-    "title": "Rust + TypeScript | Open Source | London, UK (onsite) | Full-time | £80–120k + 0.5%",
-    "location": "Onsite",
-    "tech_stack": [
-      "react",
-      "rust",
-      "typescript"
-    ],
-    "url": "https://jobs.polymer.co/vibe-kanban/36855?source=hn",
-    "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.658861",
-    "hidden_score": 100
-  },
-  {
-    "id": "90bf6a7a3c01a4e1fdb47512928bb031",
-    "company": "Normal Computing",
-    "title": "Multiple Roles | New York, San Francisco, London, Copenhagen | ONSITE/HYBRID | Full-time | normalcom",
-    "location": "Onsite",
-    "tech_stack": [
-      "react",
-      "kubernetes",
-      "aws",
-      "typescript",
-      "python",
-      "go",
-      "terraform"
-    ],
-    "url": "https://jobs.ashbyhq.com/Normal%20Computing%20AI",
-    "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.660142",
+    "posted_date": "2025-11-05T10:46:30.896417",
     "hidden_score": 100
   },
   {
@@ -3073,14 +3050,48 @@
     "title": "API Engineer, Front End Engineer | Remote",
     "location": "Remote",
     "tech_stack": [
+      "typescript",
       "react",
-      "node",
       "postgresql",
-      "typescript"
+      "node"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.661329",
+    "posted_date": "2025-11-05T10:46:30.897574",
+    "hidden_score": 100
+  },
+  {
+    "id": "280cb38df3abf460ccb25db037861ab0",
+    "company": "The project",
+    "title": "Rust + TypeScript | Open Source | London, UK (onsite) | Full-time | £80–120k + 0.5%",
+    "location": "Onsite",
+    "tech_stack": [
+      "typescript",
+      "react",
+      "rust"
+    ],
+    "url": "https://jobs.polymer.co/vibe-kanban/36855?source=hn",
+    "source": "hn who's hiring",
+    "posted_date": "2025-11-05T10:46:30.898348",
+    "hidden_score": 100
+  },
+  {
+    "id": "90bf6a7a3c01a4e1fdb47512928bb031",
+    "company": "Normal Computing",
+    "title": "Multiple Roles | New York, San Francisco, London, Copenhagen | ONSITE/HYBRID | Full-time | normalcom",
+    "location": "Onsite",
+    "tech_stack": [
+      "go",
+      "aws",
+      "python",
+      "kubernetes",
+      "typescript",
+      "terraform",
+      "react"
+    ],
+    "url": "https://jobs.ashbyhq.com/Normal%20Computing%20AI",
+    "source": "hn who's hiring",
+    "posted_date": "2025-11-05T10:46:30.899770",
     "hidden_score": 100
   },
   {
@@ -3089,14 +3100,14 @@
     "title": "Founding Engineer (Full Stack) | Full-time | Remote (US)",
     "location": "Remote",
     "tech_stack": [
+      "typescript",
       "react",
       "mongodb",
-      "node",
-      "typescript"
+      "node"
     ],
     "url": "https://www.figuretwo.com/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.662405",
+    "posted_date": "2025-11-05T10:46:30.901003",
     "hidden_score": 100
   },
   {
@@ -3107,7 +3118,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.663473",
+    "posted_date": "2025-11-05T10:46:30.902160",
     "hidden_score": 100
   },
   {
@@ -3118,7 +3129,7 @@
     "tech_stack": [],
     "url": "https://ats.rippling.com/rippling/jobs/631e8120-3e87-4cb2-8083-3bc4324069bd",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.665151",
+    "posted_date": "2025-11-05T10:46:30.903726",
     "hidden_score": 100
   },
   {
@@ -3129,7 +3140,7 @@
     "tech_stack": [],
     "url": "https://jeenie.com/company/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.666263",
+    "posted_date": "2025-11-05T10:46:30.904916",
     "hidden_score": 100
   },
   {
@@ -3142,7 +3153,7 @@
     ],
     "url": "https://app.dover.com/jobs/deviceflow",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.667191",
+    "posted_date": "2025-11-05T10:46:30.905867",
     "hidden_score": 100
   },
   {
@@ -3153,7 +3164,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.667997",
+    "posted_date": "2025-11-05T10:46:30.906696",
     "hidden_score": 100
   },
   {
@@ -3163,13 +3174,13 @@
     "location": "Remote",
     "tech_stack": [
       "react",
+      "ruby",
       "rails",
-      "vue",
-      "ruby"
+      "vue"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.668706",
+    "posted_date": "2025-11-05T10:46:30.907470",
     "hidden_score": 100
   },
   {
@@ -3178,14 +3189,14 @@
     "title": "ONSITE - San Francisco | Full-time |",
     "location": "Onsite",
     "tech_stack": [
-      "typescript",
       "go",
+      "typescript",
       "rust",
       "python"
     ],
     "url": "https://jobs.ashbyhq.com/trychroma/9ed3aee8-07dd-44e3-9ca1-dd1a3020fb6f?utm_source=xmKJgJQWpY",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.669690",
+    "posted_date": "2025-11-05T10:46:30.908470",
     "hidden_score": 100
   },
   {
@@ -3196,7 +3207,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.670482",
+    "posted_date": "2025-11-05T10:46:30.909399",
     "hidden_score": 100
   },
   {
@@ -3207,7 +3218,7 @@
     "tech_stack": [],
     "url": "https://posthog.com/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.671343",
+    "posted_date": "2025-11-05T10:46:30.910376",
     "hidden_score": 100
   },
   {
@@ -3218,7 +3229,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.673034",
+    "posted_date": "2025-11-05T10:46:30.912066",
     "hidden_score": 100
   },
   {
@@ -3231,7 +3242,7 @@
     ],
     "url": "https://www.hestus.co/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.673938",
+    "posted_date": "2025-11-05T10:46:30.912982",
     "hidden_score": 100
   },
   {
@@ -3242,7 +3253,7 @@
     "tech_stack": [],
     "url": "https://ats.rippling.com/polar-sky/jobs/a04ed5b7-6202-45e6-b6e5-389a75d01e20",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.676398",
+    "posted_date": "2025-11-05T10:46:30.914224",
     "hidden_score": 100
   },
   {
@@ -3251,16 +3262,16 @@
     "title": "Senior Backend & Frontend Engineer positions | New York, NY | Full-time | REMOTE (4-hour overlap wit",
     "location": "Remote",
     "tech_stack": [
-      "kubernetes",
       "aws",
-      "vite",
+      "kubernetes",
       "typescript",
+      "terraform",
       "docker",
-      "terraform"
+      "vite"
     ],
     "url": "https://jobs.narrative.io/",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.677831",
+    "posted_date": "2025-11-05T10:46:30.915816",
     "hidden_score": 100
   },
   {
@@ -3275,7 +3286,7 @@
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.679540",
+    "posted_date": "2025-11-05T10:46:30.917876",
     "hidden_score": 100
   },
   {
@@ -3290,7 +3301,7 @@
     ],
     "url": "https://20220112223644_yer4zwtstda5jc3k.applytojob.com/apply/OUGEj3goAY/Machine-Learning-Engineer?source=LINK",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.680154",
+    "posted_date": "2025-11-05T10:46:30.918563",
     "hidden_score": 100
   },
   {
@@ -3299,14 +3310,14 @@
     "title": "Compass is hiring a full-time front-end developer.",
     "location": "Onsite",
     "tech_stack": [
+      "typescript",
       "react",
-      "css",
       "gcp",
-      "typescript"
+      "css"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.681894",
+    "posted_date": "2025-11-05T10:46:30.920426",
     "hidden_score": 100
   },
   {
@@ -3319,21 +3330,21 @@
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.682812",
+    "posted_date": "2025-11-05T10:46:30.921339",
     "hidden_score": 100
   },
   {
     "id": "39da0460b96ac3a783d8fd2fbbb1c858",
     "company": "Boundary (YC W23)",
     "title": "Software engineer (compilers) | Seattle, USA (in person) | Full-time",
-    "location": "Seattle",
+    "location": "Usa",
     "tech_stack": [
-      "rust",
-      "typescript"
+      "typescript",
+      "rust"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.683596",
+    "posted_date": "2025-11-05T10:46:30.923109",
     "hidden_score": 100
   },
   {
@@ -3346,7 +3357,7 @@
     ],
     "url": "https://foxglove.dev/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.684399",
+    "posted_date": "2025-11-05T10:46:30.923988",
     "hidden_score": 100
   },
   {
@@ -3355,13 +3366,13 @@
     "title": "Software Engineer",
     "location": "Remote",
     "tech_stack": [
+      "typescript",
       "react",
-      "mongodb",
-      "typescript"
+      "mongodb"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.685228",
+    "posted_date": "2025-11-05T10:46:30.924833",
     "hidden_score": 100
   },
   {
@@ -3372,7 +3383,7 @@
     "tech_stack": [],
     "url": "https://jobs.ashbyhq.com/protege",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.686060",
+    "posted_date": "2025-11-05T10:46:30.925705",
     "hidden_score": 100
   },
   {
@@ -3381,13 +3392,13 @@
     "title": "Product Engineer | Ireland & Remote (EMEA preferred) | glitchads.ai",
     "location": "Remote",
     "tech_stack": [
-      "react",
       "tailwind",
+      "react",
       "python"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.686829",
+    "posted_date": "2025-11-05T10:46:30.926567",
     "hidden_score": 100
   },
   {
@@ -3398,7 +3409,7 @@
     "tech_stack": [],
     "url": "https://jobs.ashbyhq.com/bedrock/4b88d31a-c79c-43eb-af1a-86d4fff1902b",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.690348",
+    "posted_date": "2025-11-05T10:46:30.930507",
     "hidden_score": 100
   },
   {
@@ -3409,7 +3420,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.690960",
+    "posted_date": "2025-11-05T10:46:30.931199",
     "hidden_score": 100
   },
   {
@@ -3423,7 +3434,7 @@
     ],
     "url": "https://xata.io/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.691677",
+    "posted_date": "2025-11-05T10:46:30.931891",
     "hidden_score": 100
   },
   {
@@ -3434,7 +3445,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.692402",
+    "posted_date": "2025-11-05T10:46:30.932598",
     "hidden_score": 100
   },
   {
@@ -3445,7 +3456,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.694444",
+    "posted_date": "2025-11-05T10:46:30.934818",
     "hidden_score": 100
   },
   {
@@ -3456,7 +3467,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.695123",
+    "posted_date": "2025-11-05T10:46:30.935592",
     "hidden_score": 100
   },
   {
@@ -3465,13 +3476,13 @@
     "title": "Junior Developers (2) | Christchurch, NZ | Hybrid (mostly WFH) | Contract → possible long-term",
     "location": "Hybrid",
     "tech_stack": [
-      "postgres",
       "svelte",
+      "postgres",
       "python"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.696042",
+    "posted_date": "2025-11-05T10:46:30.936554",
     "hidden_score": 100
   },
   {
@@ -3482,7 +3493,7 @@
     "tech_stack": [],
     "url": "https://nango.dev/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.696684",
+    "posted_date": "2025-11-05T10:46:30.937261",
     "hidden_score": 100
   },
   {
@@ -3491,15 +3502,15 @@
     "title": "Cambridge, MA | New York, NY | Full-time | Onsite",
     "location": "Onsite",
     "tech_stack": [
-      "react",
-      "nextjs",
-      "django",
+      "python",
       "typescript",
-      "python"
+      "react",
+      "django",
+      "nextjs"
     ],
     "url": "https://jobs.ashbyhq.com/suno",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.697602",
+    "posted_date": "2025-11-05T10:46:30.938224",
     "hidden_score": 100
   },
   {
@@ -3510,7 +3521,7 @@
     "tech_stack": [],
     "url": "https://yuzu.health/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.698312",
+    "posted_date": "2025-11-05T10:46:30.938877",
     "hidden_score": 100
   },
   {
@@ -3519,25 +3530,25 @@
     "title": "Principal Software Engineer | Remote (UK/EU) | Full-time |",
     "location": "Remote",
     "tech_stack": [
+      "terraform",
       "typescript",
-      "node",
       "python",
-      "terraform"
+      "node"
     ],
     "url": "https://recombine.ai/careers/",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.699022",
+    "posted_date": "2025-11-05T10:46:30.939631",
     "hidden_score": 100
   },
   {
     "id": "58e018d052fbd37c62697a1af1144672",
     "company": "Ankr Health",
     "title": "based company with offices in San Francisco, Houston, and Bangalore.",
-    "location": "Bangalore",
+    "location": "Usa",
     "tech_stack": [],
     "url": "https://foundersarehiring.com/job/on-site/manager-clinical-research-oncology-6904468af8b6b97b497a2376",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.699784",
+    "posted_date": "2025-11-05T10:46:30.940241",
     "hidden_score": 100
   },
   {
@@ -3546,14 +3557,14 @@
     "title": "Principal Engineer / Tech Lead | REMOTE (US) | Full-time",
     "location": "Remote",
     "tech_stack": [
+      "typescript",
       "react",
       "aws",
-      "node",
-      "typescript"
+      "node"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.702066",
+    "posted_date": "2025-11-05T10:46:30.942615",
     "hidden_score": 100
   },
   {
@@ -3564,7 +3575,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.703637",
+    "posted_date": "2025-11-05T10:46:30.944457",
     "hidden_score": 100
   },
   {
@@ -3573,15 +3584,15 @@
     "title": "Lead Fullstack Engineer | Remote (US) | 150-200k",
     "location": "Remote",
     "tech_stack": [
-      "react",
       "aws",
-      "postgres",
       "golang",
-      "terraform"
+      "postgres",
+      "terraform",
+      "react"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.704143",
+    "posted_date": "2025-11-05T10:46:30.944999",
     "hidden_score": 100
   },
   {
@@ -3592,7 +3603,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.704678",
+    "posted_date": "2025-11-05T10:46:30.945585",
     "hidden_score": 100
   },
   {
@@ -3601,15 +3612,15 @@
     "title": "Staff Backend Engineer - AI Engineer – REMOTE LATAM - We build AI tools that help high-volume law fi",
     "location": "Remote",
     "tech_stack": [
-      "kubernetes",
-      "postgres",
-      "typescript",
       "python",
+      "kubernetes",
+      "typescript",
+      "postgres",
       "gcp"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.705695",
+    "posted_date": "2025-11-05T10:46:30.946665",
     "hidden_score": 100
   },
   {
@@ -3620,7 +3631,7 @@
     "tech_stack": [],
     "url": "https://jobs.careers.microsoft.com/global/en/job/1903609/Senior-Security-Researcher",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.706990",
+    "posted_date": "2025-11-05T10:46:30.947842",
     "hidden_score": 100
   },
   {
@@ -3633,7 +3644,7 @@
     ],
     "url": "https://tracebit.com/careers#section_open-positions",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.707684",
+    "posted_date": "2025-11-05T10:46:30.948571",
     "hidden_score": 100
   },
   {
@@ -3642,16 +3653,16 @@
     "title": "San Francisco, NYC, REMOTE | Engineering, Data Science, Risk Operations, Growth, Compliance | found.",
     "location": "Remote",
     "tech_stack": [
-      "react",
-      "kubernetes",
-      "rails",
+      "mysql",
       "ruby",
+      "kubernetes",
       "typescript",
-      "mysql"
+      "react",
+      "rails"
     ],
     "url": "https://found.com/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.708281",
+    "posted_date": "2025-11-05T10:46:30.949217",
     "hidden_score": 100
   },
   {
@@ -3662,20 +3673,20 @@
     "tech_stack": [],
     "url": "https://jobs.ashbyhq.com/salesjack/5645b4c3-dc1b-4021-83d4-25393520b7f5",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.710328",
+    "posted_date": "2025-11-05T10:46:30.951533",
     "hidden_score": 100
   },
   {
     "id": "c38aab726bff4db2e7be4f1092e7b8c9",
     "company": "Pickaxe",
     "title": "Founding Typescript Engineer | Full-Time | In Person (SF)",
-    "location": "San Francisco",
+    "location": "Co",
     "tech_stack": [
       "typescript"
     ],
     "url": "https://pickaxe.co/careers/full-stack-engineer",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.711323",
+    "posted_date": "2025-11-05T10:46:30.952386",
     "hidden_score": 100
   },
   {
@@ -3684,15 +3695,15 @@
     "title": "Gumroad — NYC (onsite/hybrid) — Hiring Product/Engineering",
     "location": "Onsite",
     "tech_stack": [
-      "react",
-      "rails",
       "redis",
+      "typescript",
       "postgres",
-      "typescript"
+      "react",
+      "rails"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.712116",
+    "posted_date": "2025-11-05T10:46:30.953365",
     "hidden_score": 100
   },
   {
@@ -3705,7 +3716,7 @@
     ],
     "url": "https://jobs.ashbyhq.com/duck-duck-go/abb953ee-5bb7-4637-9f66-ad555b446ab7?utm_source=1DKZJgG9d9",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.713802",
+    "posted_date": "2025-11-05T10:46:30.955170",
     "hidden_score": 100
   },
   {
@@ -3714,16 +3725,16 @@
     "title": "Hiring in Berlin or Remote EU (role dependent)",
     "location": "Remote",
     "tech_stack": [
-      "svelte",
-      "aws",
-      "postgres",
       "node",
+      "aws",
+      "python",
       "typescript",
-      "python"
+      "postgres",
+      "svelte"
     ],
     "url": "https://mercanis.jobs.personio.de/",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.715963",
+    "posted_date": "2025-11-05T10:46:30.957264",
     "hidden_score": 100
   },
   {
@@ -3734,7 +3745,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.716361",
+    "posted_date": "2025-11-05T10:46:30.957643",
     "hidden_score": 100
   },
   {
@@ -3744,13 +3755,13 @@
     "location": "Remote",
     "tech_stack": [
       "typescript",
+      "react",
       "nextjs",
-      "python",
-      "react"
+      "python"
     ],
     "url": "https://www.documentcrunch.com/careers#open-roles",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.717036",
+    "posted_date": "2025-11-05T10:46:30.958374",
     "hidden_score": 100
   },
   {
@@ -3763,7 +3774,7 @@
     ],
     "url": "https://careers.besgroup.com/jobs/vacancy/applications-development-lead-2705-670/2723/description/",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.717505",
+    "posted_date": "2025-11-05T10:46:30.958872",
     "hidden_score": 100
   },
   {
@@ -3774,7 +3785,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.718279",
+    "posted_date": "2025-11-05T10:46:30.959781",
     "hidden_score": 100
   },
   {
@@ -3783,15 +3794,15 @@
     "title": "Software Engineer",
     "location": "Onsite",
     "tech_stack": [
-      "react",
-      "graphql",
-      "postgres",
       "node",
-      "gcp"
+      "postgres",
+      "gcp",
+      "graphql",
+      "react"
     ],
     "url": "https://jobs.ashbyhq.com/two-dots",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.718757",
+    "posted_date": "2025-11-05T10:46:30.960319",
     "hidden_score": 100
   },
   {
@@ -3802,7 +3813,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.719342",
+    "posted_date": "2025-11-05T10:46:30.960963",
     "hidden_score": 100
   },
   {
@@ -3811,13 +3822,13 @@
     "title": "Senior Full-Stack Engineer | Berlin, Germany | REMOTE (CET) | Full-time",
     "location": "Remote",
     "tech_stack": [
+      "typescript",
       "react",
-      "tailwind",
-      "typescript"
+      "tailwind"
     ],
     "url": "https://taskwise.jobs.personio.com/job/1646275",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.720423",
+    "posted_date": "2025-11-05T10:46:30.962046",
     "hidden_score": 100
   },
   {
@@ -3828,7 +3839,7 @@
     "tech_stack": [],
     "url": "https://exe.dev/jobs",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.721005",
+    "posted_date": "2025-11-05T10:46:30.962461",
     "hidden_score": 100
   },
   {
@@ -3837,13 +3848,13 @@
     "title": "Senior Engineer (3+ YoE) | ONSITE in San Francisco, CA",
     "location": "Onsite",
     "tech_stack": [
-      "react",
       "postgres",
+      "react",
       "graphql"
     ],
     "url": "https://comulate.com/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.721635",
+    "posted_date": "2025-11-05T10:46:30.963155",
     "hidden_score": 100
   },
   {
@@ -3854,7 +3865,7 @@
     "tech_stack": [],
     "url": "https://job-boards.greenhouse.io/beautifulai/jobs/4802989007",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.722651",
+    "posted_date": "2025-11-05T10:46:30.964288",
     "hidden_score": 100
   },
   {
@@ -3865,7 +3876,7 @@
     "tech_stack": [],
     "url": "https://job-boards.greenhouse.io/lightningai",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.723124",
+    "posted_date": "2025-11-05T10:46:30.964798",
     "hidden_score": 100
   },
   {
@@ -3874,18 +3885,18 @@
     "title": "Stack Software Engineer — TypeScript / Node / Postgres / AI",
     "location": "Remote",
     "tech_stack": [
-      "react",
-      "css",
-      "aws",
-      "html",
-      "postgres",
       "node",
+      "aws",
+      "python",
       "typescript",
-      "python"
+      "postgres",
+      "html",
+      "react",
+      "css"
     ],
     "url": "https://www.prairielearn.com/jobs",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.725041",
+    "posted_date": "2025-11-05T10:46:30.966700",
     "hidden_score": 100
   },
   {
@@ -3896,7 +3907,7 @@
     "tech_stack": [],
     "url": "https://www.airmo.io/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.725640",
+    "posted_date": "2025-11-05T10:46:30.967285",
     "hidden_score": 100
   },
   {
@@ -3907,7 +3918,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.726183",
+    "posted_date": "2025-11-05T10:46:30.968008",
     "hidden_score": 100
   },
   {
@@ -3918,7 +3929,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.726780",
+    "posted_date": "2025-11-05T10:46:30.968651",
     "hidden_score": 100
   },
   {
@@ -3932,7 +3943,7 @@
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.727262",
+    "posted_date": "2025-11-05T10:46:30.969164",
     "hidden_score": 100
   },
   {
@@ -3941,13 +3952,13 @@
     "title": "https://mithril.ai/",
     "location": "Onsite",
     "tech_stack": [
-      "node",
       "kubernetes",
+      "node",
       "terraform"
     ],
     "url": "https://job-boards.greenhouse.io/mithril/jobs/4199826007",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.729393",
+    "posted_date": "2025-11-05T10:46:30.971323",
     "hidden_score": 100
   },
   {
@@ -3958,7 +3969,7 @@
     "tech_stack": [],
     "url": "https://jobs.ashbyhq.com/knowlix",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.730051",
+    "posted_date": "2025-11-05T10:46:30.972010",
     "hidden_score": 100
   },
   {
@@ -3969,7 +3980,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.730679",
+    "posted_date": "2025-11-05T10:46:30.972661",
     "hidden_score": 100
   },
   {
@@ -3980,7 +3991,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.732315",
+    "posted_date": "2025-11-05T10:46:30.974190",
     "hidden_score": 100
   },
   {
@@ -3989,12 +4000,12 @@
     "title": "Stack Engineer (AI-focused, remote, CET!)",
     "location": "Remote",
     "tech_stack": [
-      "java",
-      "postgresql"
+      "postgresql",
+      "java"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.733016",
+    "posted_date": "2025-11-05T10:46:30.974866",
     "hidden_score": 100
   },
   {
@@ -4008,7 +4019,7 @@
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.735429",
+    "posted_date": "2025-11-05T10:46:30.977561",
     "hidden_score": 100
   },
   {
@@ -4018,13 +4029,13 @@
     "location": "Remote",
     "tech_stack": [
       "go",
-      "golang",
       "aws",
-      "postgresql"
+      "postgresql",
+      "golang"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.736609",
+    "posted_date": "2025-11-05T10:46:30.978863",
     "hidden_score": 100
   },
   {
@@ -4035,7 +4046,7 @@
     "tech_stack": [],
     "url": "https://elicit.com/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.738486",
+    "posted_date": "2025-11-05T10:46:30.980808",
     "hidden_score": 100
   },
   {
@@ -4046,7 +4057,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.738945",
+    "posted_date": "2025-11-05T10:46:30.981292",
     "hidden_score": 100
   },
   {
@@ -4056,12 +4067,12 @@
     "location": "Onsite",
     "tech_stack": [
       "react",
-      "golang",
-      "postgresql"
+      "postgresql",
+      "golang"
     ],
     "url": "https://www.akeno.ai/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.740207",
+    "posted_date": "2025-11-05T10:46:30.982494",
     "hidden_score": 100
   },
   {
@@ -4075,7 +4086,7 @@
     ],
     "url": "https://apply.10x-partners.com/",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.741761",
+    "posted_date": "2025-11-05T10:46:30.984098",
     "hidden_score": 100
   },
   {
@@ -4086,7 +4097,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.742826",
+    "posted_date": "2025-11-05T10:46:30.985315",
     "hidden_score": 100
   },
   {
@@ -4095,13 +4106,13 @@
     "title": "Full-Stack Software Developer | Huntsville, AL (onsite) | Full-Time",
     "location": "Onsite",
     "tech_stack": [
-      "rest",
       "javascript",
+      "rest",
       "typescript"
     ],
     "url": "https://aviagen.wd1.myworkdayjobs.com/en-US/aviagen-careers/job/Full-Stack-Software-Developer_JR101272",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.744785",
+    "posted_date": "2025-11-05T10:46:30.987320",
     "hidden_score": 100
   },
   {
@@ -4114,7 +4125,7 @@
     ],
     "url": "https://jobs.ashbyhq.com/backmarket/b2a29b43-f5a9-4138-b710-a87b51f12637",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.745151",
+    "posted_date": "2025-11-05T10:46:30.987733",
     "hidden_score": 100
   },
   {
@@ -4123,15 +4134,15 @@
     "title": "India",
     "location": "Remote",
     "tech_stack": [
-      "react",
-      "svelte",
+      "go",
       "vue",
       "typescript",
-      "go"
+      "svelte",
+      "react"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.745898",
+    "posted_date": "2025-11-05T10:46:30.988546",
     "hidden_score": 100
   },
   {
@@ -4140,15 +4151,15 @@
     "title": "Software Engineer",
     "location": "Remote",
     "tech_stack": [
-      "django",
-      "graphql",
-      "postgres",
       "python",
-      "gcp"
+      "postgres",
+      "gcp",
+      "graphql",
+      "django"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.746583",
+    "posted_date": "2025-11-05T10:46:30.989295",
     "hidden_score": 100
   },
   {
@@ -4157,16 +4168,16 @@
     "title": "Senior Engineer (Backend, Full-stack) | Full-Time | Remote (US) | 170-200k base + equity | Visa Spon",
     "location": "Remote",
     "tech_stack": [
-      "react",
-      "css",
-      "html",
+      "python",
       "tailwind",
       "postgres",
-      "python"
+      "html",
+      "react",
+      "css"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.748398",
+    "posted_date": "2025-11-05T10:46:30.991273",
     "hidden_score": 100
   },
   {
@@ -4177,25 +4188,25 @@
     "tech_stack": [],
     "url": "https://www.linkedin.com/jobs/view/4320217892/",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.749187",
+    "posted_date": "2025-11-05T10:46:30.992061",
     "hidden_score": 100
   },
   {
     "id": "6d514377947db90021a0a43a570cbeef",
     "company": "Stellar (",
     "title": "https://stellarcs.ai",
-    "location": "Netherlands",
+    "location": "Usa",
     "tech_stack": [
-      "react",
-      "nextjs",
+      "go",
       "node",
       "typescript",
-      "go",
-      "gcp"
+      "gcp",
+      "react",
+      "nextjs"
     ],
     "url": "https://www.stellarcs.ai/careers/software-engineer",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.752055",
+    "posted_date": "2025-11-05T10:46:30.995110",
     "hidden_score": 100
   },
   {
@@ -4208,7 +4219,7 @@
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.752411",
+    "posted_date": "2025-11-05T10:46:30.995498",
     "hidden_score": 100
   },
   {
@@ -4217,14 +4228,14 @@
     "title": "Multiple Roles | New York City | Full-time | In Office |",
     "location": "New York",
     "tech_stack": [
+      "node",
       "react",
       "postgres",
-      "node",
       "python"
     ],
     "url": "https://wellfound.com/company/arya-health-ai/jobs",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.753812",
+    "posted_date": "2025-11-05T10:46:30.998834",
     "hidden_score": 100
   },
   {
@@ -4233,18 +4244,18 @@
     "title": "FULLY REMOTE | Full-time | Able to work 4+ hours overlap with mainland US (global)  | 1 x Tech Lead ",
     "location": "Remote",
     "tech_stack": [
+      "node",
+      "mysql",
+      "aws",
       "rest",
       "vue",
-      "aws",
-      "graphql",
-      "node",
       "typescript",
-      "docker",
-      "mysql"
+      "graphql",
+      "docker"
     ],
     "url": "https://www.ycombinator.com/companies/gogograndparent/jobs",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.754559",
+    "posted_date": "2025-11-05T10:46:30.999656",
     "hidden_score": 100
   },
   {
@@ -4255,7 +4266,7 @@
     "tech_stack": [],
     "url": "https://jobs.ashbyhq.com/continua/",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.756858",
+    "posted_date": "2025-11-05T10:46:31.002095",
     "hidden_score": 100
   },
   {
@@ -4265,13 +4276,13 @@
     "location": "Remote",
     "tech_stack": [
       "react",
+      "ruby",
       "rails",
-      "java",
-      "ruby"
+      "java"
     ],
     "url": "https://tbkbank.wd1.myworkdayjobs.com/en-US/tfin/job/Senior-Software-Engineer---Ruby-on-Rails--Remote-_REQ-3796-1",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.758750",
+    "posted_date": "2025-11-05T10:46:31.004058",
     "hidden_score": 100
   },
   {
@@ -4282,7 +4293,7 @@
     "tech_stack": [],
     "url": "https://tbkbank.wd1.myworkdayjobs.com/en-US/tfin/details/Staff-Software-Engineer_REQ-4581?q=staff",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.759695",
+    "posted_date": "2025-11-05T10:46:31.004756",
     "hidden_score": 100
   },
   {
@@ -4293,7 +4304,7 @@
     "tech_stack": [],
     "url": "https://jobs.ashbyhq.com/neon-health",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.761301",
+    "posted_date": "2025-11-05T10:46:31.006431",
     "hidden_score": 100
   },
   {
@@ -4302,18 +4313,18 @@
     "title": "Multiple Roles | Toronto, Canada & Austin, Texas (ONSITE/HYBRID) | Full-time",
     "location": "Onsite",
     "tech_stack": [
-      "react",
-      "docker",
       "aws",
-      "postgres",
-      "typescript",
-      "python",
       "fastapi",
-      "terraform"
+      "python",
+      "typescript",
+      "postgres",
+      "terraform",
+      "react",
+      "docker"
     ],
     "url": "https://reffie.me/jobs/swe-fullstack-toronto",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.762413",
+    "posted_date": "2025-11-05T10:46:31.007690",
     "hidden_score": 100
   },
   {
@@ -4326,7 +4337,7 @@
     ],
     "url": "https://jobs.ashbyhq.com/Railway?utm_source=DayMzWzJ0P",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.764050",
+    "posted_date": "2025-11-05T10:46:31.009421",
     "hidden_score": 100
   },
   {
@@ -4335,13 +4346,13 @@
     "title": "Distributed Systems Eng. & Data Engineers | San Francisco (on-site & remote), CA",
     "location": "Remote",
     "tech_stack": [
+      "kubernetes",
       "go",
-      "python",
-      "kubernetes"
+      "python"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.766150",
+    "posted_date": "2025-11-05T10:46:31.011600",
     "hidden_score": 100
   },
   {
@@ -4352,7 +4363,7 @@
     "tech_stack": [],
     "url": "https://source.network/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.768109",
+    "posted_date": "2025-11-05T10:46:31.013618",
     "hidden_score": 100
   },
   {
@@ -4363,7 +4374,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.770895",
+    "posted_date": "2025-11-05T10:46:31.016511",
     "hidden_score": 100
   },
   {
@@ -4374,7 +4385,7 @@
     "tech_stack": [],
     "url": "https://www.temporal.io/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.774414",
+    "posted_date": "2025-11-05T10:46:31.018999",
     "hidden_score": 100
   },
   {
@@ -4385,7 +4396,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.775667",
+    "posted_date": "2025-11-05T10:46:31.020161",
     "hidden_score": 100
   },
   {
@@ -4396,7 +4407,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.778290",
+    "posted_date": "2025-11-05T10:46:31.022884",
     "hidden_score": 100
   },
   {
@@ -4405,18 +4416,18 @@
     "title": "Software Engineer",
     "location": "Hybrid",
     "tech_stack": [
+      "go",
       "vue",
-      "rust",
+      "python",
       "golang",
       "typescript",
-      "python",
-      "go",
+      "terraform",
       "docker",
-      "terraform"
+      "rust"
     ],
     "url": "https://allspice.io/careers",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.781076",
+    "posted_date": "2025-11-05T10:46:31.025551",
     "hidden_score": 100
   },
   {
@@ -4426,13 +4437,13 @@
     "location": "Remote",
     "tech_stack": [
       "typescript",
-      "golang",
+      "react",
       "python",
-      "react"
+      "golang"
     ],
     "url": "https://careers.abnormal.ai",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.782652",
+    "posted_date": "2025-11-05T10:46:31.027322",
     "hidden_score": 100
   },
   {
@@ -4443,7 +4454,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.784460",
+    "posted_date": "2025-11-05T10:46:31.029173",
     "hidden_score": 100
   },
   {
@@ -4452,18 +4463,18 @@
     "title": "Software Engineer",
     "location": "Remote",
     "tech_stack": [
-      "react",
-      "aws",
-      "postgres",
       "node",
-      "typescript",
-      "python",
+      "aws",
       "fastapi",
-      "terraform"
+      "python",
+      "typescript",
+      "postgres",
+      "terraform",
+      "react"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.786884",
+    "posted_date": "2025-11-05T10:46:31.031589",
     "hidden_score": 100
   },
   {
@@ -4472,13 +4483,13 @@
     "title": "Berlin, Germany | REMOTE (Europe/+- 2h timezone) | FULL-TIME | AI Creative Suite",
     "location": "Remote",
     "tech_stack": [
-      "react",
       "go",
-      "typescript"
+      "typescript",
+      "react"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.787763",
+    "posted_date": "2025-11-05T10:46:31.032569",
     "hidden_score": 100
   },
   {
@@ -4487,12 +4498,12 @@
     "title": "REMOTE (US-Based Preferred) | Full-Time | spruceid.com",
     "location": "Remote",
     "tech_stack": [
-      "rust",
-      "typescript"
+      "typescript",
+      "rust"
     ],
     "url": "https://jobs.lever.co/sprucesystems/",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.790023",
+    "posted_date": "2025-11-05T10:46:31.034930",
     "hidden_score": 100
   },
   {
@@ -4503,7 +4514,7 @@
     "tech_stack": [],
     "url": "https://jobs.ashbyhq.com/creditgenie/af8cbaca-5c9d-407a-a085-1589c8ad7c57",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.791635",
+    "posted_date": "2025-11-05T10:46:31.036805",
     "hidden_score": 100
   },
   {
@@ -4514,7 +4525,7 @@
     "tech_stack": [],
     "url": "https://jobs.ashbyhq.com/creditgenie/594bb5a7-8d0f-4b84-a0a8-1a055437c75c?ashby_jid=b1bac0f3-98dc-4023-b82e-ee463ae6fc4f",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.793114",
+    "posted_date": "2025-11-05T10:46:31.038369",
     "hidden_score": 100
   },
   {
@@ -4523,13 +4534,13 @@
     "title": "Software Engineer | REMOTE (North America) | Full‑time",
     "location": "Remote",
     "tech_stack": [
-      "react",
       "azure",
-      "typescript"
+      "typescript",
+      "react"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.795592",
+    "posted_date": "2025-11-05T10:46:31.040941",
     "hidden_score": 100
   },
   {
@@ -4538,16 +4549,16 @@
     "title": "Software Engineers | 100% REMOTE (Global) | Full-Time",
     "location": "Remote",
     "tech_stack": [
-      "javascript",
-      "rust",
-      "typescript",
-      "python",
       "go",
-      "postgresql"
+      "javascript",
+      "python",
+      "typescript",
+      "postgresql",
+      "rust"
     ],
     "url": "https://www.ycombinator.com/companies/mixrank/jobs/Fnwsojk-junior-software-engineer-global-remote",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.800084",
+    "posted_date": "2025-11-05T10:46:31.045551",
     "hidden_score": 100
   },
   {
@@ -4558,7 +4569,7 @@
     "tech_stack": [],
     "url": "https://babylonlabs.io/job-listings/lead-application-security-engineer",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.801015",
+    "posted_date": "2025-11-05T10:46:31.046543",
     "hidden_score": 100
   },
   {
@@ -4569,7 +4580,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.801779",
+    "posted_date": "2025-11-05T10:46:31.047051",
     "hidden_score": 100
   },
   {
@@ -4580,7 +4591,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.803542",
+    "posted_date": "2025-11-05T10:46:31.048676",
     "hidden_score": 100
   },
   {
@@ -4591,7 +4602,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.804958",
+    "posted_date": "2025-11-05T10:46:31.050110",
     "hidden_score": 100
   },
   {
@@ -4602,7 +4613,7 @@
     "tech_stack": [],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.808447",
+    "posted_date": "2025-11-05T10:46:31.053713",
     "hidden_score": 100
   },
   {
@@ -4617,7 +4628,7 @@
     ],
     "url": "https://job-boards.greenhouse.io/novig/jobs/4588745006",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.809422",
+    "posted_date": "2025-11-05T10:46:31.054773",
     "hidden_score": 100
   },
   {
@@ -4626,316 +4637,869 @@
     "title": "Bangalore, India | REMOTE / HYBRID",
     "location": "Remote",
     "tech_stack": [
+      "microservices",
       "rest",
       "kubernetes",
       "mongodb",
-      "microservices",
       "java"
     ],
     "url": "https://news.ycombinator.com/item?id=45800465",
     "source": "hn who's hiring",
-    "posted_date": "2025-11-05T10:40:48.810684",
+    "posted_date": "2025-11-05T10:46:31.055881",
     "hidden_score": 100
   },
   {
-    "id": "cceab452048bc9dc5ffa77b662e1ae77",
+    "id": "1599ffb965ebab06ef40e9f0d923e6be",
     "company": "Athelas",
-    "title": "Full-Stack Software Engineer",
-    "location": "Europe",
+    "title": "Senior Employee Experience Program Manager",
+    "location": "Usa",
+    "tech_stack": [],
+    "url": "https://www.ycombinator.com/companies/athelas/jobs/WCujObs-senior-employee-experience-program-manager",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:46:32.486345",
+    "hidden_score": 90
+  },
+  {
+    "id": "410bb90c710d4e2e7f5c60c926999943",
+    "company": "Athelas",
+    "title": "Operations Associate, Customer Success",
+    "location": "Ma",
+    "tech_stack": [],
+    "url": "https://www.ycombinator.com/companies/athelas/jobs/OnDMJHf-operations-associate-customer-success",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:46:33.313752",
+    "hidden_score": 90
+  },
+  {
+    "id": "26fd704f62eed25573dd9de737ef7e1c",
+    "company": "Athelas",
+    "title": "Pharmaceutical/Medical Device Sales Representative",
+    "location": "Usa",
     "tech_stack": [
-      "react",
+      "go"
+    ],
+    "url": "https://www.ycombinator.com/companies/athelas/jobs/Wca4R5T-pharmaceutical-medical-device-sales-representative",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:46:34.018029",
+    "hidden_score": 90
+  },
+  {
+    "id": "fb3e1c7f4da0bbbb8534a10b4be0d298",
+    "company": "Athelas",
+    "title": "Senior Full-Stack Software Engineer",
+    "location": "Usa",
+    "tech_stack": [
       "javascript",
       "vue",
-      "kubernetes",
-      "rails",
-      "flask",
-      "php",
       "python",
-      "docker"
+      "kubernetes",
+      "react",
+      "flask",
+      "docker",
+      "rails"
     ],
-    "url": "https://www.ycombinator.com/companies/athelas/jobs/uOF24KR-full-stack-software-engineer",
+    "url": "https://www.ycombinator.com/companies/athelas/jobs/MQeLXbb-senior-full-stack-software-engineer",
     "source": "yc",
-    "posted_date": "2025-11-05T10:40:50.207695",
+    "posted_date": "2025-11-05T10:46:34.695495",
+    "hidden_score": 90
+  },
+  {
+    "id": "90d153deeb59fb67187b8b15bc57a593",
+    "company": "Athelas",
+    "title": "Software Engineer, Ambient AI (Summer 2026 New Grad)",
+    "location": "Usa",
+    "tech_stack": [
+      "go",
+      "node",
+      "aws",
+      "python",
+      "kubernetes",
+      "typescript",
+      "gcp",
+      "react",
+      "docker",
+      "rails"
+    ],
+    "url": "https://www.ycombinator.com/companies/athelas/jobs/9pe3rxv-software-engineer-ambient-ai-summer-2026-new-grad",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:46:35.553241",
     "hidden_score": 90
   },
   {
     "id": "21ce5b4bc28a1c4844d9a8cc4fb9398b",
     "company": "Jetlenses",
     "title": "Senior/Staff Full Stack Engineer",
-    "location": "New York",
+    "location": "Usa",
     "tech_stack": [
-      "react",
       "javascript",
-      "vue",
-      "aws",
-      "rails",
-      "graphql",
-      "postgres",
-      "flask",
-      "php",
-      "typescript",
-      "python",
       "go",
+      "mysql",
+      "aws",
+      "vue",
+      "python",
+      "typescript",
+      "postgres",
       "postgresql",
-      "mysql"
+      "graphql",
+      "react",
+      "flask",
+      "rails"
     ],
     "url": "https://www.ycombinator.com/companies/jetlenses/jobs/g3BB427-senior-staff-full-stack-engineer",
     "source": "yc",
-    "posted_date": "2025-11-05T10:40:51.231259",
+    "posted_date": "2025-11-05T10:46:38.022900",
+    "hidden_score": 90
+  },
+  {
+    "id": "17fde96f181f9a427135a0b689e1c888",
+    "company": "Jetlenses",
+    "title": "Senior Data Analyst",
+    "location": "Usa",
+    "tech_stack": [
+      "go",
+      "postgres",
+      "python"
+    ],
+    "url": "https://www.ycombinator.com/companies/jetlenses/jobs/sQTWaij-senior-data-analyst",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:46:38.760894",
     "hidden_score": 90
   },
   {
     "id": "f7075e0d94a9e886ef4d8ee1d15e0d44",
     "company": "Slash",
     "title": "Mobile Design Engineer, iOS (React Native)",
-    "location": "Europe",
+    "location": "Usa",
     "tech_stack": [
       "react",
-      "rails",
-      "php",
-      "python"
+      "rails"
     ],
     "url": "https://www.ycombinator.com/companies/slash/jobs/30nJXIk-mobile-design-engineer-ios-react-native",
     "source": "yc",
-    "posted_date": "2025-11-05T10:40:52.245320",
+    "posted_date": "2025-11-05T10:46:41.122791",
+    "hidden_score": 90
+  },
+  {
+    "id": "c8a7a39b4d92d97551ce114bf4cff0d8",
+    "company": "Slash",
+    "title": "Platform Engineer: Core Infrastructure",
+    "location": "Usa",
+    "tech_stack": [
+      "rest",
+      "aws",
+      "kubernetes",
+      "terraform",
+      "rails"
+    ],
+    "url": "https://www.ycombinator.com/companies/slash/jobs/3xjCHSt-platform-engineer-core-infrastructure",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:46:41.997971",
+    "hidden_score": 90
+  },
+  {
+    "id": "ad0e7e9b84fe52fd48c3e2faa61b8b96",
+    "company": "Slash",
+    "title": "Mobile Design Engineer, Android (React Native)",
+    "location": "Usa",
+    "tech_stack": [
+      "react",
+      "rails"
+    ],
+    "url": "https://www.ycombinator.com/companies/slash/jobs/l3X7zq1-mobile-design-engineer-android-react-native",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:46:42.836963",
+    "hidden_score": 90
+  },
+  {
+    "id": "93b6f26a0212fb45c65a87f8799a9807",
+    "company": "Slash",
+    "title": "Platform Engineer: Developer Infrastructure",
+    "location": "Usa",
+    "tech_stack": [
+      "typescript",
+      "rails"
+    ],
+    "url": "https://www.ycombinator.com/companies/slash/jobs/k2BJ5ws-platform-engineer-developer-infrastructure",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:46:43.609293",
+    "hidden_score": 90
+  },
+  {
+    "id": "3544d724c42d249117e492e40fd5860a",
+    "company": "Slash",
+    "title": "Design Engineer, Web",
+    "location": "Usa",
+    "tech_stack": [
+      "javascript",
+      "rails",
+      "css"
+    ],
+    "url": "https://www.ycombinator.com/companies/slash/jobs/adLcZXW-design-engineer-web",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:46:44.469314",
+    "hidden_score": 90
+  },
+  {
+    "id": "f2752bd341e74fc07699e503fd27c604",
+    "company": "Wefunder",
+    "title": "Lead Designer",
+    "location": "Usa",
+    "tech_stack": [
+      "rest",
+      "html",
+      "css"
+    ],
+    "url": "https://www.ycombinator.com/companies/wefunder/jobs/d14VZFb-lead-designer",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:46:47.232384",
+    "hidden_score": 90
+  },
+  {
+    "id": "9c6ee650ed5d7cbe7f1473b05faed113",
+    "company": "Wefunder",
+    "title": "Internship - Investor Success",
+    "location": "Ma",
+    "tech_stack": [
+      "rest"
+    ],
+    "url": "https://www.ycombinator.com/companies/wefunder/jobs/hy8uJ9k-internship-investor-success",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:46:48.008372",
+    "hidden_score": 90
+  },
+  {
+    "id": "d564b38aa1d5cecca123c7616ac18bb7",
+    "company": "Wefunder",
+    "title": "Business Development Intern-to-Hire",
+    "location": "Usa",
+    "tech_stack": [
+      "rest"
+    ],
+    "url": "https://www.ycombinator.com/companies/wefunder/jobs/kjsEKDu-business-development-intern-to-hire",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:46:48.785878",
     "hidden_score": 90
   },
   {
     "id": "c9520ee0f304633fa771be5b90b3ad45",
     "company": "Wefunder",
     "title": "Full Stack, Senior Software Engineer",
-    "location": "San Francisco",
+    "location": "Usa",
     "tech_stack": [
-      "react",
-      "rest",
+      "go",
       "javascript",
-      "css",
-      "django",
-      "rails",
       "ruby",
-      "postgres",
       "node",
-      "php",
-      "python",
-      "go"
+      "rest",
+      "postgres",
+      "react",
+      "django",
+      "css",
+      "rails"
     ],
     "url": "https://www.ycombinator.com/companies/wefunder/jobs/oC8Vfe1-full-stack-senior-software-engineer",
     "source": "yc",
-    "posted_date": "2025-11-05T10:40:53.381426",
+    "posted_date": "2025-11-05T10:46:49.553372",
+    "hidden_score": 90
+  },
+  {
+    "id": "553e6e32d2a16d369f55714c2e1d6af9",
+    "company": "Wefunder",
+    "title": "Internship – Fundraising and Marketing (Jan-July 2026)",
+    "location": "Usa",
+    "tech_stack": [
+      "rest"
+    ],
+    "url": "https://www.ycombinator.com/companies/wefunder/jobs/jeZhHkA-internship-fundraising-and-marketing-jan-july-2026",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:46:50.376291",
     "hidden_score": 90
   },
   {
     "id": "da04d07d07e19917016db0f73473a505",
     "company": "Aden",
     "title": "Full-stack Software Development Engineer (FS SDE)",
-    "location": "Europe",
+    "location": "Usa",
     "tech_stack": [
-      "react",
       "javascript",
-      "vue",
-      "webpack",
-      "kubernetes",
-      "css",
-      "mongodb",
-      "rails",
-      "html",
       "node",
-      "php",
-      "typescript",
+      "mysql",
+      "vue",
       "python",
+      "kubernetes",
+      "typescript",
+      "mongodb",
+      "html",
+      "react",
       "docker",
-      "mysql"
+      "css",
+      "webpack",
+      "rails"
     ],
     "url": "https://www.ycombinator.com/companies/aden/jobs/jZsWSplPD-full-stack-software-development-engineer-fs-sde",
     "source": "yc",
-    "posted_date": "2025-11-05T10:40:54.354723",
+    "posted_date": "2025-11-05T10:46:53.272030",
     "hidden_score": 90
   },
   {
-    "id": "e0fc3228b689f4ce07e161ef340340d2",
-    "company": "Confido",
-    "title": "Senior Software Engineer",
-    "location": "New York",
+    "id": "f4a8ac48079017e99db1cf0d66d8cd77",
+    "company": "Aden",
+    "title": "Product Designer",
+    "location": "Usa",
     "tech_stack": [
-      "rails",
-      "php",
+      "bootstrap",
+      "react",
+      "vue"
+    ],
+    "url": "https://www.ycombinator.com/companies/aden/jobs/lRImIXc-product-designer",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:46:53.906996",
+    "hidden_score": 90
+  },
+  {
+    "id": "b6ed3933a9d46812f9b42ba052ad63c3",
+    "company": "Aden",
+    "title": "Software Development Engineer (Product) - Vue.js, Vuex, Node.js",
+    "location": "Usa",
+    "tech_stack": [
+      "javascript",
+      "node",
+      "mysql",
+      "vue",
+      "postgresql",
+      "mongodb",
+      "html",
+      "react",
+      "css",
+      "webpack"
+    ],
+    "url": "https://www.ycombinator.com/companies/aden/jobs/19ixflT-software-development-engineer-product-vue-js-vuex-node-js",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:46:54.610913",
+    "hidden_score": 90
+  },
+  {
+    "id": "82cc71bf6d42444fa4158e10236d74ab",
+    "company": "Aden",
+    "title": "Sales Lead",
+    "location": "Usa",
+    "tech_stack": [
       "python"
     ],
-    "url": "https://www.ycombinator.com/companies/confido/jobs/W6pjo0Q-senior-software-engineer",
+    "url": "https://www.ycombinator.com/companies/aden/jobs/LCfjFEq-sales-lead",
     "source": "yc",
-    "posted_date": "2025-11-05T10:40:55.632018",
+    "posted_date": "2025-11-05T10:46:55.401940",
+    "hidden_score": 90
+  },
+  {
+    "id": "6865b2290821db5a3ab324efd668d2f9",
+    "company": "Aden",
+    "title": "Growth Marketing Lead",
+    "location": "Usa",
+    "tech_stack": [],
+    "url": "https://www.ycombinator.com/companies/aden/jobs/p2prFe1-growth-marketing-lead",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:46:56.141646",
+    "hidden_score": 90
+  },
+  {
+    "id": "3e3166ee938cc88440d91b0d1af7fe01",
+    "company": "Confido",
+    "title": "Software Engineer",
+    "location": "Usa",
+    "tech_stack": [
+      "rails"
+    ],
+    "url": "https://www.ycombinator.com/companies/confido/jobs/J35tBtW-software-engineer",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:46:58.652287",
+    "hidden_score": 90
+  },
+  {
+    "id": "69016becdfbdb411cdeec1dd99c96905",
+    "company": "Confido",
+    "title": "Product Marketing",
+    "location": "Usa",
+    "tech_stack": [],
+    "url": "https://www.ycombinator.com/companies/confido/jobs/QPGmxSF-product-marketing",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:47:00.336516",
+    "hidden_score": 90
+  },
+  {
+    "id": "b7d512b8b4259d8e8318f4a9ad44f200",
+    "company": "Confido",
+    "title": "Founding Staff ML / AI Engineer",
+    "location": "Usa",
+    "tech_stack": [],
+    "url": "https://www.ycombinator.com/companies/confido/jobs/8Bspwx4-founding-staff-ml-ai-engineer",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:47:01.053481",
+    "hidden_score": 90
+  },
+  {
+    "id": "26065ab54231ae1fe775cc7aab34cce7",
+    "company": "Confido",
+    "title": "Founding ML / AI Engineer",
+    "location": "Usa",
+    "tech_stack": [],
+    "url": "https://www.ycombinator.com/companies/confido/jobs/aohUsRX-founding-ml-ai-engineer",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:47:01.777596",
     "hidden_score": 90
   },
   {
     "id": "6ed5445a1e96e58133ce12ced6cf1c26",
     "company": "Flock Safety",
     "title": "Staff Software Engineer - Rust",
-    "location": "Atlanta",
+    "location": "Usa",
     "tech_stack": [
-      "react",
-      "kubernetes",
-      "docker",
-      "aws",
-      "rails",
-      "rust",
       "ruby",
+      "aws",
+      "python",
+      "kubernetes",
       "postgres",
-      "node",
-      "java"
+      "react",
+      "docker",
+      "rails",
+      "rust"
     ],
     "url": "https://www.ycombinator.com/companies/flock-safety/jobs/w0KUMNn-staff-software-engineer-rust",
     "source": "yc",
-    "posted_date": "2025-11-05T10:40:56.610284",
+    "posted_date": "2025-11-05T10:47:04.436260",
+    "hidden_score": 90
+  },
+  {
+    "id": "3d2632b548796119466d0ad24ffb04b6",
+    "company": "Flock Safety",
+    "title": "Senior Software Engineer, Video FullStack Experience",
+    "location": "Usa",
+    "tech_stack": [
+      "javascript",
+      "node",
+      "aws",
+      "kubernetes",
+      "typescript",
+      "react",
+      "docker",
+      "rails"
+    ],
+    "url": "https://www.ycombinator.com/companies/flock-safety/jobs/jrcaMY6-senior-software-engineer-video-fullstack-experience",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:47:05.362395",
+    "hidden_score": 90
+  },
+  {
+    "id": "62fd1902907f4ca74afe76f8894b188c",
+    "company": "Flock Safety",
+    "title": "Senior Software Engineer, Backend Integrations",
+    "location": "Usa",
+    "tech_stack": [
+      "go",
+      "node",
+      "aws",
+      "redis",
+      "kubernetes",
+      "typescript",
+      "postgres",
+      "postgresql",
+      "docker",
+      "rails"
+    ],
+    "url": "https://www.ycombinator.com/companies/flock-safety/jobs/YME3UnJ-senior-software-engineer-backend-integrations",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:47:06.393006",
+    "hidden_score": 90
+  },
+  {
+    "id": "2bafec50d33e5c3b8800739418f50c17",
+    "company": "Flock Safety",
+    "title": "Senior Embedded Machine Learning Engineer",
+    "location": "Usa",
+    "tech_stack": [
+      "docker",
+      "aws",
+      "java"
+    ],
+    "url": "https://www.ycombinator.com/companies/flock-safety/jobs/RA8Y9aJ-senior-embedded-machine-learning-engineer",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:47:07.471137",
+    "hidden_score": 90
+  },
+  {
+    "id": "718b91bf7973e2c90e78e621b21a5669",
+    "company": "Flock Safety",
+    "title": "Senior Video Software Engineer",
+    "location": "Usa",
+    "tech_stack": [
+      "javascript",
+      "node",
+      "go",
+      "aws",
+      "python",
+      "kubernetes",
+      "typescript",
+      "react",
+      "docker"
+    ],
+    "url": "https://www.ycombinator.com/companies/flock-safety/jobs/oHQmXUR-senior-video-software-engineer",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:47:08.283560",
     "hidden_score": 90
   },
   {
     "id": "666c3580e698c3f8b4b7d509b109ef93",
     "company": "Gordian Software",
     "title": "Software Engineer - AI Travel Agent",
-    "location": "Usa",
+    "location": "Wa",
     "tech_stack": [
-      "node",
-      "java"
+      "python"
     ],
     "url": "https://www.ycombinator.com/companies/gordian-software/jobs/EUjvQB7-software-engineer-ai-travel-agent",
     "source": "yc",
-    "posted_date": "2025-11-05T10:40:57.459356",
+    "posted_date": "2025-11-05T10:47:11.804545",
+    "hidden_score": 90
+  },
+  {
+    "id": "ce30b44249cb6032ceec59700868422b",
+    "company": "Gordian Software",
+    "title": "Operations",
+    "location": "Wa",
+    "tech_stack": [],
+    "url": "https://www.ycombinator.com/companies/gordian-software/jobs/JOXBGa6-operations",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:47:12.618476",
     "hidden_score": 90
   },
   {
     "id": "edda055efbfbd3ea12d5483fe857dd04",
     "company": "Activeloop",
     "title": "Member of Technical Staff – Backend Engineering",
-    "location": "San Francisco",
+    "location": "Usa",
     "tech_stack": [
-      "kubernetes",
-      "docker",
-      "mongodb",
-      "aws",
-      "rails",
-      "redis",
-      "serverless",
       "microservices",
-      "php",
-      "python",
-      "azure",
+      "aws",
       "fastapi",
+      "redis",
+      "python",
+      "serverless",
+      "kubernetes",
       "postgresql",
-      "gcp"
+      "mongodb",
+      "gcp",
+      "docker",
+      "azure",
+      "rails"
     ],
     "url": "https://www.ycombinator.com/companies/activeloop/jobs/zn1plZe-member-of-technical-staff-backend-engineering",
     "source": "yc",
-    "posted_date": "2025-11-05T10:40:58.372781",
+    "posted_date": "2025-11-05T10:47:15.390822",
+    "hidden_score": 90
+  },
+  {
+    "id": "d2f998e9afb6937bde742d1598465713",
+    "company": "Activeloop",
+    "title": "AI Search Engineer",
+    "location": "Usa",
+    "tech_stack": [
+      "serverless",
+      "python"
+    ],
+    "url": "https://www.ycombinator.com/companies/activeloop/jobs/RQYMSP1-ai-search-engineer",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:47:16.200993",
+    "hidden_score": 90
+  },
+  {
+    "id": "d23daaeedddb4417c05def1529dcd76f",
+    "company": "Activeloop",
+    "title": "VP of Engineering",
+    "location": "Usa",
+    "tech_stack": [
+      "serverless",
+      "rails"
+    ],
+    "url": "https://www.ycombinator.com/companies/activeloop/jobs/EkoSMcC-vp-of-engineering",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:47:16.836141",
+    "hidden_score": 90
+  },
+  {
+    "id": "903049f9156a9c310c306148d07b75de",
+    "company": "Reframe",
+    "title": "Content Writer",
+    "location": "Usa",
+    "tech_stack": [],
+    "url": "https://www.ycombinator.com/companies/reframe/jobs/WJsOSC5-content-writer",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:47:19.179181",
     "hidden_score": 90
   },
   {
     "id": "edf5a1a9621c89c8c7ee5397fbfd0356",
     "company": "Reframe",
     "title": "Fullstack Engineer",
-    "location": "Atlanta",
+    "location": "Usa",
     "tech_stack": [
-      "html",
-      "tailwind",
-      "gcp",
-      "rest",
+      "javascript",
       "node",
-      "typescript",
-      "python",
-      "postgresql",
-      "react",
-      "css",
+      "mysql",
       "aws",
       "redis",
-      "graphql",
+      "rest",
+      "typescript",
       "postgres",
-      "javascript",
-      "rails",
-      "php",
-      "azure",
+      "tailwind",
+      "postgresql",
+      "gcp",
+      "graphql",
+      "html",
+      "react",
       "docker",
-      "mysql"
+      "css",
+      "azure",
+      "rails"
     ],
     "url": "https://www.ycombinator.com/companies/reframe/jobs/V39dt3G-fullstack-engineer",
     "source": "yc",
-    "posted_date": "2025-11-05T10:40:59.263231",
+    "posted_date": "2025-11-05T10:47:19.865613",
     "hidden_score": 90
   },
   {
-    "id": "155cfd8e8b093ac70c04cc6e217e6c2a",
+    "id": "ac8c93e48a23d3e7892f9efc4b19b9ee",
+    "company": "Reframe",
+    "title": "Executive Assistant to the Founders",
+    "location": "Usa",
+    "tech_stack": [],
+    "url": "https://www.ycombinator.com/companies/reframe/jobs/I2K9Bq8-executive-assistant-to-the-founders",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:47:20.596472",
+    "hidden_score": 90
+  },
+  {
+    "id": "e7d24886e974243137018addc9b63ae0",
+    "company": "Reframe",
+    "title": "Product Designer",
+    "location": "Usa",
+    "tech_stack": [],
+    "url": "https://www.ycombinator.com/companies/reframe/jobs/4PA8ThD-product-designer",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:47:21.430592",
+    "hidden_score": 90
+  },
+  {
+    "id": "8cb7a970c13cbdb4667c33722e6ae1b8",
+    "company": "Reframe",
+    "title": "Product Manager",
+    "location": "Usa",
+    "tech_stack": [],
+    "url": "https://www.ycombinator.com/companies/reframe/jobs/UyM6sgD-product-manager",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:47:22.147055",
+    "hidden_score": 90
+  },
+  {
+    "id": "30d77e146029ef42c0a527ba7c5bc633",
     "company": "Spruceid",
-    "title": "Senior Forward Deployed Engineer",
-    "location": "New York",
+    "title": "Principal Forward Deployed Engineer",
+    "location": "Usa",
     "tech_stack": [
-      "aws",
-      "rails",
-      "rust",
-      "php",
-      "python",
-      "azure",
       "go",
       "java",
-      "gcp"
+      "rails",
+      "rust"
     ],
-    "url": "https://www.ycombinator.com/companies/spruceid/jobs/9IqYIbe-senior-forward-deployed-engineer",
+    "url": "https://www.ycombinator.com/companies/spruceid/jobs/C1bXocv-principal-forward-deployed-engineer",
     "source": "yc",
-    "posted_date": "2025-11-05T10:41:00.240154",
+    "posted_date": "2025-11-05T10:47:24.608998",
+    "hidden_score": 90
+  },
+  {
+    "id": "874bd938a5adc5bc34342dddbef88857",
+    "company": "Spruceid",
+    "title": "Senior Forward Deployed Engineer, Mobile",
+    "location": "Usa",
+    "tech_stack": [
+      "react",
+      "rails"
+    ],
+    "url": "https://www.ycombinator.com/companies/spruceid/jobs/46OJWEi-senior-forward-deployed-engineer-mobile",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:47:25.427861",
     "hidden_score": 90
   },
   {
     "id": "64dca6332b22ee5a5593275800605d49",
     "company": "Liveflow",
     "title": "Senior Full Stack Engineer",
-    "location": "New York",
+    "location": "Usa",
     "tech_stack": [
-      "react",
-      "nextjs",
-      "django",
-      "aws",
-      "rails",
-      "php",
-      "typescript",
-      "python",
       "go",
-      "terraform"
+      "aws",
+      "typescript",
+      "terraform",
+      "react",
+      "django",
+      "nextjs",
+      "rails"
     ],
     "url": "https://www.ycombinator.com/companies/liveflow/jobs/yQSiOcS-senior-full-stack-engineer",
     "source": "yc",
-    "posted_date": "2025-11-05T10:41:01.200151",
+    "posted_date": "2025-11-05T10:47:28.633039",
+    "hidden_score": 90
+  },
+  {
+    "id": "48757c4a1e090ed0e9738287bffadda3",
+    "company": "Liveflow",
+    "title": "Engineering Manager",
+    "location": "Usa",
+    "tech_stack": [
+      "rest",
+      "rails"
+    ],
+    "url": "https://www.ycombinator.com/companies/liveflow/jobs/0hsRoER-engineering-manager",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:47:29.303531",
+    "hidden_score": 90
+  },
+  {
+    "id": "dc2050633a32d449f4b2aec430da4d95",
+    "company": "Liveflow",
+    "title": "Sales Development Representative (NYC)",
+    "location": "Usa",
+    "tech_stack": [],
+    "url": "https://www.ycombinator.com/companies/liveflow/jobs/VqypILm-sales-development-representative-nyc",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:47:30.246285",
+    "hidden_score": 90
+  },
+  {
+    "id": "2fa2f089140415e8c19514299c8e6ddf",
+    "company": "Liveflow",
+    "title": "Web & Visual Designer",
+    "location": "Usa",
+    "tech_stack": [],
+    "url": "https://www.ycombinator.com/companies/liveflow/jobs/yQXUJit-web-visual-designer",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:47:31.056885",
+    "hidden_score": 90
+  },
+  {
+    "id": "cc25b563297a02c6510108329d009a16",
+    "company": "Liveflow",
+    "title": "Brand Marketing Manager",
+    "location": "Usa",
+    "tech_stack": [],
+    "url": "https://www.ycombinator.com/companies/liveflow/jobs/D6wkNEz-brand-marketing-manager",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:47:31.879124",
     "hidden_score": 90
   },
   {
     "id": "bd631ed03c32a685f625eb561447e7bb",
     "company": "Seal",
     "title": "Product Engineer",
-    "location": "Uk",
+    "location": "Usa",
     "tech_stack": [
-      "react",
-      "rails",
       "node",
-      "php",
-      "python",
-      "postgresql"
+      "react",
+      "postgresql",
+      "rails"
     ],
     "url": "https://www.ycombinator.com/companies/seal-2/jobs/n4byaPm-product-engineer",
     "source": "yc",
-    "posted_date": "2025-11-05T10:41:02.204733",
+    "posted_date": "2025-11-05T10:47:34.228221",
+    "hidden_score": 90
+  },
+  {
+    "id": "9f2cbf5488094eee6ca9e1b79bf20d45",
+    "company": "Seal",
+    "title": "Solutions Consultant",
+    "location": "Usa",
+    "tech_stack": [],
+    "url": "https://www.ycombinator.com/companies/seal-2/jobs/ZgASyYW-solutions-consultant",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:47:34.922081",
+    "hidden_score": 90
+  },
+  {
+    "id": "2a366f9d88334fba8c76ef692be36e25",
+    "company": "Seal",
+    "title": "Founder associate",
+    "location": "Usa",
+    "tech_stack": [],
+    "url": "https://www.ycombinator.com/companies/seal-2/jobs/zwXbCCM-founder-associate",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:47:35.629552",
+    "hidden_score": 90
+  },
+  {
+    "id": "5290f0d71e79ebd182b103c4d46c8955",
+    "company": "Camber",
+    "title": "Insurance Operations Lead",
+    "location": "Usa",
+    "tech_stack": [
+      "aws"
+    ],
+    "url": "https://www.ycombinator.com/companies/camber-2/jobs/XS8PScV-insurance-operations-lead",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:47:38.056954",
+    "hidden_score": 90
+  },
+  {
+    "id": "0f94988b77ad810b393d3bcef5b31fd5",
+    "company": "Camber",
+    "title": "Workforce Operations Associate",
+    "location": "Usa",
+    "tech_stack": [
+      "aws"
+    ],
+    "url": "https://www.ycombinator.com/companies/camber-2/jobs/bztxgf7-workforce-operations-associate",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:47:38.934568",
+    "hidden_score": 90
+  },
+  {
+    "id": "ef91a0638d0ae42010bd1aadde372e3e",
+    "company": "Camber",
+    "title": "SMB Account Manager",
+    "location": "Usa",
+    "tech_stack": [
+      "aws"
+    ],
+    "url": "https://www.ycombinator.com/companies/camber-2/jobs/QazWKhI-smb-account-manager",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:47:39.761187",
     "hidden_score": 90
   },
   {
     "id": "b0a1d95e18db8ef5cf28873156eb271c",
     "company": "Camber",
     "title": "Senior Software Engineer",
-    "location": "New York",
+    "location": "Usa",
     "tech_stack": [
+      "go",
       "aws",
-      "rails",
-      "php",
-      "python",
-      "go"
+      "rails"
     ],
     "url": "https://www.ycombinator.com/companies/camber-2/jobs/umDRrTM-senior-software-engineer",
     "source": "yc",
-    "posted_date": "2025-11-05T10:41:03.359360",
+    "posted_date": "2025-11-05T10:47:40.577818",
+    "hidden_score": 90
+  },
+  {
+    "id": "ee986605cd30510ee70b5ad52e296891",
+    "company": "Camber",
+    "title": "Senior Data Analyst",
+    "location": "Usa",
+    "tech_stack": [
+      "react",
+      "aws",
+      "python"
+    ],
+    "url": "https://www.ycombinator.com/companies/camber-2/jobs/3Ef786I-senior-data-analyst",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:47:41.299027",
     "hidden_score": 90
   },
   {
@@ -4944,54 +5508,96 @@
     "title": "Senior Software Engineer, Frontend",
     "location": "Usa",
     "tech_stack": [
-      "react",
-      "django",
+      "javascript",
       "aws",
-      "postgres",
-      "typescript",
       "python",
-      "postgresql"
+      "typescript",
+      "postgres",
+      "postgresql",
+      "react",
+      "django"
     ],
     "url": "https://www.ycombinator.com/companies/billiontoone/jobs/4qoi212-senior-software-engineer-frontend",
     "source": "yc",
-    "posted_date": "2025-11-05T10:41:04.348290",
+    "posted_date": "2025-11-05T10:47:43.708447",
     "hidden_score": 90
   },
   {
     "id": "369787dfda603e851f148a94904fdd47",
     "company": "Replo",
     "title": "Software Engineer (Full-Stack)",
-    "location": "Europe",
+    "location": "Usa",
     "tech_stack": [
+      "typescript",
       "react",
       "rails",
-      "node",
-      "php",
-      "typescript",
-      "python"
+      "node"
     ],
     "url": "https://www.ycombinator.com/companies/replo/jobs/YcMC1B8-software-engineer-full-stack",
     "source": "yc",
-    "posted_date": "2025-11-05T10:41:05.363846",
+    "posted_date": "2025-11-05T10:47:46.216203",
+    "hidden_score": 90
+  },
+  {
+    "id": "d8a3fdbe2794ac142ef6cd41f46df81b",
+    "company": "Replo",
+    "title": "Account Executive",
+    "location": "Usa",
+    "tech_stack": [],
+    "url": "https://www.ycombinator.com/companies/replo/jobs/R2DwBYf-account-executive",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:47:46.967958",
+    "hidden_score": 90
+  },
+  {
+    "id": "7c334f21fe71df58eb0073b2e48d197b",
+    "company": "Replo",
+    "title": "Chief of Staff",
+    "location": "Usa",
+    "tech_stack": [
+      "python"
+    ],
+    "url": "https://www.ycombinator.com/companies/replo/jobs/ol2fJr5-chief-of-staff",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:47:47.717449",
+    "hidden_score": 90
+  },
+  {
+    "id": "13051d31b4a1c9ec0e7865711246e16b",
+    "company": "Replo",
+    "title": "Senior Backend Engineer",
+    "location": "Usa",
+    "tech_stack": [
+      "go",
+      "node",
+      "redis",
+      "python",
+      "typescript",
+      "react",
+      "nextjs",
+      "rails",
+      "java"
+    ],
+    "url": "https://www.ycombinator.com/companies/replo/jobs/pyCiG9M-senior-backend-engineer",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:47:48.515244",
     "hidden_score": 90
   },
   {
     "id": "c30ee736377b4b590ce6916f478fcd5a",
     "company": "Alinea",
     "title": "Full Stack iOS Software Engineer",
-    "location": "New York",
+    "location": "Usa",
     "tech_stack": [
-      "mongodb",
-      "aws",
-      "rails",
       "node",
-      "php",
+      "aws",
       "typescript",
-      "python"
+      "mongodb",
+      "rails"
     ],
     "url": "https://www.ycombinator.com/companies/alinea/jobs/2GVRUn2-full-stack-ios-software-engineer",
     "source": "yc",
-    "posted_date": "2025-11-05T10:41:06.352668",
+    "posted_date": "2025-11-05T10:47:51.713987",
     "hidden_score": 90
   },
   {
@@ -5000,35 +5606,130 @@
     "title": "GoGoGrandparent (YC S16) is hiring Backend and Full-Stack Engineers",
     "location": "Usa",
     "tech_stack": [
+      "node",
+      "mysql",
+      "aws",
       "rest",
       "vue",
+      "python",
       "kubernetes",
-      "docker",
-      "aws",
-      "graphql",
-      "node",
       "typescript",
-      "java",
-      "mysql"
+      "graphql",
+      "docker"
     ],
     "url": "https://www.ycombinator.com/companies/gogograndparent/jobs/2vbzAw8-gogograndparent-yc-s16-is-hiring-backend-and-full-stack-engineers",
     "source": "yc",
-    "posted_date": "2025-11-05T10:41:07.365566",
+    "posted_date": "2025-11-05T10:47:54.328634",
+    "hidden_score": 90
+  },
+  {
+    "id": "b0c3ec2d371f114e8ea00f35ca675207",
+    "company": "Gogograndparent",
+    "title": "Product Manager",
+    "location": "Usa",
+    "tech_stack": [
+      "go"
+    ],
+    "url": "https://www.ycombinator.com/companies/gogograndparent/jobs/FnWfgXv-product-manager",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:47:55.985639",
+    "hidden_score": 90
+  },
+  {
+    "id": "a2040e42a3b69bc3183cfc5525881937",
+    "company": "Gogograndparent",
+    "title": "GoGoGrandparent (YC S16) is hiring a Tech Lead",
+    "location": "Usa",
+    "tech_stack": [
+      "node",
+      "mysql",
+      "aws",
+      "rest",
+      "vue",
+      "kubernetes",
+      "typescript",
+      "graphql",
+      "docker"
+    ],
+    "url": "https://www.ycombinator.com/companies/gogograndparent/jobs/jYLlw7X-gogograndparent-yc-s16-is-hiring-a-tech-lead",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:47:56.640502",
+    "hidden_score": 90
+  },
+  {
+    "id": "3d095dd7b66663740c5480482d3dad60",
+    "company": "Vapi",
+    "title": "Head of Marketing",
+    "location": "Co",
+    "tech_stack": [],
+    "url": "https://www.ycombinator.com/companies/vapi/jobs/jbh0A1c-head-of-marketing",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:47:59.214964",
+    "hidden_score": 90
+  },
+  {
+    "id": "034e7a67a653541f7d4e508096e6bed6",
+    "company": "Vapi",
+    "title": "Technical Account Manager",
+    "location": "Usa",
+    "tech_stack": [
+      "rest"
+    ],
+    "url": "https://www.ycombinator.com/companies/vapi/jobs/UnPxATg-technical-account-manager",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:47:59.941770",
+    "hidden_score": 90
+  },
+  {
+    "id": "ad7b9edf17680a18cfee32aef4593f03",
+    "company": "Vapi",
+    "title": "Head of Partnerships",
+    "location": "Usa",
+    "tech_stack": [
+      "rest"
+    ],
+    "url": "https://www.ycombinator.com/companies/vapi/jobs/abKXpQ9-head-of-partnerships",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:48:00.679168",
+    "hidden_score": 90
+  },
+  {
+    "id": "ea0b989c20c60017c0b863c497b457e0",
+    "company": "Vapi",
+    "title": "Customer Support Engineer",
+    "location": "Co",
+    "tech_stack": [
+      "rails"
+    ],
+    "url": "https://www.ycombinator.com/companies/vapi/jobs/BYEw4BP-customer-support-engineer",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:48:01.477222",
+    "hidden_score": 90
+  },
+  {
+    "id": "9a65dd3606c25e8701e18b4e86d473a5",
+    "company": "Vapi",
+    "title": "Staff Backend Engineer",
+    "location": "Co",
+    "tech_stack": [
+      "rails"
+    ],
+    "url": "https://www.ycombinator.com/companies/vapi/jobs/PXEn9WY-staff-backend-engineer",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:48:02.221935",
     "hidden_score": 90
   },
   {
     "id": "472ccb04e35615b238de2ba48022a0a9",
     "company": "Vapi",
     "title": "Infrastructure Engineer (Security)",
-    "location": "Europe",
+    "location": "Co",
     "tech_stack": [
-      "rails",
-      "php",
-      "python"
+      "rails"
     ],
     "url": "https://www.ycombinator.com/companies/vapi/jobs/Hqu2JQA-infrastructure-engineer-security",
     "source": "yc",
-    "posted_date": "2025-11-05T10:41:08.446196",
+    "posted_date": "2025-11-05T10:48:04.001083",
     "hidden_score": 90
   },
   {
@@ -5037,16 +5738,56 @@
     "title": "Integrations Engineer",
     "location": "Usa",
     "tech_stack": [
-      "react",
-      "docker",
-      "aws",
       "node",
+      "aws",
       "python",
-      "java"
+      "react",
+      "docker"
     ],
     "url": "https://www.ycombinator.com/companies/hotglue/jobs/RccirOQ-integrations-engineer",
     "source": "yc",
-    "posted_date": "2025-11-05T10:41:09.404776",
+    "posted_date": "2025-11-05T10:48:04.651158",
+    "hidden_score": 90
+  },
+  {
+    "id": "940038ce32287b86ed30aa68df71a4a0",
+    "company": "Hotglue",
+    "title": "Full Stack Software Engineer",
+    "location": "Usa",
+    "tech_stack": [
+      "javascript",
+      "node",
+      "aws",
+      "python",
+      "postgresql",
+      "gcp",
+      "react",
+      "docker",
+      "azure",
+      "rails"
+    ],
+    "url": "https://www.ycombinator.com/companies/hotglue/jobs/V7rOYvg-full-stack-software-engineer",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:48:05.464105",
+    "hidden_score": 90
+  },
+  {
+    "id": "b06592f4cf146094b3fa2b9acc1680fb",
+    "company": "Hotglue",
+    "title": "Solutions Architect",
+    "location": "Usa",
+    "tech_stack": [
+      "javascript",
+      "node",
+      "aws",
+      "rest",
+      "python",
+      "react",
+      "docker"
+    ],
+    "url": "https://www.ycombinator.com/companies/hotglue/jobs/aDWIDRN-solutions-architect",
+    "source": "yc",
+    "posted_date": "2025-11-05T10:48:06.998845",
     "hidden_score": 90
   }
 ]

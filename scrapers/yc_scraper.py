@@ -76,6 +76,73 @@ class YCScraper:
         
         return None
     
+    def scrape_company_page(self, company_url: str) -> List[JobPosting]:
+        """Scrape all jobs from a company page"""
+        soup = self.fetch_page(company_url)
+        if not soup:
+            return []
+        
+        company_jobs = []
+        
+        # Extract company name from URL
+        company_name = self.extract_company_from_url(company_url + "/jobs/dummy")
+        if not company_name:
+            match = re.search(r'/companies/([^/]+)', company_url)
+            if match:
+                company_slug = match.group(1)
+                company_name = re.sub(r'-\d+$', '', company_slug).replace('-', ' ').title()
+        
+        # Find all job links on the company page
+        job_links = soup.find_all('a', href=re.compile(r'/jobs/', re.I))
+        
+        for link in job_links[:20]:  # Limit to avoid too many requests
+            job_path = link.get('href', '')
+            if not job_path:
+                continue
+            
+            # Make full URL
+            if not job_path.startswith('http'):
+                job_url = self.BASE_URL + job_path
+            else:
+                job_url = job_path
+            
+            # Only process if it's a job posting URL
+            if '/companies/' not in job_url or '/jobs/' not in job_url:
+                continue
+            
+            # Fetch job details
+            print(f"  Fetching job: {job_url}")
+            details = self.fetch_job_details(job_url)
+            
+            if details:
+                company = details.get('company') or company_name or "Unknown"
+                title = details.get('title') or link.get_text(strip=True) or "Software Engineer"
+                location = details.get('location')
+                tech_stack = details.get('tech_stack', [])
+                description = details.get('description', '')
+                
+                # Clean up title
+                if title and title.endswith('Jobs'):
+                    title = title[:-4].strip()
+                
+                job = JobPosting(
+                    company=company[:100] if company else "Unknown",
+                    title=title[:100] if title else "Software Engineer",
+                    location=location,
+                    tech_stack=tech_stack,
+                    raw_text=description[:500] if description else '',
+                    source='YC',
+                    source_url=self.JOBS_URL,
+                    scraped_at=datetime.now(),
+                    url=job_url,
+                    posted_date=datetime.now()
+                )
+                
+                company_jobs.append(job)
+                time.sleep(0.3)  # Rate limiting
+        
+        return company_jobs
+    
     def extract_company_from_url(self, url: str) -> Optional[str]:
         """Extract company name from YC job URL format: /companies/company-name/jobs/..."""
         match = re.search(r'/companies/([^/]+)/jobs/', url)
@@ -192,7 +259,7 @@ class YCScraper:
         processed_count = 0
         
         for link in job_links:
-            if processed_count >= 50:  # Limit to avoid too many requests
+            if processed_count >= 100:  # Increased limit to get more jobs
                 break
             
             try:
@@ -223,10 +290,27 @@ class YCScraper:
                     continue
                 visited_urls.add(job_url)
                 
-                # Only process actual job posting URLs (company job pages)
-                # Must contain /companies/.../jobs/ pattern
-                if '/companies/' not in job_url or '/jobs/' not in job_url:
-                    # Skip if it's not a company job page
+                # Process two types of URLs:
+                # 1. Individual job postings: /companies/company-name/jobs/job-id
+                # 2. Company pages: /companies/company-name (may have multiple jobs)
+                if '/companies/' not in job_url:
+                    # Skip if it's not a company-related URL
+                    continue
+                
+                # Check if it's a company page (no /jobs/ in URL) - we'll scrape it for job listings
+                is_company_page = '/companies/' in job_url and '/jobs/' not in job_url
+                is_job_page = '/companies/' in job_url and '/jobs/' in job_url
+                
+                if is_company_page:
+                    # Company page - scrape it for job listings
+                    print(f"Fetching company page: {job_url}")
+                    company_jobs = self.scrape_company_page(job_url)
+                    jobs.extend(company_jobs)
+                    processed_count += len(company_jobs)  # Count jobs found from company page
+                    time.sleep(0.5)  # Rate limiting
+                    continue
+                elif not is_job_page:
+                    # Skip other URLs
                     continue
                 
                 # Extract company name from URL first
