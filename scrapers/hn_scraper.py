@@ -88,26 +88,180 @@ class HNScraper:
         
         first_line = lines[0].strip()
         
+        # Common sentence starters that indicate it's not a company name
+        sentence_starters = [
+            'we are', 'we\'re', 'we', 'our', 'looking for', 'hiring', 'seeking',
+            'are you', 'do you', 'want to', 'join us', 'come work', 'come join',
+            'at', 'from', 'help us', 'we need', 'we want', 'we build', 'we make',
+            'we develop', 'we create', 'we help', 'we focus', 'we specialize',
+            'interested in', 'if you', 'when you', 'as a', 'as an'
+        ]
+        
+        # Check if first line starts with a sentence starter
+        first_line_lower = first_line.lower()
+        for starter in sentence_starters:
+            if first_line_lower.startswith(starter):
+                # Look for company name patterns in the text
+                company = self._find_company_in_text(text)
+                if company:
+                    return company
+                # If not found, try to extract from common patterns
+                return self._extract_from_sentence(text)
+        
         # Common patterns:
         # "Company Name | Role"
         # "Company Name - Role"
         # "Company Name: Role"
-        # Sometimes company name is in bold or at the start
+        # "Company Name • Role"
         
         # Try to extract from common separators
         for separator in ['|', '-', ':', '•']:
             if separator in first_line:
                 parts = first_line.split(separator, 1)
                 company = parts[0].strip()
-                if company and len(company) < 100:  # Reasonable company name length
+                
+                # Validate it looks like a company name
+                if self._is_valid_company_name(company):
                     return company
         
-        # If no separator, use first line but limit length
-        company = first_line[:100].strip()
+        # If no separator, check if first line looks like a company name
+        if self._is_valid_company_name(first_line):
+            # Limit length to reasonable company name
+            company = first_line[:60].strip()
+            if company:
+                return company
+        
+        # Fallback: search for company name patterns in text
+        company = self._find_company_in_text(text)
+        if company:
+            return company
+        
+        # Last resort: use first line but limit length
+        company = first_line[:60].strip()
         if not company:
             return "Unknown"
         
         return company
+    
+    def _is_valid_company_name(self, text: str) -> bool:
+        """Check if text looks like a valid company name"""
+        if not text or len(text) < 2:
+            return False
+        
+        # Too long to be a company name
+        if len(text) > 60:
+            return False
+        
+        text_lower = text.lower()
+        
+        # Sentence starters that indicate it's NOT a company name
+        sentence_starters = [
+            'we are', 'we\'re', 'we', 'our', 'looking for', 'hiring', 'seeking',
+            'are you', 'do you', 'want to', 'join us', 'come work', 'come join',
+            'at', 'from', 'help us', 'we need', 'we want', 'we build', 'we make',
+            'we develop', 'we create', 'we help', 'we focus', 'we specialize',
+            'interested in', 'if you', 'when you', 'as a', 'as an', 'the role',
+            'this role', 'this position', 'the position', 'this opportunity'
+        ]
+        
+        if any(text_lower.startswith(starter) for starter in sentence_starters):
+            return False
+        
+        # Common verbs that indicate it's a sentence
+        verbs = ['are', 'is', 'was', 'were', 'have', 'has', 'had', 'do', 'does',
+                'did', 'can', 'could', 'will', 'would', 'should', 'must', 'need',
+                'want', 'looking', 'seeking', 'hiring', 'recruiting']
+        
+        words = text_lower.split()
+        # If it starts with a verb, it's likely a sentence
+        if words and words[0] in verbs:
+            return False
+        
+        # Too many words likely means it's a sentence (company names are usually 1-5 words)
+        if len(words) > 8:
+            return False
+        
+        # Check for common sentence patterns
+        if any(keyword in text_lower for keyword in ['years of', 'experience', 'working with', 'familiar with']):
+            return False
+        
+        # Valid company name patterns:
+        # - Starts with capital letter (or all caps)
+        # - Usually 1-5 words
+        # - May contain &, +, -, but not common sentence words
+        
+        # Check if it starts with capital letter (common for company names)
+        first_char = text[0] if text else ''
+        if first_char and first_char.isalpha() and not first_char.isupper():
+            # If it's lowercase, might still be valid if it's a short tech name
+            if len(words) > 3:
+                return False
+        
+        return True
+    
+    def _find_company_in_text(self, text: str) -> Optional[str]:
+        """Look for company name patterns in the text"""
+        # Patterns like "at CompanyName", "from CompanyName", "CompanyName is", "CompanyName,"
+        patterns = [
+            r'(?:at|from|with|join|working at|work at|working with|work with)\s+([A-Z][a-zA-Z0-9\s&]+?)(?:\s|,|\.|$)',
+            r'([A-Z][a-zA-Z0-9\s&]{2,40})\s+(?:is|are|was|were|hiring|seeking|looking)',
+            r'([A-Z][a-zA-Z0-9\s&]{2,40})(?:\s|,|\.|$)',
+        ]
+        
+        for pattern in patterns:
+            matches = re.findall(pattern, text[:500])  # Check first 500 chars
+            for match in matches:
+                company = match.strip()
+                # Clean up common prefixes/suffixes
+                company = re.sub(r'^(at|from|with|join|working at|work at|working with|work with)\s+', '', company, flags=re.I)
+                company = company.rstrip('.,;:')
+                
+                if self._is_valid_company_name(company):
+                    return company
+        
+        return None
+    
+    def _extract_from_sentence(self, text: str) -> str:
+        """Extract company name from a sentence-like format"""
+        # Look for patterns like "CompanyName is hiring..." or "Join CompanyName..."
+        lines = text.split('\n')[:3]  # Check first 3 lines
+        
+        for line in lines:
+            # Pattern: "CompanyName is/are/was/were/hiring..."
+            match = re.search(r'^([A-Z][a-zA-Z0-9\s&]{2,40})\s+(?:is|are|was|were|hiring|seeking|looking)', line)
+            if match:
+                company = match.group(1).strip()
+                if self._is_valid_company_name(company):
+                    return company
+            
+            # Pattern: "Join CompanyName..." or "Work at CompanyName..."
+            match = re.search(r'(?:join|work at|working at|come work at)\s+([A-Z][a-zA-Z0-9\s&]{2,40})', line, re.I)
+            if match:
+                company = match.group(1).strip()
+                if self._is_valid_company_name(company):
+                    return company
+        
+        # If still not found, look for capitalized phrases that might be company names
+        # This is a fallback - try to find capitalized words that aren't sentences
+        words = text.split()[:20]  # First 20 words
+        potential_names = []
+        current_name = []
+        
+        for word in words:
+            word_clean = word.strip('.,;:()[]{}')
+            if word_clean and word_clean[0].isupper() and word_clean.isalnum():
+                current_name.append(word_clean)
+            else:
+                if current_name and len(current_name) <= 5:
+                    potential_name = ' '.join(current_name)
+                    if self._is_valid_company_name(potential_name):
+                        potential_names.append(potential_name)
+                current_name = []
+        
+        if potential_names:
+            return potential_names[0]
+        
+        return "Unknown"
     
     def extract_job_title(self, text: str) -> str:
         """Extract job title from comment text"""
