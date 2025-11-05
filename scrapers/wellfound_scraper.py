@@ -130,8 +130,10 @@ class WellfoundScraper:
                     
                     tech_stack = self.extract_tech_stack(parent_text + " " + link_text)
                     
-                    # Extract location
+                    # Extract location using whitelist validation
                     location = None
+                    from utils.location_validator import validate_and_normalize_location
+                    
                     location_patterns = [
                         r'\b(remote|onsite|hybrid|anywhere)\b',
                         r'\b(san francisco|sf|bay area|new york|nyc|seattle|austin|boston|chicago|los angeles|la)\b',
@@ -141,8 +143,10 @@ class WellfoundScraper:
                     for pattern in location_patterns:
                         match = re.search(pattern, parent_text.lower(), re.I)
                         if match:
-                            location = match.group(1).title()
-                            break
+                            candidate = validate_and_normalize_location(match.group(1))
+                            if candidate:
+                                location = candidate
+                                break
                     
                     # Extract posted date
                     posted_date = None
@@ -190,11 +194,15 @@ class WellfoundScraper:
                     if url and not url.startswith('http'):
                         url = self.BASE_URL + url
                     
-                    # Extract location
+                    # Extract location using whitelist validation
                     location = None
+                    from utils.location_validator import validate_and_normalize_location
+                    
                     location_elem = card.find(string=re.compile(r'remote|onsite|hybrid|location', re.I))
                     if location_elem:
-                        location = location_elem.strip()
+                        candidate = validate_and_normalize_location(location_elem.strip())
+                        if candidate:
+                            location = candidate
                     
                     # Extract tech stack
                     card_text = card.get_text()

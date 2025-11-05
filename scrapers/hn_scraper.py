@@ -343,40 +343,69 @@ class HNScraper:
     
     def extract_location(self, text: str) -> Optional[str]:
         """Extract location from comment text"""
-        # Common location patterns
-        location_patterns = [
-            r'\b(remote|onsite|hybrid|anywhere)\b',
-            r'\b(san francisco|sf|bay area|new york|nyc|seattle|austin|boston|chicago|los angeles|la)\b',
-            r'\b(usa|united states|us|canada|uk|united kingdom|london|berlin|paris|amsterdam)\b',
-            r'\b([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*,\s*[A-Z]{2})\b',  # City, State format
-            r'\b([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*,\s*[A-Z][a-z]+)\b',  # City, Country format
-        ]
+        from utils.location_validator import VALID_LOCATIONS, LOCATION_NORMALIZE, validate_and_normalize_location
         
         text_lower = text.lower()
         
-        # Check for remote/hybrid first
-        for pattern in location_patterns[:1]:
-            matches = re.findall(pattern, text_lower, re.IGNORECASE)
-            if matches:
-                return matches[0].title()
+        # First, check for explicit remote/hybrid/onsite keywords
+        work_type_pattern = r'\b(remote|onsite|hybrid|anywhere)\b'
+        match = re.search(work_type_pattern, text_lower)
+        if match:
+            candidate = validate_and_normalize_location(match.group(1))
+            if candidate:
+                return candidate
         
-        # Check for specific locations
-        for pattern in location_patterns[1:]:
-            matches = re.findall(pattern, text, re.IGNORECASE)
-            if matches:
-                return matches[0]
+        # Check for known city/country names (case-insensitive)
+        for valid_loc in VALID_LOCATIONS:
+            pattern = r'\b' + re.escape(valid_loc) + r'\b'
+            match = re.search(pattern, text_lower)
+            if match:
+                location = match.group(0).lower()
+                candidate = validate_and_normalize_location(location)
+                if candidate:
+                    return candidate
         
-        # Look for location keywords in first few lines
-        location_keywords = ['location', 'based', 'office', 'headquarters']
+        # Try to find "City, State" or "City, Country" format
+        # But be more strict - only match if City is in our whitelist
+        city_state_pattern = r'\b([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*),\s*([A-Z]{2}|[A-Z][a-z]+)\b'
+        matches = re.findall(city_state_pattern, text)
+        
+        for city, state_or_country in matches:
+            city_lower = city.lower()
+            # Check if city is in our whitelist
+            if city_lower in VALID_LOCATIONS:
+                # Normalize city
+                city_normalized = LOCATION_NORMALIZE.get(city_lower, city_lower)
+                # Validate city
+                city_validated = validate_and_normalize_location(city_normalized)
+                if city_validated:
+                    # Check if state/country is valid
+                    state_country_lower = state_or_country.lower()
+                    if len(state_or_country) == 2:  # State abbreviation
+                        return f"{city_validated}, {state_or_country.upper()}"
+                    elif state_country_lower in VALID_LOCATIONS:
+                        state_country_validated = validate_and_normalize_location(state_country_lower)
+                        if state_country_validated:
+                            return f"{city_validated}, {state_country_validated}"
+                    else:
+                        return city_validated
+        
+        # Look for location keywords followed by a valid location
+        location_keywords = ['location', 'based', 'office', 'headquarters', 'in']
         lines = text.split('\n')[:10]
-        for i, line in enumerate(lines):
+        
+        for line in lines:
             line_lower = line.lower()
             if any(keyword in line_lower for keyword in location_keywords):
-                # Try to extract location from this line
-                for pattern in location_patterns:
-                    matches = re.findall(pattern, line, re.IGNORECASE)
-                    if matches:
-                        return matches[0]
+                # Try to find a valid location in this line
+                for valid_loc in VALID_LOCATIONS:
+                    pattern = r'\b' + re.escape(valid_loc) + r'\b'
+                    match = re.search(pattern, line_lower)
+                    if match:
+                        location = match.group(0).lower()
+                        candidate = validate_and_normalize_location(location)
+                        if candidate:
+                            return candidate
         
         return None
     
