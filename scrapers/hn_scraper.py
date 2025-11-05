@@ -138,6 +138,11 @@ class HNScraper:
         
         # Last resort: use first line but limit length
         company = first_line[:60].strip()
+        
+        # Final validation - if it still looks like a sentence, return Unknown
+        if not self._is_valid_company_name(company):
+            return "Unknown"
+        
         if not company:
             return "Unknown"
         
@@ -161,20 +166,46 @@ class HNScraper:
             'at', 'from', 'help us', 'we need', 'we want', 'we build', 'we make',
             'we develop', 'we create', 'we help', 'we focus', 'we specialize',
             'interested in', 'if you', 'when you', 'as a', 'as an', 'the role',
-            'this role', 'this position', 'the position', 'this opportunity'
+            'this role', 'this position', 'the position', 'this opportunity',
+            'hi ', 'thanks', 'thank you', 'hello', 'hey', 'your', 'you\'re',
+            'looks', 'seems', 'appears', 'i\'ve', 'i have', 'i\'m', 'i am',
+            'we\'ve', 'we have', 'we\'re', 'we are', 'they', 'they\'re', 'they are'
         ]
         
+        # Check if it STARTS with sentence starters
         if any(text_lower.startswith(starter) for starter in sentence_starters):
+            return False
+        
+        # Check if it CONTAINS sentence patterns (not just at start)
+        sentence_patterns = [
+            'thanks for', 'thank you for', 'for your', 'in this', 'on this',
+            'to this', 'of this', 'this is', 'this was', 'this seems', 'this looks',
+            'because it', 'because we', 'because they', 'seems to be', 'looks like',
+            'looks pretty', 'we only', 'we\'ve', 'we have', 'we\'re', 'we are',
+            'i think', 'i believe', 'i would', 'i could', 'i can', 'i will',
+            'let me', 'feel free', 'please', 'feel free to', 'please contact',
+            'years of', 'experience', 'working with', 'familiar with',
+            'the account', 'the position', 'the role', 'the job', 'the company',
+            'your comp', 'your company', 'your team', 'your interest',
+            'allows', 'allowing', 'allow', 'ban', 'banned', 'banning'
+        ]
+        
+        if any(pattern in text_lower for pattern in sentence_patterns):
             return False
         
         # Common verbs that indicate it's a sentence
         verbs = ['are', 'is', 'was', 'were', 'have', 'has', 'had', 'do', 'does',
                 'did', 'can', 'could', 'will', 'would', 'should', 'must', 'need',
-                'want', 'looking', 'seeking', 'hiring', 'recruiting']
+                'want', 'looking', 'seeking', 'hiring', 'recruiting', 'thanks',
+                'thank', 'allows', 'allow', 'seems', 'looks', 'appears', 'banned']
         
         words = text_lower.split()
         # If it starts with a verb, it's likely a sentence
         if words and words[0] in verbs:
+            return False
+        
+        # If it contains verbs in the first few words, likely a sentence
+        if len(words) > 2 and any(word in verbs for word in words[:3]):
             return False
         
         # Too many words likely means it's a sentence (company names are usually 1-5 words)
@@ -183,6 +214,18 @@ class HNScraper:
         
         # Check for common sentence patterns
         if any(keyword in text_lower for keyword in ['years of', 'experience', 'working with', 'familiar with']):
+            return False
+        
+        # Check for sentence punctuation patterns
+        if text.count(',') > 2 or text.count('.') > 1:
+            return False
+        
+        # Check if it contains lowercase words in the middle (indicates sentence)
+        # Company names are usually all caps or Title Case
+        words_with_case = text.split()
+        lowercase_count = sum(1 for w in words_with_case if w and w[0].islower())
+        if len(words_with_case) > 2 and lowercase_count > len(words_with_case) * 0.5:
+            # More than half are lowercase - likely a sentence
             return False
         
         # Valid company name patterns:
@@ -405,6 +448,33 @@ class HNScraper:
         if first_line.strip().startswith('>'):  # Quote indicator
             return None
         
+        # Enhanced filtering: Skip comments that are clearly replies or non-job postings
+        reply_indicators = [
+            'hi ', 'hello', 'hey', 'thanks', 'thank you', 'thanks for',
+            'your', 'you\'re', 'you are', 'your interest', 'your application',
+            'we only', 'we\'ve', 'we have', 'we\'re', 'we are', 'we\'ll',
+            'looks', 'seems', 'appears', 'this is', 'this was', 'this seems',
+            'because it', 'because we', 'because they', 'seems to be',
+            'looks like', 'looks pretty', 'the account', 'i\'ve', 'i have',
+            'i think', 'i believe', 'i would', 'i could', 'i can', 'i will',
+            'let me', 'feel free', 'please', 'please contact', 'feel free to',
+            'banned', 'banning', 'ban', 'allows', 'allowing', 'allow'
+        ]
+        
+        first_line_lower = first_line.lower().strip()
+        if any(first_line_lower.startswith(indicator) for indicator in reply_indicators):
+            return None
+        
+        # Skip if it contains reply patterns anywhere in first 200 chars
+        text_preview = text[:200].lower()
+        if any(pattern in text_preview for pattern in [
+            'thanks for your', 'thank you for', 'for your interest',
+            'your interest in', 'your application', 'we only allow',
+            'we\'ve banned', 'banned this account', 'seems to be a',
+            'looks pretty normal', 'your comp philosophy'
+        ]):
+            return None
+        
         # Skip if doesn't contain job-related keywords
         job_keywords = ['hiring', 'engineer', 'developer', 'software', 'position', 'role', 'job', 'opportunity']
         if not any(keyword in text_lower for keyword in job_keywords):
@@ -412,6 +482,11 @@ class HNScraper:
         
         # Try to extract fields
         company = self.extract_company_name(text)
+        
+        # Reject if company name is still a sentence (double-check)
+        if not self._is_valid_company_name(company) or company == "Unknown":
+            return None
+        
         title = self.extract_job_title(text)
         location = self.extract_location(text)
         tech_stack = self.extract_tech_stack(text)
