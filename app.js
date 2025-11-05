@@ -2,6 +2,8 @@
 let allJobs = [];
 let filteredJobs = [];
 let selectedTech = new Set();
+let currentSort = 'score';
+let currentView = 'grid';
 
 // DOM elements
 const jobsContainer = document.getElementById('jobs-container');
@@ -11,10 +13,15 @@ const techFilter = document.getElementById('tech-filter');
 const clearFiltersBtn = document.getElementById('clear-filters');
 const jobCount = document.getElementById('job-count');
 const lastUpdated = document.getElementById('last-updated');
+const loadingState = document.querySelector('.loading-state');
+const emptyState = document.querySelector('.empty-state');
 
 // Load jobs from JSON
 async function loadJobs() {
     try {
+        if (loadingState) loadingState.style.display = 'block';
+        if (emptyState) emptyState.style.display = 'none';
+        
         const response = await fetch('jobs.json');
         if (!response.ok) {
             throw new Error('Failed to load jobs.json');
@@ -23,17 +30,28 @@ async function loadJobs() {
         allJobs = data;
         
         // Update last updated time
-        const updateTime = new Date().toLocaleString();
-        lastUpdated.textContent = updateTime;
+        if (lastUpdated) {
+            const updateTime = new Date().toLocaleString();
+            lastUpdated.textContent = updateTime;
+        }
         
         // Initialize filters
         initializeFilters();
         
         // Apply filters
         applyFilters();
+        
+        if (loadingState) loadingState.style.display = 'none';
     } catch (error) {
         console.error('Error loading jobs:', error);
-        jobsContainer.innerHTML = '<div class="no-jobs">Failed to load jobs. Make sure jobs.json exists.</div>';
+        if (loadingState) loadingState.style.display = 'none';
+        if (emptyState) {
+            emptyState.style.display = 'block';
+            emptyState.querySelector('.empty-state-title').textContent = 'Failed to load jobs';
+            emptyState.querySelector('.empty-state-description').textContent = 'Make sure jobs.json exists.';
+        } else {
+            jobsContainer.innerHTML = '<div class="no-jobs">Failed to load jobs. Make sure jobs.json exists.</div>';
+        }
     }
 }
 
@@ -114,11 +132,29 @@ function applyFilters() {
 // Render jobs
 function renderJobs() {
     if (filteredJobs.length === 0) {
-        jobsContainer.innerHTML = '<div class="no-jobs">No jobs found matching your filters.</div>';
+        if (emptyState) {
+            emptyState.style.display = 'block';
+        } else {
+            jobsContainer.innerHTML = '<div class="no-jobs">No jobs found matching your filters.</div>';
+        }
         return;
     }
     
-    jobsContainer.innerHTML = filteredJobs.map(job => `
+    if (emptyState) emptyState.style.display = 'none';
+    
+    // Sort jobs
+    let sortedJobs = [...filteredJobs];
+    if (currentSort === 'score') {
+        sortedJobs.sort((a, b) => (b.hidden_score || 0) - (a.hidden_score || 0));
+    } else if (currentSort === 'date') {
+        sortedJobs.sort((a, b) => {
+            const dateA = new Date(a.posted_date || a.scraped_at || 0);
+            const dateB = new Date(b.posted_date || b.scraped_at || 0);
+            return dateB - dateA;
+        });
+    }
+    
+    jobsContainer.innerHTML = sortedJobs.map(job => `
         <div class="job-card">
             <div class="job-header">
                 <div>
@@ -132,7 +168,7 @@ function renderJobs() {
             
             <div class="job-source">${escapeHtml(job.source)}</div>
             
-            ${job.tech_stack.length > 0 ? `
+            ${job.tech_stack && job.tech_stack.length > 0 ? `
                 <div class="job-tech-stack">
                     ${job.tech_stack.map(tech => `<span class="tech-badge">${escapeHtml(tech)}</span>`).join('')}
                 </div>
@@ -143,6 +179,13 @@ function renderJobs() {
             </a>
         </div>
     `).join('');
+    
+    // Update view class
+    if (currentView === 'list') {
+        jobsContainer.classList.add('list-view');
+    } else {
+        jobsContainer.classList.remove('list-view');
+    }
 }
 
 // Update stats
@@ -166,10 +209,65 @@ function clearFilters() {
     applyFilters();
 }
 
+// Sort handler
+function handleSort(sortType) {
+    currentSort = sortType;
+    document.querySelectorAll('.sort-option').forEach(btn => btn.classList.remove('active'));
+    document.querySelector(`[data-sort="${sortType}"]`).classList.add('active');
+    renderJobs();
+}
+
+// View handler
+function handleView(viewType) {
+    currentView = viewType;
+    document.querySelectorAll('.view-option').forEach(btn => btn.classList.remove('active'));
+    document.querySelector(`[data-view="${viewType}"]`).classList.add('active');
+    renderJobs();
+}
+
 // Event listeners
-searchInput.addEventListener('input', applyFilters);
-locationSelect.addEventListener('change', applyFilters);
-clearFiltersBtn.addEventListener('click', clearFilters);
+if (searchInput) {
+    searchInput.addEventListener('input', applyFilters);
+}
+if (locationSelect) {
+    locationSelect.addEventListener('change', applyFilters);
+}
+if (clearFiltersBtn) {
+    clearFiltersBtn.addEventListener('click', clearFilters);
+}
+
+// Sort options
+document.querySelectorAll('.sort-option').forEach(btn => {
+    btn.addEventListener('click', () => handleSort(btn.dataset.sort));
+});
+
+// View options
+document.querySelectorAll('.view-option').forEach(btn => {
+    btn.addEventListener('click', () => handleView(btn.dataset.view));
+});
+
+// Newsletter form
+const newsletterForm = document.querySelector('.newsletter-form');
+if (newsletterForm) {
+    newsletterForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Newsletter subscription coming soon!');
+    });
+}
+
+// Reset filters button
+const resetFiltersBtn = document.getElementById('reset-filters');
+if (resetFiltersBtn) {
+    resetFiltersBtn.addEventListener('click', clearFilters);
+}
+
+// Refresh data button
+const refreshDataBtn = document.getElementById('refresh-data');
+if (refreshDataBtn) {
+    refreshDataBtn.addEventListener('click', () => {
+        loadJobs();
+    });
+}
 
 // Load jobs on page load
 loadJobs();
