@@ -65,6 +65,15 @@ main {
     gap: 1rem;
 }
 
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-group.full-width {
+    width: 100%;
+}
+
 .filter-group label {
     font-weight: 600;
     margin-bottom: 0.5rem;
