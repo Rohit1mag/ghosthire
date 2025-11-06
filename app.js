@@ -28,12 +28,25 @@ async function loadJobs() {
             throw new Error('Failed to load jobs.json');
         }
         const data = await response.json();
-        allJobs = data;
         
-        // Update last updated time
-        if (lastUpdated) {
-            const updateTime = new Date().toLocaleString();
-            lastUpdated.textContent = updateTime;
+        // Handle both old format (array) and new format (object with metadata)
+        if (Array.isArray(data)) {
+            // Old format - backward compatibility
+            allJobs = data;
+            if (lastUpdated) {
+                lastUpdated.textContent = 'Unknown';
+            }
+        } else {
+            // New format with metadata
+            allJobs = data.jobs || [];
+            
+            // Show actual scrape time
+            if (data.last_updated && lastUpdated) {
+                const updateDate = new Date(data.last_updated);
+                lastUpdated.textContent = updateDate.toLocaleString();
+            } else if (lastUpdated) {
+                lastUpdated.textContent = 'Unknown';
+            }
         }
         
         // Initialize filters

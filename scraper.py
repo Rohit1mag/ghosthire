@@ -30,8 +30,15 @@ def save_jobs_to_json(jobs: List[JobPosting], filename: str):
     data = [job.to_dict() for job in jobs]
     data.sort(key=lambda x: x.get('hidden_score', 0), reverse=True)
     
+    # Add metadata with timestamp
+    output = {
+        'last_updated': datetime.now().isoformat(),
+        'total_jobs': len(data),
+        'jobs': data
+    }
+    
     with open(filename, 'w', encoding='utf-8') as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
+        json.dump(output, f, indent=2, ensure_ascii=False)
     print(f"\nSaved {len(jobs)} jobs to {filename}")
 
 
