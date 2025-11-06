@@ -1,6 +1,6 @@
-# Job Aggregator - Hidden SWE Roles Finder
+# Job Aggregator - YC Jobs Focus
 
-A web scraper and job aggregator that finds "hidden" software engineering roles from non-mainstream sources like HN Who's Hiring threads, YC jobs, and VC portfolio pages.
+A web scraper and job aggregator that finds software engineering roles from Y Combinator companies in W24, S24, and W25 batches (11-50 employees).
 
 ## Architecture Overview
 
@@ -8,7 +8,7 @@ A web scraper and job aggregator that finds "hidden" software engineering roles 
 Job Aggregator/
 ├── scrapers/           # Scraper modules for different sources
 │   ├── __init__.py
-│   └── hn_scraper.py   # HackerNews Who's Hiring scraper
+│   └── yc_scraper.py  # Y Combinator Jobs scraper
 ├── models.py           # Data models (JobPosting)
 ├── scraper.py          # Main script to run scrapers
 ├── config.json         # Configuration file for source URLs
@@ -17,21 +17,14 @@ Job Aggregator/
 └── README.md           # This file
 ```
 
-### Current Status: MVP - HN Scraper ✅
+### Current Status: YC Jobs Scraper ✅
 
 **Implemented:**
-- ✅ HN Who's Hiring thread scraper
+- ✅ YC Jobs scraper
+- ✅ Batch filtering (W24, S24, W25)
+- ✅ Company size filtering (11-50 employees)
 - ✅ Job parsing (company, title, location, tech stack)
 - ✅ JSON export with statistics
-
-**Planned:**
-- ⏳ YC Jobs scraper
-- ⏳ VC portfolio scraper
-- ⏳ Database storage (Postgres)
-- ⏳ Hidden score calculation
-- ⏳ Deduplication logic
-- ⏳ Backend API (Flask/FastAPI)
-- ⏳ Frontend (React)
 
 ## Setup
 
@@ -41,16 +34,16 @@ pip install -r requirements.txt
 ```
 
 2. **Configure sources (optional):**
-   - Edit `config.json` to add HN thread URLs and other sources
+   - Edit `config.json` to configure YC Jobs source
    - Set `"active": true` for sources you want to scrape
    - Example:
    ```json
    {
      "sources": {
-       "hn_whos_hiring": [
+       "yc_jobs": [
          {
-           "name": "November 2025",
-           "url": "https://news.ycombinator.com/item?id=45800465",
+           "name": "YC Jobs Board",
+           "url": "https://www.ycombinator.com/jobs",
            "active": true
          }
        ]
@@ -62,21 +55,21 @@ pip install -r requirements.txt
 ```bash
 # Scrape all active sources from config.json
 python scraper.py
-
-# Or scrape a specific URL
-python scraper.py https://news.ycombinator.com/item?id=XXXXX
 ```
 
 ## How It Works
 
-### HN Scraper (`scrapers/hn_scraper.py`)
+### YC Scraper (`scrapers/yc_scraper.py`)
 
-The `HNScraper` class:
-1. Fetches the HN thread HTML
-2. Parses all comments
-3. Extracts job information using pattern matching:
-   - **Company name**: First line or before separators (|, -, :, •)
-   - **Job title**: After separator or keywords like "engineer", "developer"
+The `YCScraper` class:
+1. Fetches the YC Jobs page
+2. Extracts company URLs from job listings
+3. Validates companies against criteria:
+   - **Batch**: Must be W24, S24, or W25
+   - **Company size**: Must be 11-50 employees
+4. Scrapes job details from company pages:
+   - **Company name**: Extracted from URL and page content
+   - **Job title**: Extracted from job posting page
    - **Location**: Pattern matching for cities, countries, remote
    - **Tech stack**: Keyword matching against common technologies
 
@@ -87,15 +80,16 @@ The `JobPosting` dataclass stores:
 - Job title
 - Location (optional)
 - Tech stack (list of technologies)
-- Raw comment text
+- Raw job description text
 - Source information
 - Timestamp
 
 ### Output
 
-Jobs are saved to `data/hn_jobs_TIMESTAMP.json` with:
+Jobs are saved to `jobs.json` and `frontend/jobs.json` with:
 - All job postings as JSON
 - Statistics: top companies, tech stacks, locations
+- Metadata: last updated timestamp, total job count
 
 ## Example Output
 
@@ -105,39 +99,21 @@ Jobs are saved to `data/hn_jobs_TIMESTAMP.json` with:
   "title": "Senior Software Engineer",
   "location": "Remote",
   "tech_stack": ["python", "react", "postgresql", "aws"],
-  "raw_text": "Example Corp | Senior Software Engineer...",
-  "source": "HN Who's Hiring",
-  "source_url": "https://news.ycombinator.com/item?id=XXXXX",
+  "raw_text": "Example Corp is hiring...",
+  "source": "YC",
+  "source_url": "https://www.ycombinator.com/jobs",
   "scraped_at": "2024-11-15T10:30:00",
-  "comment_id": "c_12345678"
+  "url": "https://www.ycombinator.com/companies/example/jobs/123"
 }
 ```
 
-## Next Steps
+## Filtering Criteria
 
-1. **Test with real HN thread** - Get actual November 2024 thread URL and verify extraction
-2. **Improve parsing** - Tune regex patterns based on real data
-3. **Add YC Jobs scraper** - Next source to integrate
-4. **Database integration** - Move from JSON to Postgres
-5. **Hidden score algorithm** - Calculate based on recency, platform obscurity, estimated applicants
+The scraper only includes jobs from companies that meet ALL of the following:
+- **Batch**: W24, S24, or W25
+- **Company size**: 11-50 employees
 
-## Technical Details
-
-### Parsing Challenges
-
-HN comments are unstructured, so we use heuristics:
-- Company names usually appear first
-- Common separators help split company/title
-- Tech keywords are matched with word boundaries
-- Location patterns cover common formats
-
-### Future Improvements
-
-- Machine learning for better entity extraction
-- Deduplication across sources
-- Hidden score calculation (recency + platform obscurity)
-- Email alerts for new matching jobs
-- User preference filtering
+This ensures we focus on actual job opportunities at growing startups.
 
 ## License
 

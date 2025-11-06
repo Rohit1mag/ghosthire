@@ -20,6 +20,13 @@ class YCScraper:
     BASE_URL = "https://www.ycombinator.com"
     JOBS_URL = "https://www.ycombinator.com/jobs"
     
+    # Allowed batches
+    ALLOWED_BATCHES = ['W24', 'S24', 'W25']
+    
+    # Company size range (11-50 employees)
+    MIN_COMPANY_SIZE = 11
+    MAX_COMPANY_SIZE = 50
+    
     # Common tech stack keywords to look for
     TECH_KEYWORDS = [
         'python', 'javascript', 'typescript', 'react', 'vue', 'angular',
@@ -37,6 +44,8 @@ class YCScraper:
         self.session.headers.update({
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
         })
+        # Cache for company info to avoid repeated requests
+        self.company_info_cache = {}
     
     def fetch_page(self, url: str) -> Optional[BeautifulSoup]:
         """Fetch and parse a page"""
@@ -76,8 +85,135 @@ class YCScraper:
         
         return None
     
+    def get_company_url_from_job_url(self, job_url: str) -> Optional[str]:
+        """Extract company URL from job URL"""
+        # Extract company slug from job URL: /companies/company-name/jobs/job-id
+        match = re.search(r'/companies/([^/]+)', job_url)
+        if match:
+            company_slug = match.group(1)
+            return f"{self.BASE_URL}/companies/{company_slug}"
+        return None
+    
+    def fetch_company_info(self, company_url: str) -> Optional[dict]:
+        """Fetch company batch and size information from company page"""
+        # Check cache first
+        if company_url in self.company_info_cache:
+            return self.company_info_cache[company_url]
+        
+        soup = self.fetch_page(company_url)
+        if not soup:
+            self.company_info_cache[company_url] = None
+            return None
+        
+        info = {
+            'batch': None,
+            'company_size': None,
+            'valid': False
+        }
+        
+        try:
+            # Get all text from the page
+            page_text = soup.get_text(separator=' ', strip=True)
+            page_text_lower = page_text.lower()
+            
+            # Look for batch information (W24, S24, W25, etc.)
+            batch_pattern = r'\b([WS]\d{2})\b'
+            batch_matches = re.findall(batch_pattern, page_text, re.IGNORECASE)
+            for batch in batch_matches:
+                batch_upper = batch.upper()
+                if batch_upper in self.ALLOWED_BATCHES:
+                    info['batch'] = batch_upper
+                    break
+            
+            # Look for company size information
+            # Patterns: "11-50 employees", "15 people", "20 team members", "~30 employees"
+            size_patterns = [
+                r'(\d+)\s*-\s*(\d+)\s*(?:employees?|people|team\s*members?)',
+                r'~?\s*(\d+)\s*(?:employees?|people|team\s*members?)',
+                r'(?:team|company|we)\s*(?:of|size|with|has)\s*(?:~?)?\s*(\d+)\s*(?:employees?|people|team\s*members?)',
+            ]
+            
+            for pattern in size_patterns:
+                matches = re.findall(pattern, page_text_lower, re.IGNORECASE)
+                for match in matches:
+                    if isinstance(match, tuple):
+                        # Range pattern
+                        if len(match) == 2:
+                            try:
+                                min_size = int(match[0])
+                                max_size = int(match[1])
+                                # Use average or check if range fits our criteria
+                                avg_size = (min_size + max_size) // 2
+                                if self.MIN_COMPANY_SIZE <= avg_size <= self.MAX_COMPANY_SIZE:
+                                    info['company_size'] = avg_size
+                                    break
+                            except ValueError:
+                                continue
+                        else:
+                            try:
+                                size = int(match[0])
+                                if self.MIN_COMPANY_SIZE <= size <= self.MAX_COMPANY_SIZE:
+                                    info['company_size'] = size
+                                    break
+                            except (ValueError, IndexError):
+                                continue
+                    else:
+                        # Single number pattern
+                        try:
+                            size = int(match)
+                            if self.MIN_COMPANY_SIZE <= size <= self.MAX_COMPANY_SIZE:
+                                info['company_size'] = size
+                                break
+                        except ValueError:
+                            continue
+            
+            # Also check structured data or meta tags
+            # Look for JSON-LD structured data
+            json_ld = soup.find('script', type='application/ld+json')
+            if json_ld:
+                try:
+                    import json
+                    data = json.loads(json_ld.string)
+                    # Check for organization data
+                    if isinstance(data, dict) and data.get('@type') == 'Organization':
+                        if 'numberOfEmployees' in data:
+                            size = data['numberOfEmployees']
+                            if isinstance(size, (int, str)):
+                                try:
+                                    size_int = int(str(size).replace(',', ''))
+                                    if self.MIN_COMPANY_SIZE <= size_int <= self.MAX_COMPANY_SIZE:
+                                        info['company_size'] = size_int
+                                except ValueError:
+                                    pass
+                except:
+                    pass
+            
+            # Validate: must have batch AND company size
+            if info['batch'] and info['company_size']:
+                info['valid'] = True
+            
+            # Cache the result
+            self.company_info_cache[company_url] = info
+            return info
+            
+        except Exception as e:
+            print(f"Error fetching company info from {company_url}: {e}")
+            self.company_info_cache[company_url] = None
+            return None
+    
+    def is_company_valid(self, company_url: str) -> bool:
+        """Check if company matches our criteria (batch and size)"""
+        if not company_url:
+            return False
+        
+        info = self.fetch_company_info(company_url)
+        if not info:
+            return False
+        
+        return info.get('valid', False)
+    
     def scrape_company_page(self, company_url: str) -> List[JobPosting]:
-        """Scrape all jobs from a company page"""
+        """Scrape all jobs from a company page (assumes company already validated)"""
         soup = self.fetch_page(company_url)
         if not soup:
             return []
@@ -302,6 +438,12 @@ class YCScraper:
                 is_job_page = '/companies/' in job_url and '/jobs/' in job_url
                 
                 if is_company_page:
+                    # Company page - check if it matches our criteria first
+                    print(f"Checking company: {job_url}")
+                    if not self.is_company_valid(job_url):
+                        print(f"  Skipping - company doesn't match batch/size criteria")
+                        continue
+                    
                     # Company page - scrape it for job listings
                     print(f"Fetching company page: {job_url}")
                     company_jobs = self.scrape_company_page(job_url)
@@ -335,6 +477,14 @@ class YCScraper:
                         company_elem = parent.find(['h3', 'h4', 'strong', 'div', 'a'], class_=re.compile(r'company|name', re.I))
                         if company_elem:
                             company = company_elem.get_text(strip=True)
+                
+                # Check if company matches our criteria before processing job
+                company_url = self.get_company_url_from_job_url(job_url)
+                if company_url:
+                    print(f"Checking company: {company_url}")
+                    if not self.is_company_valid(company_url):
+                        print(f"  Skipping - company doesn't match batch/size criteria")
+                        continue
                 
                 # Always fetch details from job page to get accurate info
                 print(f"Fetching details from: {job_url}")

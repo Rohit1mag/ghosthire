@@ -9,12 +9,8 @@ import os
 from datetime import datetime
 from typing import List
 
-# Import all scrapers
-from scrapers.hn_scraper import HNScraper
+# Import YC scraper
 from scrapers.yc_scraper import YCScraper
-from scrapers.wellfound_scraper import WellfoundScraper
-from scrapers.remoteok_scraper import RemoteOKScraper
-from scrapers.weworkremotely_scraper import WeWorkRemotelyScraper
 
 from models import JobPosting
 from utils.hidden_score import calculate_hidden_score
@@ -52,26 +48,9 @@ def load_config():
 
 
 def scrape_all_active_sources() -> List[JobPosting]:
-    """Scrape all active sources from config.json"""
+    """Scrape YC Jobs from specified batches"""
     config = load_config()
     all_jobs = []
-    
-    # Scrape HN Who's Hiring threads
-    hn_sources = config.get("sources", {}).get("hn_whos_hiring", [])
-    if hn_sources:
-        scraper = HNScraper()
-        for source in hn_sources:
-            if source.get("active", False):
-                print(f"\n{'='*60}")
-                print(f"Scraping HN: {source.get('name', 'Unknown')}")
-                print(f"URL: {source['url']}")
-                print(f"{'='*60}")
-                try:
-                    jobs = scraper.scrape_thread(source['url'])
-                    all_jobs.extend(jobs)
-                except Exception as e:
-                    print(f"Error scraping HN {source['url']}: {e}")
-                    continue
     
     # Scrape YC Jobs
     yc_sources = config.get("sources", {}).get("yc_jobs", [])
@@ -99,87 +78,6 @@ def scrape_all_active_sources() -> List[JobPosting]:
             all_jobs.extend(jobs)
         except Exception as e:
             print(f"Error scraping YC Jobs: {e}")
-    
-    # Scrape Wellfound
-    wellfound_sources = config.get("sources", {}).get("wellfound", [])
-    if wellfound_sources:
-        scraper = WellfoundScraper()
-        for source in wellfound_sources:
-            if source.get("active", False):
-                print(f"\n{'='*60}")
-                print(f"Scraping Wellfound")
-                print(f"{'='*60}")
-                try:
-                    jobs = scraper.scrape_jobs()
-                    all_jobs.extend(jobs)
-                except Exception as e:
-                    print(f"Error scraping Wellfound: {e}")
-                    continue
-    else:
-        # Try scraping Wellfound anyway
-        print(f"\n{'='*60}")
-        print(f"Scraping Wellfound")
-        print(f"{'='*60}")
-        try:
-            scraper = WellfoundScraper()
-            jobs = scraper.scrape_jobs()
-            all_jobs.extend(jobs)
-        except Exception as e:
-            print(f"Error scraping Wellfound: {e}")
-    
-    # Scrape RemoteOK
-    remoteok_sources = config.get("sources", {}).get("remoteok", [])
-    if remoteok_sources:
-        scraper = RemoteOKScraper()
-        for source in remoteok_sources:
-            if source.get("active", False):
-                print(f"\n{'='*60}")
-                print(f"Scraping RemoteOK")
-                print(f"{'='*60}")
-                try:
-                    jobs = scraper.scrape_jobs()
-                    all_jobs.extend(jobs)
-                except Exception as e:
-                    print(f"Error scraping RemoteOK: {e}")
-                    continue
-    else:
-        # Try scraping RemoteOK anyway
-        print(f"\n{'='*60}")
-        print(f"Scraping RemoteOK")
-        print(f"{'='*60}")
-        try:
-            scraper = RemoteOKScraper()
-            jobs = scraper.scrape_jobs()
-            all_jobs.extend(jobs)
-        except Exception as e:
-            print(f"Error scraping RemoteOK: {e}")
-    
-    # Scrape We Work Remotely
-    wwr_sources = config.get("sources", {}).get("weworkremotely", [])
-    if wwr_sources:
-        scraper = WeWorkRemotelyScraper()
-        for source in wwr_sources:
-            if source.get("active", False):
-                print(f"\n{'='*60}")
-                print(f"Scraping We Work Remotely")
-                print(f"{'='*60}")
-                try:
-                    jobs = scraper.scrape_jobs()
-                    all_jobs.extend(jobs)
-                except Exception as e:
-                    print(f"Error scraping We Work Remotely: {e}")
-                    continue
-    else:
-        # Try scraping We Work Remotely anyway
-        print(f"\n{'='*60}")
-        print(f"Scraping We Work Remotely")
-        print(f"{'='*60}")
-        try:
-            scraper = WeWorkRemotelyScraper()
-            jobs = scraper.scrape_jobs()
-            all_jobs.extend(jobs)
-        except Exception as e:
-            print(f"Error scraping We Work Remotely: {e}")
     
     return all_jobs
 
