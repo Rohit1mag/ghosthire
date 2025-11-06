@@ -310,9 +310,12 @@ class YCScraper:
             return None
     
     def scrape_jobs(self) -> List[JobPosting]:
-        """Scrape all job postings from YC Jobs"""
-        print(f"Fetching YC Jobs: {self.JOBS_URL}")
-        soup = self.fetch_page(self.JOBS_URL)
+        """Scrape all job postings from Work at a Startup (YC's job platform)"""
+        print(f"Fetching Work at a Startup jobs")
+        
+        # Use Work at a Startup which has better structure for scraping
+        waas_url = "https://www.workatastartup.com/jobs"
+        soup = self.fetch_page(waas_url)
         
         if not soup:
             print("Failed to fetch YC jobs page")
@@ -378,13 +381,7 @@ class YCScraper:
                 is_job_page = '/companies/' in job_url and '/jobs/' in job_url
                 
                 if is_company_page:
-                    # Company page - check if it matches our criteria first
-                    print(f"Checking company: {job_url}")
-                    if not self.is_company_valid(job_url):
-                        print(f"  Skipping - company doesn't match batch criteria")
-                        continue
-                    
-                    # Company page - scrape it for job listings
+                    # Company page - scrape it for job listings (already filtered by batch in URL)
                     print(f"Fetching company page: {job_url}")
                     company_jobs = self.scrape_company_page(job_url)
                     jobs.extend(company_jobs)
@@ -418,15 +415,7 @@ class YCScraper:
                         if company_elem:
                             company = company_elem.get_text(strip=True)
                 
-                # Check if company matches our criteria before processing job
-                company_url = self.get_company_url_from_job_url(job_url)
-                if company_url:
-                    print(f"Checking company: {company_url}")
-                    if not self.is_company_valid(company_url):
-                        print(f"  Skipping - company doesn't match batch criteria")
-                        continue
-                
-                # Always fetch details from job page to get accurate info
+                # Always fetch details from job page to get accurate info (already filtered by batch)
                 print(f"Fetching details from: {job_url}")
                 details = self.fetch_job_details(job_url)
                 
