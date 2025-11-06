@@ -1,6 +1,6 @@
 # Job Aggregator - YC Jobs Focus
 
-A web scraper and job aggregator that finds software engineering roles from Y Combinator companies in W24, S24, and W25 batches (11-50 employees).
+A web scraper and job aggregator that finds software engineering roles from Y Combinator companies in W24, S24, and W25 batches.
 
 ## Architecture Overview
 
@@ -22,7 +22,6 @@ Job Aggregator/
 **Implemented:**
 - ✅ YC Jobs scraper
 - ✅ Batch filtering (W24, S24, W25)
-- ✅ Company size filtering (11-50 employees)
 - ✅ Job parsing (company, title, location, tech stack)
 - ✅ JSON export with statistics
 
@@ -66,7 +65,6 @@ The `YCScraper` class:
 2. Extracts company URLs from job listings
 3. Validates companies against criteria:
    - **Batch**: Must be W24, S24, or W25
-   - **Company size**: Must be 11-50 employees
 4. Scrapes job details from company pages:
    - **Company name**: Extracted from URL and page content
    - **Job title**: Extracted from job posting page
@@ -109,11 +107,10 @@ Jobs are saved to `jobs.json` and `frontend/jobs.json` with:
 
 ## Filtering Criteria
 
-The scraper only includes jobs from companies that meet ALL of the following:
+The scraper only includes jobs from companies in the following batches:
 - **Batch**: W24, S24, or W25
-- **Company size**: 11-50 employees
 
-This ensures we focus on actual job opportunities at growing startups.
+This ensures we focus on recent Y Combinator companies with active job postings.
 
 ## License
 

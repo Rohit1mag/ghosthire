@@ -23,10 +23,6 @@ class YCScraper:
     # Allowed batches
     ALLOWED_BATCHES = ['W24', 'S24', 'W25']
     
-    # Company size range (11-50 employees)
-    MIN_COMPANY_SIZE = 11
-    MAX_COMPANY_SIZE = 50
-    
     # Common tech stack keywords to look for
     TECH_KEYWORDS = [
         'python', 'javascript', 'typescript', 'react', 'vue', 'angular',
@@ -95,7 +91,7 @@ class YCScraper:
         return None
     
     def fetch_company_info(self, company_url: str) -> Optional[dict]:
-        """Fetch company batch and size information from company page"""
+        """Fetch company batch information from company page"""
         # Check cache first
         if company_url in self.company_info_cache:
             return self.company_info_cache[company_url]
@@ -107,14 +103,12 @@ class YCScraper:
         
         info = {
             'batch': None,
-            'company_size': None,
             'valid': False
         }
         
         try:
             # Get all text from the page
             page_text = soup.get_text(separator=' ', strip=True)
-            page_text_lower = page_text.lower()
             
             # Look for batch information (W24, S24, W25, etc.)
             batch_pattern = r'\b([WS]\d{2})\b'
@@ -125,71 +119,8 @@ class YCScraper:
                     info['batch'] = batch_upper
                     break
             
-            # Look for company size information
-            # Patterns: "11-50 employees", "15 people", "20 team members", "~30 employees"
-            size_patterns = [
-                r'(\d+)\s*-\s*(\d+)\s*(?:employees?|people|team\s*members?)',
-                r'~?\s*(\d+)\s*(?:employees?|people|team\s*members?)',
-                r'(?:team|company|we)\s*(?:of|size|with|has)\s*(?:~?)?\s*(\d+)\s*(?:employees?|people|team\s*members?)',
-            ]
-            
-            for pattern in size_patterns:
-                matches = re.findall(pattern, page_text_lower, re.IGNORECASE)
-                for match in matches:
-                    if isinstance(match, tuple):
-                        # Range pattern
-                        if len(match) == 2:
-                            try:
-                                min_size = int(match[0])
-                                max_size = int(match[1])
-                                # Use average or check if range fits our criteria
-                                avg_size = (min_size + max_size) // 2
-                                if self.MIN_COMPANY_SIZE <= avg_size <= self.MAX_COMPANY_SIZE:
-                                    info['company_size'] = avg_size
-                                    break
-                            except ValueError:
-                                continue
-                        else:
-                            try:
-                                size = int(match[0])
-                                if self.MIN_COMPANY_SIZE <= size <= self.MAX_COMPANY_SIZE:
-                                    info['company_size'] = size
-                                    break
-                            except (ValueError, IndexError):
-                                continue
-                    else:
-                        # Single number pattern
-                        try:
-                            size = int(match)
-                            if self.MIN_COMPANY_SIZE <= size <= self.MAX_COMPANY_SIZE:
-                                info['company_size'] = size
-                                break
-                        except ValueError:
-                            continue
-            
-            # Also check structured data or meta tags
-            # Look for JSON-LD structured data
-            json_ld = soup.find('script', type='application/ld+json')
-            if json_ld:
-                try:
-                    import json
-                    data = json.loads(json_ld.string)
-                    # Check for organization data
-                    if isinstance(data, dict) and data.get('@type') == 'Organization':
-                        if 'numberOfEmployees' in data:
-                            size = data['numberOfEmployees']
-                            if isinstance(size, (int, str)):
-                                try:
-                                    size_int = int(str(size).replace(',', ''))
-                                    if self.MIN_COMPANY_SIZE <= size_int <= self.MAX_COMPANY_SIZE:
-                                        info['company_size'] = size_int
-                                except ValueError:
-                                    pass
-                except:
-                    pass
-            
-            # Validate: must have batch AND company size
-            if info['batch'] and info['company_size']:
+            # Validate: must have batch
+            if info['batch']:
                 info['valid'] = True
             
             # Cache the result
@@ -202,7 +133,7 @@ class YCScraper:
             return None
     
     def is_company_valid(self, company_url: str) -> bool:
-        """Check if company matches our criteria (batch and size)"""
+        """Check if company matches our criteria (batch only)"""
         if not company_url:
             return False
         
@@ -441,7 +372,7 @@ class YCScraper:
                     # Company page - check if it matches our criteria first
                     print(f"Checking company: {job_url}")
                     if not self.is_company_valid(job_url):
-                        print(f"  Skipping - company doesn't match batch/size criteria")
+                        print(f"  Skipping - company doesn't match batch criteria")
                         continue
                     
                     # Company page - scrape it for job listings
@@ -483,7 +414,7 @@ class YCScraper:
                 if company_url:
                     print(f"Checking company: {company_url}")
                     if not self.is_company_valid(company_url):
-                        print(f"  Skipping - company doesn't match batch/size criteria")
+                        print(f"  Skipping - company doesn't match batch criteria")
                         continue
                 
                 # Always fetch details from job page to get accurate info
