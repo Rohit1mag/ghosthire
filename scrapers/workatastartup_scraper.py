@@ -238,32 +238,77 @@ class WorkatastartupScraper:
         """Scrape all job postings from Work at a Startup"""
         print(f"Fetching Work at a Startup jobs")
         
-        # Use Work at a Startup which has better structure for scraping
-        waas_url = "https://www.workatastartup.com/jobs"
-        soup = self.fetch_page(waas_url)
-        
-        if not soup:
-            print("Failed to fetch Work at a Startup jobs page")
-            return []
-        
         jobs = []
         
-        # Find all job links on the main page
-        # Workatastartup jobs typically link to company/job pages or external application pages
-        job_links = soup.find_all('a', href=re.compile(r'(companies/|jobs/|apply)', re.I))
+        # Define all job categories to scrape
+        job_categories = [
+            "software-engineer",
+            "product-manager", 
+            "designer",
+            "recruiting",
+            "science",
+            "operations",
+            "sales-manager",
+            "marketing",
+            "legal",
+            "finance"
+        ]
         
-        if not job_links:
-            # Fallback: find any links that might be jobs
-            job_links = soup.find_all('a', href=True)
+        # Scrape each category
+        for category in job_categories:
+            print(f"\nScraping category: {category}")
+            category_jobs = self.scrape_category(category)
+            jobs.extend(category_jobs)
+            time.sleep(1)  # Rate limiting between categories
         
-        print(f"Found {len(job_links)} potential job links")
+        print(f"\nExtracted {len(jobs)} total jobs from Work at a Startup")
+        return jobs
+    
+    def scrape_category(self, category: str, max_pages: int = 5) -> List[JobPosting]:
+        """Scrape jobs from a specific category with pagination"""
+        category_jobs = []
         
-        # Track visited URLs to avoid duplicates
-        visited_urls = set()
+        for page in range(1, max_pages + 1):
+            if page == 1:
+                url = f"https://www.workatastartup.com/jobs/l/{category}"
+            else:
+                url = f"https://www.workatastartup.com/jobs/l/{category}?page={page}"
+            
+            print(f"  Fetching page {page}: {url}")
+            soup = self.fetch_page(url)
+            
+            if not soup:
+                print(f"    Failed to fetch page {page}")
+                break
+            
+            # Find all job links on this page
+            job_links = soup.find_all('a', href=re.compile(r'(companies/|jobs/|apply)', re.I))
+            
+            if not job_links:
+                print(f"    No jobs found on page {page}, stopping pagination")
+                break
+            
+            page_jobs = self.process_job_links(job_links, f"{category} page {page}")
+            
+            if not page_jobs:
+                print(f"    No valid jobs processed on page {page}, stopping pagination")
+                break
+            
+            category_jobs.extend(page_jobs)
+            print(f"    Found {len(page_jobs)} jobs on page {page}")
+            
+            # Rate limiting between pages
+            time.sleep(0.5)
+        
+        return category_jobs
+    
+    def process_job_links(self, job_links, source_description: str) -> List[JobPosting]:
+        """Process a list of job links and extract job information"""
+        jobs = []
         processed_count = 0
         
         for link in job_links:
-            if processed_count >= 100:  # Increased limit to get more jobs
+            if processed_count >= 50:  # Limit per page to avoid too many requests
                 break
             
             try:
@@ -276,8 +321,7 @@ class WorkatastartupScraper:
                 if any(skip in job_url.lower() for skip in skip_patterns):
                     continue
                 
-                # CRITICAL: Skip role category pages (e.g., /jobs/role/software-engineer)
-                # These are not individual job postings
+                # Skip role category pages
                 if '/jobs/role/' in job_url.lower():
                     continue
                 
@@ -292,92 +336,56 @@ class WorkatastartupScraper:
                     else:
                         job_url = self.BASE_URL + job_url
                 
-                # Skip if already visited
-                if job_url in visited_urls:
-                    continue
-                visited_urls.add(job_url)
-                
-                # Process two types of URLs:
-                # 1. Individual job postings: /companies/company-name/jobs/job-id
-                # 2. Company pages: /companies/company-name (may have multiple jobs)
+                # Only process company/job URLs
                 if '/companies/' not in job_url:
-                    # Skip if it's not a company-related URL
                     continue
                 
-                # Check if it's a company page (no /jobs/ in URL) - we'll scrape it for job listings
-                is_company_page = '/companies/' in job_url and '/jobs/' not in job_url
+                # Check if it's a company page or job page
                 is_job_page = '/companies/' in job_url and '/jobs/' in job_url
                 
-                if is_company_page:
-                    # Company page - scrape it for job listings
-                    print(f"Fetching company page: {job_url}")
-                    company_jobs = self.scrape_company_page(job_url)
-                    jobs.extend(company_jobs)
-                    processed_count += len(company_jobs)  # Count jobs found from company page
-                    time.sleep(0.5)  # Rate limiting
-                    continue
-                elif not is_job_page:
-                    # Skip other URLs
+                if not is_job_page:
                     continue
                 
-                # Extract company name from URL first
+                # Extract company name from URL
                 company = self.extract_company_from_url(job_url)
                 
-                # Extract company and title from the link card/element
+                # Extract title and company from link
                 parent = link.find_parent(['div', 'article', 'li', 'section'])
                 link_text = link.get_text(strip=True)
-                parent_text = parent.get_text(separator=' ', strip=True) if parent else ''
                 
-                # Extract title from listing
                 title = None
-                
-                # Try to find title in parent element
                 if parent:
                     title_elem = parent.find(['h2', 'h3', 'h4', 'span', 'div'], class_=re.compile(r'title|role|position|job', re.I))
                     if title_elem:
                         title = title_elem.get_text(strip=True)
-                    
-                    # Also try to find company name from listing
-                    if not company:
-                        company_elem = parent.find(['h3', 'h4', 'strong', 'div', 'a'], class_=re.compile(r'company|name', re.I))
-                        if company_elem:
-                            company = company_elem.get_text(strip=True)
                 
-                # Always fetch details from job page to get accurate info
-                print(f"Fetching details from: {job_url}")
+                # Fetch job details
                 details = self.fetch_job_details(job_url)
                 
                 if details:
-                    # Use fetched details, with fallbacks
                     company = details.get('company') or company or "Unknown"
                     title = details.get('title') or title or link_text
                     location = details.get('location')
                     tech_stack = details.get('tech_stack', [])
                     description = details.get('description', '')
-                    
-                    # Rate limiting
-                    time.sleep(0.5)
+                    time.sleep(0.3)  # Rate limiting
                 else:
-                    # If fetch failed, try to use what we have
+                    # Use fallback data
                     if not company:
                         company = self.extract_company_from_url(job_url) or "Unknown"
                     if not title:
                         title = link_text or "Software Engineer"
-                    location = self.extract_location_from_text(parent_text)
-                    tech_stack = self.extract_tech_stack(parent_text + " " + link_text)
-                    description = parent_text
+                    location = self.extract_location_from_text(link_text)
+                    tech_stack = self.extract_tech_stack(link_text)
+                    description = link_text
                 
                 # Skip if we don't have minimum required info
                 if company == "Unknown" and not title:
                     continue
                 
-                # Clean up title - remove "Jobs" suffix if present
+                # Clean up title
                 if title and title.endswith('Jobs'):
                     title = title[:-4].strip()
-                
-                # Clean up company - remove "Jobs by Role" if present
-                if company and "Jobs by Role" in company:
-                    company = "Unknown"
                 
                 # Create job posting
                 job = JobPosting(
@@ -390,17 +398,14 @@ class WorkatastartupScraper:
                     source_url=self.JOBS_URL,
                     scraped_at=datetime.now(),
                     url=job_url,
-                    posted_date=datetime.now()  # Workatastartup doesn't show exact dates
+                    posted_date=datetime.now()
                 )
                 
                 jobs.append(job)
                 processed_count += 1
                 
-                print(f"Processed {processed_count}/100: {company} - {title}")
-                
             except Exception as e:
                 print(f"Error processing link: {e}")
                 continue
         
-        print(f"Extracted {len(jobs)} jobs from Work at a Startup")
         return jobs
