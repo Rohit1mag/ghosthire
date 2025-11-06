@@ -1,5 +1,450 @@
 {
-  "last_updated": "",
-  "total_jobs": 0,
-  "jobs": []
+  "last_updated": "2025-11-06T09:22:06.165475",
+  "total_jobs": 26,
+  "jobs": [
+    {
+      "id": "ebe81cb735589b34119fe7e772a2d894",
+      "company": "Mashgin",
+      "title": "Senior Software Engineer, Full-Stack",
+      "location": "Co",
+      "tech_stack": [
+        "node",
+        "java",
+        "python",
+        "go"
+      ],
+      "url": "https://www.ycombinator.com/companies/mashgin/jobs/BaWLmBF-senior-software-engineer-full-stack",
+      "source": "workatastartup",
+      "posted_date": "2025-11-06T09:21:20.769375",
+      "hidden_score": 30
+    },
+    {
+      "id": "4193d8bfe51357f7072e54a457fe8fff",
+      "company": "Mashgin",
+      "title": "Software Engineer, Computer Vision and Deep Learning",
+      "location": "Co",
+      "tech_stack": [
+        "python"
+      ],
+      "url": "https://www.ycombinator.com/companies/mashgin/jobs/Lwg6Tpa-software-engineer-computer-vision-and-deep-learning",
+      "source": "workatastartup",
+      "posted_date": "2025-11-06T09:21:21.870407",
+      "hidden_score": 30
+    },
+    {
+      "id": "dbdd1d6e85e4c829000950b75a86d18c",
+      "company": "Hackerrank",
+      "title": "Web Design Engineer",
+      "location": "Co",
+      "tech_stack": [
+        "html",
+        "javascript"
+      ],
+      "url": "https://www.ycombinator.com/companies/hackerrank/jobs/HFH0zad-web-design-engineer",
+      "source": "workatastartup",
+      "posted_date": "2025-11-06T09:21:23.685403",
+      "hidden_score": 30
+    },
+    {
+      "id": "331c1fbefeb67e62f6f5772bc25bbafa",
+      "company": "Hackerrank",
+      "title": "HackerRank (YC S11) | Hiring Senior Software Engineer | Santa Clara CA - Hybrid",
+      "location": "Co",
+      "tech_stack": [
+        "node",
+        "python",
+        "go",
+        "typescript",
+        "kubernetes",
+        "aws"
+      ],
+      "url": "https://www.ycombinator.com/companies/hackerrank/jobs/6yom11r-hackerrank-yc-s11-hiring-senior-software-engineer-santa-clara-ca-hybrid",
+      "source": "workatastartup",
+      "posted_date": "2025-11-06T09:21:24.740438",
+      "hidden_score": 30
+    },
+    {
+      "id": "1cdb907a585810a697f2e10044387d44",
+      "company": "Tenjin",
+      "title": "Senior Full-Stack Ruby on Rails Engineer",
+      "location": "Co",
+      "tech_stack": [
+        "javascript",
+        "react",
+        "docker",
+        "typescript",
+        "ruby",
+        "postgresql",
+        "kubernetes",
+        "rest",
+        "rails",
+        "aws"
+      ],
+      "url": "https://www.ycombinator.com/companies/tenjin/jobs/ce5FhoG-senior-full-stack-ruby-on-rails-engineer",
+      "source": "workatastartup",
+      "posted_date": "2025-11-06T09:21:26.650422",
+      "hidden_score": 30
+    },
+    {
+      "id": "5ec0fa2c7d6df60b87246ca2d3282928",
+      "company": "Tenjin",
+      "title": "Senior Mobile SDK Engineer",
+      "location": "Co",
+      "tech_stack": [
+        "javascript",
+        "python",
+        "java",
+        "react",
+        "go",
+        "typescript",
+        "ruby",
+        "rest",
+        "rails",
+        "aws"
+      ],
+      "url": "https://www.ycombinator.com/companies/tenjin/jobs/ZKTRwru-senior-mobile-sdk-engineer",
+      "source": "workatastartup",
+      "posted_date": "2025-11-06T09:21:27.633707",
+      "hidden_score": 30
+    },
+    {
+      "id": "c9520ee0f304633fa771be5b90b3ad45",
+      "company": "Wefunder",
+      "title": "Full Stack, Senior Software Engineer",
+      "location": "Co",
+      "tech_stack": [
+        "node",
+        "javascript",
+        "css",
+        "react",
+        "go",
+        "django",
+        "postgres",
+        "ruby",
+        "rest",
+        "rails"
+      ],
+      "url": "https://www.ycombinator.com/companies/wefunder/jobs/oC8Vfe1-full-stack-senior-software-engineer",
+      "source": "workatastartup",
+      "posted_date": "2025-11-06T09:21:29.524057",
+      "hidden_score": 30
+    },
+    {
+      "id": "3efa40b2403eaa29bb201e50ea69cccd",
+      "company": "Amplitude",
+      "title": "Staff Product Engineer, AI Agents",
+      "location": "Co",
+      "tech_stack": [],
+      "url": "https://www.ycombinator.com/companies/amplitude/jobs/byPftTK-staff-product-engineer-ai-agents",
+      "source": "workatastartup",
+      "posted_date": "2025-11-06T09:21:31.975161",
+      "hidden_score": 30
+    },
+    {
+      "id": "a5429d390818e5f56e6b310c98927c4c",
+      "company": "Amplitude",
+      "title": "Full-stack AI Engineer II, Assistant",
+      "location": "Amsterdam",
+      "tech_stack": [
+        "react",
+        "python",
+        "typescript"
+      ],
+      "url": "https://www.ycombinator.com/companies/amplitude/jobs/5jpKUcf-full-stack-ai-engineer-ii-assistant",
+      "source": "workatastartup",
+      "posted_date": "2025-11-06T09:21:33.157724",
+      "hidden_score": 30
+    },
+    {
+      "id": "c99cbd9b8b4657631e9f8543a57cc1ac",
+      "company": "Bolna Ai",
+      "title": "Lead Backend Engineer (India)",
+      "location": "Co",
+      "tech_stack": [
+        "fastapi",
+        "python",
+        "docker",
+        "go",
+        "postgresql",
+        "kubernetes",
+        "redis",
+        "aws"
+      ],
+      "url": "https://www.ycombinator.com/companies/bolna-ai/jobs/S46m31I-lead-backend-engineer-india",
+      "source": "workatastartup",
+      "posted_date": "2025-11-06T09:21:34.997240",
+      "hidden_score": 30
+    },
+    {
+      "id": "1b1ea40cdcc61f5a12ae91968ec1fa2c",
+      "company": "Avelis Health",
+      "title": "Founding Engineer - AI/ML Infrastructure",
+      "location": "Co",
+      "tech_stack": [
+        "kubernetes",
+        "go"
+      ],
+      "url": "https://www.ycombinator.com/companies/avelis-health/jobs/6u8JOei-founding-engineer-ai-ml-infrastructure",
+      "source": "workatastartup",
+      "posted_date": "2025-11-06T09:21:36.833034",
+      "hidden_score": 30
+    },
+    {
+      "id": "71ed57bd1e9f3c856b613262a839f23b",
+      "company": "Humoniq",
+      "title": "Senior Backend Engineer (GDS Experience Required)",
+      "location": "Co",
+      "tech_stack": [
+        "mysql",
+        "docker",
+        "go",
+        "kubernetes",
+        "microservices",
+        "golang",
+        "gcp",
+        "aws"
+      ],
+      "url": "https://www.ycombinator.com/companies/humoniq/jobs/GQHftEL-senior-backend-engineer-gds-experience-required",
+      "source": "workatastartup",
+      "posted_date": "2025-11-06T09:21:38.768173",
+      "hidden_score": 30
+    },
+    {
+      "id": "4db0c536b59aa64bed7d7384783c8cef",
+      "company": "Humoniq",
+      "title": "Backend Engineer (Boulder)",
+      "location": "Co",
+      "tech_stack": [
+        "docker",
+        "go",
+        "kubernetes",
+        "microservices",
+        "golang",
+        "gcp",
+        "aws"
+      ],
+      "url": "https://www.ycombinator.com/companies/humoniq/jobs/jUifcJk-backend-engineer-boulder",
+      "source": "workatastartup",
+      "posted_date": "2025-11-06T09:21:39.769262",
+      "hidden_score": 30
+    },
+    {
+      "id": "bb4ea4a3e7ab1337b482d31d465189bc",
+      "company": "Idler",
+      "title": "Software Engineer",
+      "location": "Co",
+      "tech_stack": [
+        "react",
+        "redis",
+        "postgres",
+        "typescript"
+      ],
+      "url": "https://www.ycombinator.com/companies/idler/jobs/zzd9Cyt-software-engineer",
+      "source": "workatastartup",
+      "posted_date": "2025-11-06T09:21:41.544090",
+      "hidden_score": 30
+    },
+    {
+      "id": "3f126edd9c4c3a75b3c76ab745ceeda3",
+      "company": "Floot",
+      "title": "Founding Full-Stack Engineer",
+      "location": "Co",
+      "tech_stack": [
+        "react",
+        "node",
+        "aws",
+        "typescript"
+      ],
+      "url": "https://www.ycombinator.com/companies/floot/jobs/2rbWibL-founding-full-stack-engineer",
+      "source": "workatastartup",
+      "posted_date": "2025-11-06T09:21:44.483031",
+      "hidden_score": 30
+    },
+    {
+      "id": "a4b1f4e5c2f78a348b4de227c9d2a978",
+      "company": "Pangolin",
+      "title": "Founding Engineer",
+      "location": "Co",
+      "tech_stack": [
+        "nextjs",
+        "react",
+        "docker",
+        "go",
+        "postgres",
+        "typescript",
+        "tailwind",
+        "postgresql",
+        "kubernetes",
+        "aws"
+      ],
+      "url": "https://www.ycombinator.com/companies/pangolin/jobs/7DeBchl-founding-engineer",
+      "source": "workatastartup",
+      "posted_date": "2025-11-06T09:21:46.310296",
+      "hidden_score": 30
+    },
+    {
+      "id": "c211662becd3150601efaf2c17d5bcf0",
+      "company": "Wafer",
+      "title": "Member Of Technical Staff (Winter Intern)",
+      "location": "Co",
+      "tech_stack": [
+        "rust",
+        "python",
+        "go",
+        "typescript"
+      ],
+      "url": "https://www.ycombinator.com/companies/wafer/jobs/nvcPjYk-member-of-technical-staff-winter-intern",
+      "source": "workatastartup",
+      "posted_date": "2025-11-06T09:21:48.141715",
+      "hidden_score": 30
+    },
+    {
+      "id": "567fb8d374e6006496f99a7bbf1ceac1",
+      "company": "Starsling",
+      "title": "Software Engineer (Full-Stack)",
+      "location": "San Francisco",
+      "tech_stack": [
+        "node",
+        "nextjs",
+        "serverless",
+        "go",
+        "typescript",
+        "microservices"
+      ],
+      "url": "https://www.ycombinator.com/companies/starsling/jobs/YGCndbU-software-engineer-full-stack",
+      "source": "workatastartup",
+      "posted_date": "2025-11-06T09:21:50.984191",
+      "hidden_score": 30
+    },
+    {
+      "id": "e85703400991d4b0bcd4d7dcf3df2c9c",
+      "company": "Third Chair",
+      "title": "Senior Software Engineer (Backend)",
+      "location": "Co",
+      "tech_stack": [
+        "node",
+        "go",
+        "typescript",
+        "postgresql",
+        "kubernetes",
+        "aws"
+      ],
+      "url": "https://www.ycombinator.com/companies/third-chair/jobs/xWdFgKA-senior-software-engineer-backend",
+      "source": "workatastartup",
+      "posted_date": "2025-11-06T09:21:54.163956",
+      "hidden_score": 30
+    },
+    {
+      "id": "e9c816e985f604eaf0d5461d6abb508d",
+      "company": "Sixtyfour",
+      "title": "Software Engineer",
+      "location": "Co",
+      "tech_stack": [
+        "fastapi",
+        "python",
+        "graphql",
+        "docker",
+        "postgres",
+        "typescript",
+        "terraform",
+        "redis",
+        "aws"
+      ],
+      "url": "https://www.ycombinator.com/companies/sixtyfour/jobs/2MObkEK-software-engineer",
+      "source": "workatastartup",
+      "posted_date": "2025-11-06T09:21:56.040023",
+      "hidden_score": 30
+    },
+    {
+      "id": "742e98a7e71caf695b60edcbaac7cbcc",
+      "company": "Sixtyfour",
+      "title": "Founding Engineer — AI Research Agents (Full-Stack)",
+      "location": "Co",
+      "tech_stack": [
+        "fastapi",
+        "python",
+        "react",
+        "docker",
+        "postgres",
+        "typescript",
+        "terraform",
+        "redis",
+        "aws"
+      ],
+      "url": "https://www.ycombinator.com/companies/sixtyfour/jobs/MeTMrLQ-founding-engineer-ai-research-agents-full-stack",
+      "source": "workatastartup",
+      "posted_date": "2025-11-06T09:21:56.961651",
+      "hidden_score": 30
+    },
+    {
+      "id": "37cc6a839727297700afa2bc4e28e496",
+      "company": "Tegore",
+      "title": "Full Stack Developer Intern",
+      "location": "Co",
+      "tech_stack": [],
+      "url": "https://www.ycombinator.com/companies/tegore/jobs/d9GHJWn-full-stack-developer-intern",
+      "source": "workatastartup",
+      "posted_date": "2025-11-06T09:21:58.816059",
+      "hidden_score": 30
+    },
+    {
+      "id": "712c4c442e8d3edf59cfb973c56752bd",
+      "company": "Claim Health",
+      "title": "Full Stack Engineer",
+      "location": "Co",
+      "tech_stack": [
+        "react",
+        "tailwind",
+        "typescript"
+      ],
+      "url": "https://www.ycombinator.com/companies/claim-health/jobs/WyGMa1O-full-stack-engineer",
+      "source": "workatastartup",
+      "posted_date": "2025-11-06T09:22:00.590099",
+      "hidden_score": 30
+    },
+    {
+      "id": "f25b6761554a26c49fec99613f63d0ca",
+      "company": "Bloom",
+      "title": "AI / Full-Stack Student Internship (Winter or Summer 2026)",
+      "location": "Co",
+      "tech_stack": [
+        "react",
+        "go",
+        "typescript"
+      ],
+      "url": "https://www.ycombinator.com/companies/bloom-4/jobs/VAkpMHI-ai-full-stack-student-internship-winter-or-summer-2026",
+      "source": "workatastartup",
+      "posted_date": "2025-11-06T09:22:02.377029",
+      "hidden_score": 30
+    },
+    {
+      "id": "73bb9b44c25772d0d45c7aaa97a3dc97",
+      "company": "Bloom",
+      "title": "Founding Engineer",
+      "location": "Co",
+      "tech_stack": [
+        "react",
+        "typescript"
+      ],
+      "url": "https://www.ycombinator.com/companies/bloom-4/jobs/Tb6dGeS-founding-engineer",
+      "source": "workatastartup",
+      "posted_date": "2025-11-06T09:22:03.354108",
+      "hidden_score": 30
+    },
+    {
+      "id": "b01e1d61e631048f885bb82188e49518",
+      "company": "Artifact",
+      "title": "Software Engineer",
+      "location": "Co",
+      "tech_stack": [
+        "react",
+        "python",
+        "typescript"
+      ],
+      "url": "https://www.ycombinator.com/companies/artifact-2/jobs/7189rpl-software-engineer",
+      "source": "workatastartup",
+      "posted_date": "2025-11-06T09:22:05.166030",
+      "hidden_score": 30
+    }
+  ]
 }

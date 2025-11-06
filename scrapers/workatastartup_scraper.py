@@ -14,14 +14,11 @@ if parent_dir not in sys.path:
 from models import JobPosting
 
 
-class YCScraper:
-    """Scraper for Y Combinator Jobs board"""
+class WorkatastartupScraper:
+    """Scraper for Work at a Startup job board"""
     
-    BASE_URL = "https://www.ycombinator.com"
-    JOBS_URL = "https://www.ycombinator.com/jobs"
-    
-    # Allowed batches
-    ALLOWED_BATCHES = ['W24', 'S24', 'W25']
+    BASE_URL = "https://www.workatastartup.com"
+    JOBS_URL = "https://www.workatastartup.com/jobs"
     
     # Common tech stack keywords to look for
     TECH_KEYWORDS = [
@@ -40,8 +37,6 @@ class YCScraper:
         self.session.headers.update({
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
         })
-        # Cache for company info to avoid repeated requests
-        self.company_info_cache = {}
     
     def fetch_page(self, url: str) -> Optional[BeautifulSoup]:
         """Fetch and parse a page"""
@@ -81,79 +76,9 @@ class YCScraper:
         
         return None
     
-    def get_company_url_from_job_url(self, job_url: str) -> Optional[str]:
-        """Extract company URL from job URL"""
-        # Extract company slug from job URL: /companies/company-name/jobs/job-id
-        match = re.search(r'/companies/([^/]+)', job_url)
-        if match:
-            company_slug = match.group(1)
-            return f"{self.BASE_URL}/companies/{company_slug}"
-        return None
-    
-    def fetch_company_info(self, company_url: str) -> Optional[dict]:
-        """Fetch company batch information from company page"""
-        # Check cache first
-        if company_url in self.company_info_cache:
-            return self.company_info_cache[company_url]
-        
-        soup = self.fetch_page(company_url)
-        if not soup:
-            self.company_info_cache[company_url] = None
-            return None
-        
-        info = {
-            'batch': None,
-            'valid': False
-        }
-        
-        try:
-            # Get all text from the page
-            page_text = soup.get_text(separator=' ', strip=True)
-            
-            # Look for batch information (W24, S24, W25, etc.)
-            # Handle both formats: "W24" and "(W24)"
-            # Try pattern with parentheses first (more common on YC pages)
-            batch_patterns = [
-                r'\(([WS]\d{2})\)',  # (W24) format
-                r'\b([WS]\d{2})\b',  # W24 format with word boundaries
-            ]
-            
-            for pattern in batch_patterns:
-                batch_matches = re.findall(pattern, page_text, re.IGNORECASE)
-                for batch in batch_matches:
-                    batch_upper = batch.upper()
-                    if batch_upper in self.ALLOWED_BATCHES:
-                        info['batch'] = batch_upper
-                        break
-                if info['batch']:
-                    break
-            
-            # Validate: must have batch
-            if info['batch']:
-                info['valid'] = True
-            
-            # Cache the result
-            self.company_info_cache[company_url] = info
-            return info
-            
-        except Exception as e:
-            print(f"Error fetching company info from {company_url}: {e}")
-            self.company_info_cache[company_url] = None
-            return None
-    
-    def is_company_valid(self, company_url: str) -> bool:
-        """Check if company matches our criteria (batch only)"""
-        if not company_url:
-            return False
-        
-        info = self.fetch_company_info(company_url)
-        if not info:
-            return False
-        
-        return info.get('valid', False)
     
     def scrape_company_page(self, company_url: str) -> List[JobPosting]:
-        """Scrape all jobs from a company page (assumes company already validated)"""
+        """Scrape all jobs from a company page"""
         soup = self.fetch_page(company_url)
         if not soup:
             return []
@@ -178,7 +103,7 @@ class YCScraper:
             
             # Make full URL
             if not job_path.startswith('http'):
-                job_url = self.BASE_URL + job_path
+                job_url = "https://www.ycombinator.com" + job_path
             else:
                 job_url = job_path
             
@@ -207,7 +132,7 @@ class YCScraper:
                     location=location,
                     tech_stack=tech_stack,
                     raw_text=description[:500] if description else '',
-                    source='YC',
+                    source='Workatastartup',
                     source_url=self.JOBS_URL,
                     scraped_at=datetime.now(),
                     url=job_url,
@@ -220,7 +145,7 @@ class YCScraper:
         return company_jobs
     
     def extract_company_from_url(self, url: str) -> Optional[str]:
-        """Extract company name from YC job URL format: /companies/company-name/jobs/..."""
+        """Extract company name from Workatastartup job URL format: /companies/company-name/jobs/..."""
         match = re.search(r'/companies/([^/]+)/jobs/', url)
         if match:
             company_slug = match.group(1)
@@ -310,7 +235,7 @@ class YCScraper:
             return None
     
     def scrape_jobs(self) -> List[JobPosting]:
-        """Scrape all job postings from Work at a Startup (YC's job platform)"""
+        """Scrape all job postings from Work at a Startup"""
         print(f"Fetching Work at a Startup jobs")
         
         # Use Work at a Startup which has better structure for scraping
@@ -318,13 +243,13 @@ class YCScraper:
         soup = self.fetch_page(waas_url)
         
         if not soup:
-            print("Failed to fetch YC jobs page")
+            print("Failed to fetch Work at a Startup jobs page")
             return []
         
         jobs = []
         
         # Find all job links on the main page
-        # YC jobs typically link to company/job pages or external application pages
+        # Workatastartup jobs typically link to company/job pages or external application pages
         job_links = soup.find_all('a', href=re.compile(r'(companies/|jobs/|apply)', re.I))
         
         if not job_links:
@@ -362,7 +287,10 @@ class YCScraper:
                 
                 # Make full URL
                 if not job_url.startswith('http'):
-                    job_url = self.BASE_URL + job_url
+                    if job_url.startswith('/companies/'):
+                        job_url = "https://www.ycombinator.com" + job_url
+                    else:
+                        job_url = self.BASE_URL + job_url
                 
                 # Skip if already visited
                 if job_url in visited_urls:
@@ -381,7 +309,7 @@ class YCScraper:
                 is_job_page = '/companies/' in job_url and '/jobs/' in job_url
                 
                 if is_company_page:
-                    # Company page - scrape it for job listings (already filtered by batch in URL)
+                    # Company page - scrape it for job listings
                     print(f"Fetching company page: {job_url}")
                     company_jobs = self.scrape_company_page(job_url)
                     jobs.extend(company_jobs)
@@ -415,7 +343,7 @@ class YCScraper:
                         if company_elem:
                             company = company_elem.get_text(strip=True)
                 
-                # Always fetch details from job page to get accurate info (already filtered by batch)
+                # Always fetch details from job page to get accurate info
                 print(f"Fetching details from: {job_url}")
                 details = self.fetch_job_details(job_url)
                 
@@ -458,21 +386,21 @@ class YCScraper:
                     location=location,
                     tech_stack=tech_stack,
                     raw_text=description[:500] if description else link_text,
-                    source='YC',
+                    source='Workatastartup',
                     source_url=self.JOBS_URL,
                     scraped_at=datetime.now(),
                     url=job_url,
-                    posted_date=datetime.now()  # YC doesn't show exact dates
+                    posted_date=datetime.now()  # Workatastartup doesn't show exact dates
                 )
                 
                 jobs.append(job)
                 processed_count += 1
                 
-                print(f"Processed {processed_count}/50: {company} - {title}")
+                print(f"Processed {processed_count}/100: {company} - {title}")
                 
             except Exception as e:
                 print(f"Error processing link: {e}")
                 continue
         
-        print(f"Extracted {len(jobs)} jobs from YC")
+        print(f"Extracted {len(jobs)} jobs from Work at a Startup")
         return jobs

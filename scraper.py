@@ -9,8 +9,8 @@ import os
 from datetime import datetime
 from typing import List
 
-# Import YC scraper
-from scrapers.yc_scraper import YCScraper
+# Import Workatastartup scraper
+from scrapers.workatastartup_scraper import WorkatastartupScraper
 
 from models import JobPosting
 from utils.hidden_score import calculate_hidden_score
@@ -48,36 +48,36 @@ def load_config():
 
 
 def scrape_all_active_sources() -> List[JobPosting]:
-    """Scrape YC Jobs from specified batches"""
+    """Scrape Workatastartup Jobs"""
     config = load_config()
     all_jobs = []
     
-    # Scrape YC Jobs
-    yc_sources = config.get("sources", {}).get("yc_jobs", [])
-    if yc_sources:
-        scraper = YCScraper()
-        for source in yc_sources:
+    # Scrape Workatastartup Jobs
+    workatastartup_sources = config.get("sources", {}).get("workatastartup_jobs", [])
+    if workatastartup_sources:
+        scraper = WorkatastartupScraper()
+        for source in workatastartup_sources:
             if source.get("active", False):
                 print(f"\n{'='*60}")
-                print(f"Scraping YC Jobs")
+                print(f"Scraping Workatastartup Jobs")
                 print(f"{'='*60}")
                 try:
                     jobs = scraper.scrape_jobs()
                     all_jobs.extend(jobs)
                 except Exception as e:
-                    print(f"Error scraping YC Jobs: {e}")
+                    print(f"Error scraping Workatastartup Jobs: {e}")
                     continue
     else:
-        # Try scraping YC anyway if no config
+        # Try scraping Workatastartup anyway if no config
         print(f"\n{'='*60}")
-        print(f"Scraping YC Jobs")
+        print(f"Scraping Workatastartup Jobs")
         print(f"{'='*60}")
         try:
-            scraper = YCScraper()
+            scraper = WorkatastartupScraper()
             jobs = scraper.scrape_jobs()
             all_jobs.extend(jobs)
         except Exception as e:
-            print(f"Error scraping YC Jobs: {e}")
+            print(f"Error scraping Workatastartup Jobs: {e}")
     
     return all_jobs
 
