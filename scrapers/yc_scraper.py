@@ -111,12 +111,21 @@ class YCScraper:
             page_text = soup.get_text(separator=' ', strip=True)
             
             # Look for batch information (W24, S24, W25, etc.)
-            batch_pattern = r'\b([WS]\d{2})\b'
-            batch_matches = re.findall(batch_pattern, page_text, re.IGNORECASE)
-            for batch in batch_matches:
-                batch_upper = batch.upper()
-                if batch_upper in self.ALLOWED_BATCHES:
-                    info['batch'] = batch_upper
+            # Handle both formats: "W24" and "(W24)"
+            # Try pattern with parentheses first (more common on YC pages)
+            batch_patterns = [
+                r'\(([WS]\d{2})\)',  # (W24) format
+                r'\b([WS]\d{2})\b',  # W24 format with word boundaries
+            ]
+            
+            for pattern in batch_patterns:
+                batch_matches = re.findall(pattern, page_text, re.IGNORECASE)
+                for batch in batch_matches:
+                    batch_upper = batch.upper()
+                    if batch_upper in self.ALLOWED_BATCHES:
+                        info['batch'] = batch_upper
+                        break
+                if info['batch']:
                     break
             
             # Validate: must have batch
