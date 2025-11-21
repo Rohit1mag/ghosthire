@@ -34,13 +34,9 @@ jobs:
       run: |
         python scraper.py
     
-    - name: Copy jobs.json to frontend
-      run: |
-        cp jobs.json frontend/jobs.json
-    
     - name: Commit and push changes
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add jobs.json frontend/jobs.json
+        git add jobs.json
         git diff --staged --quiet || (git commit -m "Auto-update jobs.json [skip ci]" && git push)

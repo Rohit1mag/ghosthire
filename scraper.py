@@ -157,11 +157,6 @@ def main():
     output_file = "jobs.json"
     save_jobs_to_json(unique_jobs, output_file)
     
-    # Also save to frontend directory if it exists
-    frontend_file = "frontend/jobs.json"
-    if os.path.exists("frontend"):
-        save_jobs_to_json(unique_jobs, frontend_file)
-    
     # Print statistics
     print(f"\n{'='*60}")
     print("STATISTICS")
