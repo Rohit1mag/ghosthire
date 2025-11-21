@@ -9,8 +9,9 @@ import os
 from datetime import datetime
 from typing import List
 
-# Import Workatastartup scraper
+# Import scrapers
 from scrapers.workatastartup_scraper import WorkatastartupScraper
+from scrapers.a16z_scraper import A16ZScraper
 
 from models import JobPosting
 from utils.hidden_score import calculate_hidden_score
@@ -78,6 +79,33 @@ def scrape_all_active_sources() -> List[JobPosting]:
             all_jobs.extend(jobs)
         except Exception as e:
             print(f"Error scraping Workatastartup Jobs: {e}")
+    
+    # Scrape A16Z Jobs
+    a16z_sources = config.get("sources", {}).get("a16z_jobs", [])
+    if a16z_sources:
+        scraper = A16ZScraper()
+        for source in a16z_sources:
+            if source.get("active", False):
+                print(f"\n{'='*60}")
+                print(f"Scraping A16Z Engineering Jobs")
+                print(f"{'='*60}")
+                try:
+                    jobs = scraper.scrape_jobs()
+                    all_jobs.extend(jobs)
+                except Exception as e:
+                    print(f"Error scraping A16Z Jobs: {e}")
+                    continue
+    else:
+        # Try scraping A16Z anyway if no config
+        print(f"\n{'='*60}")
+        print(f"Scraping A16Z Engineering Jobs")
+        print(f"{'='*60}")
+        try:
+            scraper = A16ZScraper()
+            jobs = scraper.scrape_jobs()
+            all_jobs.extend(jobs)
+        except Exception as e:
+            print(f"Error scraping A16Z Jobs: {e}")
     
     return all_jobs
 
