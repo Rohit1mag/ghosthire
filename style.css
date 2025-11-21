@@ -19,6 +19,46 @@
   --transition: all 0.2s ease-in-out;
 }
 
+/* Dark Mode */
+[data-theme="dark"] {
+  --primary: #818cf8;
+  --primary-hover: #6366f1;
+  --secondary: #9ca3af;
+  --success: #34d399;
+  --danger: #f87171;
+  --light: #111827;
+  --dark: #f9fafb;
+  --gray-100: #1f2937;
+  --gray-200: #374151;
+  --gray-300: #4b5563;
+  --gray-700: #e5e7eb;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+  --shadow-md: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.4);
+}
+
+[data-theme="dark"] body {
+  background-color: var(--gray-100);
+  color: var(--dark);
+}
+
+[data-theme="dark"] .filters,
+[data-theme="dark"] .job-card,
+[data-theme="dark"] footer,
+[data-theme="dark"] input[type="text"],
+[data-theme="dark"] select,
+[data-theme="dark"] .pagination-button,
+[data-theme="dark"] .view-option,
+[data-theme="dark"] .sort-option {
+  background-color: var(--gray-200);
+  color: var(--dark);
+  border-color: var(--gray-300);
+}
+
+[data-theme="dark"] .tech-badge-more {
+  background-color: var(--gray-200);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -53,33 +93,6 @@ header {
 header::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  opacity: 0.5;
-  z-index: 0;
-}
-
-header .container {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 0.5rem;
-}
-
-header {
-  position: relative;
-  overflow: hidden;
-}
-
-header::before {
-  content: '';
-  position: absolute;
   top: -50%;
   left: -50%;
   width: 200%;
@@ -103,6 +116,35 @@ header::before {
   align-items: center;
   gap: 1rem;
   margin-bottom: 0.75rem;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 0;
+  font-size: 1rem;
+  backdrop-filter: blur(4px);
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.theme-icon.hidden {
+  display: none;
 }
 
 .logo-icon {
@@ -335,11 +377,34 @@ button:active {
   background: var(--gray-300);
 }
 
+/* Tech Tags */
 .tech-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.tech-tags-container {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-top: 0.25rem;
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 2px;
+}
+
+.tech-tags-container::-webkit-scrollbar {
+  width: 4px;
+}
+
+.tech-tags-container::-webkit-scrollbar-track {
+  background: var(--gray-100);
+}
+
+.tech-tags-container::-webkit-scrollbar-thumb {
+  background: var(--gray-300);
+  border-radius: 2px;
 }
 
 .tech-tag {
@@ -352,6 +417,7 @@ button:active {
   cursor: pointer;
   transition: var(--transition);
   border: 1px solid var(--gray-200);
+  user-select: none;
 }
 
 .tech-tag:hover {
@@ -533,7 +599,13 @@ button:active {
   overflow: hidden;
 }
 
-.save-button {
+.job-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.action-button {
   background: none;
   border: none;
   cursor: pointer;
@@ -541,19 +613,21 @@ button:active {
   color: var(--gray-700);
   transition: var(--transition);
   border-radius: var(--radius-md);
-  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.save-button:hover {
+.action-button:hover {
   background: var(--gray-100);
   color: var(--primary);
 }
 
-.save-button.saved {
+.action-button.saved {
   color: #f59e0b;
 }
 
-.save-button.saved:hover {
+.action-button.saved:hover {
   color: #d97706;
 }
 
@@ -590,27 +664,6 @@ button:active {
   font-weight: 600;
 }
 
-.job-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 0.5rem;
-  font-size: 0.875rem;
-  color: var(--secondary);
-}
-
-.job-meta-item {
-  display: flex;
-  align-items: center;
-  gap: 0.375rem;
-}
-
-.job-meta-item svg {
-  width: 1em;
-  height: 1em;
-  color: var(--gray-400);
-}
-
 .job-description {
   color: var(--gray-700);
   font-size: 0.9375rem;
@@ -622,16 +675,6 @@ button:active {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.job-footer {
-  margin-top: auto;
-  padding-top: 1rem;
-  border-top: 1px solid var(--gray-200);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
 }
 
 .job-tags {
@@ -650,26 +693,6 @@ button:active {
   white-space: nowrap;
 }
 
-.job-apply {
-  padding: 0.5rem 1rem;
-  background: var(--primary);
-  color: white;
-  border: none;
-  border-radius: var(--radius-md);
-  font-size: 0.875rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition);
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.job-apply:hover {
-  background: var(--primary-hover);
-  transform: translateY(-1px);
-}
-
-/* Loading State */
 .loading {
   text-align: center;
   padding: 2rem;
@@ -678,7 +701,6 @@ button:active {
   grid-column: 1 / -1;
 }
 
-/* Empty State */
 .empty-state {
   grid-column: 1 / -1;
   text-align: center;
@@ -867,19 +889,6 @@ footer {
   width: auto;
   min-width: 120px;
 }
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .main-layout {
-    grid-template-columns: 280px 1fr;
-    gap: 1.5rem;
-  }
-  
-  .jobs-container {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  }
-}
-
 
 .hidden-score {
   background: linear-gradient(135deg, var(--primary) 0%, #7c3aed 100%);
@@ -1070,6 +1079,98 @@ footer {
   font-size: 0.9375rem;
 }
 
+/* Checkbox Styles */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.9375rem;
+  color: var(--gray-700);
+  font-weight: 500;
+}
+
+.checkbox-label input {
+  display: none;
+}
+
+.checkbox-custom {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid var(--gray-300);
+  border-radius: var(--radius-sm);
+  position: relative;
+  transition: var(--transition);
+  background: white;
+}
+
+.checkbox-label input:checked + .checkbox-custom {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.checkbox-label input:checked + .checkbox-custom::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.saved-count-badge {
+  background: var(--primary);
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+  margin-left: 0.5rem;
+}
+
+/* Toast Notification */
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--dark);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1000;
+}
+
+.toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.toast i {
+  color: var(--success);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .main-layout {
+    grid-template-columns: 280px 1fr;
+    gap: 1.5rem;
+  }
+  
+  .jobs-container {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
   .main-layout {
     grid-template-columns: 1fr;
@@ -1245,7 +1346,7 @@ footer {
     gap: 0.75rem;
   }
   
-  .save-button {
+  .job-actions {
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -1269,4 +1370,3 @@ footer {
     width: 100%;
   }
 }
-

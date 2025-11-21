@@ -4,6 +4,8 @@ let filteredJobs = [];
 let selectedTech = new Set();
 let currentSort = 'score';
 let currentView = 'grid';
+let currentPage = 1;
+const itemsPerPage = 12;
 let savedJobs = new Set(JSON.parse(localStorage.getItem('savedJobs') || '[]'));
 
 // DOM elements
@@ -16,6 +18,57 @@ const jobCount = document.getElementById('job-count');
 const lastUpdated = document.getElementById('last-updated');
 const loadingState = document.querySelector('.loading-state');
 const emptyState = document.querySelector('.empty-state');
+const themeToggle = document.getElementById('theme-toggle');
+const savedFilterCheckbox = document.getElementById('saved-filter');
+const savedCountBadge = document.querySelector('.saved-count-badge');
+const paginationContainer = document.querySelector('.pagination');
+const prevPageBtn = document.getElementById('prev-page');
+const nextPageBtn = document.getElementById('next-page');
+const currentPageSpan = document.getElementById('current-page');
+const totalPagesSpan = document.getElementById('total-pages');
+
+// Theme Management
+function initTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        updateThemeIcon(true);
+    } else {
+        document.documentElement.removeAttribute('data-theme');
+        updateThemeIcon(false);
+    }
+}
+
+function updateThemeIcon(isDark) {
+    const lightIcon = themeToggle.querySelector('.light-icon');
+    const darkIcon = themeToggle.querySelector('.dark-icon');
+    
+    if (isDark) {
+        lightIcon.classList.add('hidden');
+        darkIcon.classList.remove('hidden');
+    } else {
+        lightIcon.classList.remove('hidden');
+        darkIcon.classList.add('hidden');
+    }
+}
+
+themeToggle.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    if (isDark) {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+        updateThemeIcon(false);
+    } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        updateThemeIcon(true);
+    }
+});
+
+// Initialize Theme
+initTheme();
 
 // Load jobs from JSON
 async function loadJobs() {
@@ -88,14 +141,41 @@ function initializeFilters() {
     });
     
     // Create tech filter tags
-    techFilter.innerHTML = '';
-    [...allTech].sort().forEach(tech => {
-        const tag = document.createElement('span');
-        tag.className = 'tech-tag';
-        tag.textContent = tech;
-        tag.dataset.tech = tech;
-        tag.addEventListener('click', () => toggleTechFilter(tech));
-        techFilter.appendChild(tag);
+    techFilter.innerHTML = `
+        <div class="tech-search-wrapper" style="width: 100%; margin-bottom: 0.5rem;">
+            <input type="text" id="tech-search" placeholder="Search technologies..." class="tech-search-input" style="width: 100%; padding: 0.5rem; font-size: 0.875rem; border: 1px solid var(--gray-200); border-radius: var(--radius-sm);">
+        </div>
+        <div class="tech-tags-container"></div>
+    `;
+    
+    const techTagsContainer = techFilter.querySelector('.tech-tags-container');
+    const techSearchInput = techFilter.querySelector('#tech-search');
+
+    const sortedTech = [...allTech].sort();
+    
+    function renderTechTags(filterText = '') {
+        techTagsContainer.innerHTML = '';
+        const filteredTech = sortedTech.filter(tech => tech.toLowerCase().includes(filterText.toLowerCase()));
+        
+        if (filteredTech.length === 0) {
+            techTagsContainer.innerHTML = '<span class="no-tech-found" style="font-size: 0.8rem; color: var(--secondary);">No matching technologies</span>';
+            return;
+        }
+
+        filteredTech.forEach(tech => {
+            const tag = document.createElement('span');
+            tag.className = `tech-tag ${selectedTech.has(tech) ? 'active' : ''}`;
+            tag.textContent = tech;
+            tag.dataset.tech = tech;
+            tag.addEventListener('click', () => toggleTechFilter(tech));
+            techTagsContainer.appendChild(tag);
+        });
+    }
+
+    renderTechTags();
+
+    techSearchInput.addEventListener('input', (e) => {
+        renderTechTags(e.target.value);
     });
 }
 
@@ -104,10 +184,10 @@ function toggleTechFilter(tech) {
     const tag = document.querySelector(`[data-tech="${tech}"]`);
     if (selectedTech.has(tech)) {
         selectedTech.delete(tech);
-        tag.classList.remove('active');
+        if(tag) tag.classList.remove('active');
     } else {
         selectedTech.add(tech);
-        tag.classList.add('active');
+        if(tag) tag.classList.add('active');
     }
     applyFilters();
 }
@@ -131,6 +211,11 @@ function applyFilters() {
         filtered = filtered.filter(job => job.location === locationValue);
     }
     
+    // Saved filter
+    if (savedFilterCheckbox && savedFilterCheckbox.checked) {
+        filtered = filtered.filter(job => savedJobs.has(job.id));
+    }
+
     // Tech stack filter
     if (selectedTech.size > 0) {
         filtered = filtered.filter(job => 
@@ -139,6 +224,7 @@ function applyFilters() {
     }
     
     filteredJobs = filtered;
+    currentPage = 1; // Reset to first page on filter change
     renderJobs();
     updateStats();
 }
@@ -173,6 +259,62 @@ function getFreshnessBadge(dateString) {
     return '';
 }
 
+// Copy job link
+function copyJobLink(url, event) {
+    event.preventDefault();
+    event.stopPropagation();
+    
+    navigator.clipboard.writeText(url).then(() => {
+        showToast('Link copied to clipboard!', 'success');
+    }).catch(err => {
+        console.error('Failed to copy:', err);
+        showToast('Failed to copy link', 'error');
+    });
+}
+
+// Show Toast
+function showToast(message, type = 'success') {
+    // Check if toast container exists, create if not
+    let toastContainer = document.getElementById('toast-container');
+    if (!toastContainer) {
+        toastContainer = document.createElement('div');
+        toastContainer.id = 'toast-container';
+        toastContainer.style.position = 'fixed';
+        toastContainer.style.bottom = '2rem';
+        toastContainer.style.right = '2rem';
+        toastContainer.style.zIndex = '1000';
+        toastContainer.style.display = 'flex';
+        toastContainer.style.flexDirection = 'column';
+        toastContainer.style.gap = '1rem';
+        document.body.appendChild(toastContainer);
+    }
+
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    
+    const icon = type === 'success' ? 'check-circle' : 'exclamation-circle';
+    
+    toast.innerHTML = `
+        <i class="fas fa-${icon}"></i>
+        <span>${message}</span>
+    `;
+    
+    toastContainer.appendChild(toast);
+    
+    // Trigger animation
+    requestAnimationFrame(() => {
+        toast.classList.add('show');
+    });
+    
+    // Remove after 3 seconds
+    setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => {
+            toast.remove();
+        }, 300);
+    }, 3000);
+}
+
 // Toggle save job
 function toggleSaveJob(jobId, event) {
     event.preventDefault();
@@ -197,6 +339,12 @@ function toggleSaveJob(jobId, event) {
         icon.classList.remove('fas');
         icon.classList.add('far');
         button.classList.remove('saved');
+    }
+    updateStats(); // Ensure stats update when saving/unsaving
+    
+    // If "Saved Only" is checked, re-apply filters to remove unsaved job from view
+    if (savedFilterCheckbox && savedFilterCheckbox.checked) {
+        applyFilters();
     }
 }
 
@@ -225,7 +373,13 @@ function renderJobs() {
         });
     }
     
-    jobsContainer.innerHTML = sortedJobs.map(job => {
+    // Pagination logic
+    const totalPages = Math.ceil(sortedJobs.length / itemsPerPage);
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const jobsToRender = sortedJobs.slice(startIndex, endIndex);
+
+    jobsContainer.innerHTML = jobsToRender.map(job => {
         const isSaved = savedJobs.has(job.id);
         const timeAgo = getTimeAgo(job.posted_date || job.scraped_at);
         const freshnessBadge = getFreshnessBadge(job.posted_date || job.scraped_at);
@@ -237,9 +391,14 @@ function renderJobs() {
                     <div class="job-company">${escapeHtml(job.company)}</div>
                     <div class="job-title">${escapeHtml(job.title)}</div>
                 </div>
-                <button class="save-button ${isSaved ? 'saved' : ''}" onclick="toggleSaveJob('${job.id}', event)" title="${isSaved ? 'Unsave' : 'Save'} job">
-                    <i class="${isSaved ? 'fas' : 'far'} fa-bookmark"></i>
-                </button>
+                <div class="job-actions">
+                    <button class="action-button" onclick="copyJobLink('${job.url}', event)" title="Copy Link">
+                        <i class="far fa-copy"></i>
+                    </button>
+                    <button class="action-button ${isSaved ? 'saved' : ''}" onclick="toggleSaveJob('${job.id}', event)" title="${isSaved ? 'Unsave' : 'Save'} job">
+                        <i class="${isSaved ? 'fas' : 'far'} fa-bookmark"></i>
+                    </button>
+                </div>
             </div>
             
             <div class="job-meta-row">
@@ -279,18 +438,51 @@ function renderJobs() {
     } else {
         jobsContainer.classList.remove('list-view');
     }
+
+    renderPagination(totalPages);
 }
+
+function renderPagination(totalPages) {
+    if (totalPages <= 1) {
+        paginationContainer.style.display = 'none';
+        return;
+    }
+
+    paginationContainer.style.display = 'flex';
+    currentPageSpan.textContent = currentPage;
+    totalPagesSpan.textContent = totalPages;
+
+    prevPageBtn.disabled = currentPage === 1;
+    nextPageBtn.disabled = currentPage === totalPages;
+}
+
+// Pagination Event Listeners
+prevPageBtn.addEventListener('click', () => {
+    if (currentPage > 1) {
+        currentPage--;
+        renderJobs();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+});
+
+nextPageBtn.addEventListener('click', () => {
+    const totalPages = Math.ceil(filteredJobs.length / itemsPerPage);
+    if (currentPage < totalPages) {
+        currentPage++;
+        renderJobs();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+});
 
 // Update stats
 function updateStats() {
     const savedCount = savedJobs.size;
     jobCount.textContent = `${filteredJobs.length} job${filteredJobs.length !== 1 ? 's' : ''} found`;
     
-    // Update saved jobs count if badge exists
-    const savedBadge = document.querySelector('.saved-jobs-badge');
-    if (savedBadge) {
-        savedBadge.textContent = savedCount;
-        savedBadge.style.display = savedCount > 0 ? 'inline-block' : 'none';
+    // Update saved jobs count badge in filter
+    if (savedCountBadge) {
+        savedCountBadge.textContent = savedCount;
+        savedCountBadge.style.display = savedCount > 0 ? 'inline-block' : 'none';
     }
 }
 
@@ -307,6 +499,10 @@ function clearFilters() {
     locationSelect.value = '';
     selectedTech.clear();
     document.querySelectorAll('.tech-tag').forEach(tag => tag.classList.remove('active'));
+    // Clear saved filter
+    if (savedFilterCheckbox) {
+        savedFilterCheckbox.checked = false;
+    }
     applyFilters();
 }
 
@@ -332,6 +528,9 @@ if (searchInput) {
 }
 if (locationSelect) {
     locationSelect.addEventListener('change', applyFilters);
+}
+if (savedFilterCheckbox) {
+    savedFilterCheckbox.addEventListener('change', applyFilters);
 }
 if (clearFiltersBtn) {
     clearFiltersBtn.addEventListener('click', clearFilters);
@@ -372,4 +571,3 @@ if (refreshDataBtn) {
 
 // Load jobs on page load
 loadJobs();
-
