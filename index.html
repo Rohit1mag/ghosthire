@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Find hidden software engineering jobs with fewer applicants. Discover great opportunities at startups and tech companies.">
     <title>GhostHire | Find Hidden Software Engineering Jobs</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👻</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -45,6 +46,7 @@
                         <div class="search-input-wrapper">
                             <i class="fas fa-search search-icon"></i>
                             <input type="text" id="search" placeholder="Company, title, or keywords..." aria-label="Search jobs">
+                            <i class="fas fa-times clear-search" id="clear-search" title="Clear search"></i>
                         </div>
                     </div>
                     
@@ -54,10 +56,17 @@
                             <i class="fas fa-map-marker-alt select-icon"></i>
                             <select id="location" aria-label="Filter by location">
                                 <option value="">All Locations</option>
-                                <option value="remote">🌍 Remote</option>
-                                <option value="us">🇺🇸 United States</option>
-                                <option value="europe">🇪🇺 Europe</option>
-                                <option value="asia">🌏 Asia</option>
+                            </select>
+                            <i class="fas fa-chevron-down select-arrow"></i>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="source">Source</label>
+                        <div class="select-wrapper">
+                            <i class="fas fa-globe select-icon"></i>
+                            <select id="source" aria-label="Filter by source">
+                                <option value="">All Sources</option>
                             </select>
                             <i class="fas fa-chevron-down select-arrow"></i>
                         </div>
@@ -79,7 +88,7 @@
                     </div>
                     
                     <div class="filter-actions">
-                        <button id="apply-filters" class="primary-button">
+                        <button id="apply-filters" class="primary-button" style="display: none;">
                             <i class="fas fa-filter"></i> Apply Filters
                         </button>
                         <button id="clear-filters" class="secondary-button">
@@ -120,25 +129,19 @@
                 </div>
 
                 <div id="jobs-container" class="jobs-container">
-                    <!-- Loading state -->
-                    <div class="loading-state">
-                        <div class="spinner"></div>
-                        <p>Loading jobs...</p>
+                    <!-- Skeleton Loader will be inserted here by JS -->
+                </div>
+                
+                <!-- Empty state (will be hidden when jobs are loaded) -->
+                <div class="empty-state" style="display: none;">
+                    <div class="empty-state-icon">
+                        <i class="fas fa-search"></i>
                     </div>
-                    
-                    <!-- Empty state (will be hidden when jobs are loaded) -->
-                    <div class="empty-state" style="display: none;">
-                        <div class="empty-state-icon">
-                            <i class="fas fa-search"></i>
-                        </div>
-                        <h3 class="empty-state-title">No jobs found</h3>
-                        <p class="empty-state-description">Try adjusting your filters or check back later for new postings.</p>
-                        <button id="reset-filters" class="primary-button">
-                            <i class="fas fa-undo"></i> Reset Filters
-                        </button>
-                    </div>
-                    
-                    <!-- Job cards will be inserted here by JavaScript -->
+                    <h3 class="empty-state-title">No jobs found</h3>
+                    <p class="empty-state-description">Try adjusting your filters or check back later for new postings.</p>
+                    <button id="reset-filters" class="primary-button">
+                        <i class="fas fa-undo"></i> Reset Filters
+                    </button>
                 </div>
                 
                 <div class="pagination" style="display: none;">
@@ -155,6 +158,10 @@
             </div>
         </div>
     </main>
+
+    <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <footer>
         <div class="container">
@@ -198,4 +205,3 @@
     </script>
 </body>
 </html>
-

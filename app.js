@@ -7,11 +7,13 @@ let currentView = 'grid';
 let currentPage = 1;
 const itemsPerPage = 12;
 let savedJobs = new Set(JSON.parse(localStorage.getItem('savedJobs') || '[]'));
+let searchDebounceTimer;
 
 // DOM elements
 const jobsContainer = document.getElementById('jobs-container');
 const searchInput = document.getElementById('search');
 const locationSelect = document.getElementById('location');
+const sourceSelect = document.getElementById('source'); // New
 const techFilter = document.getElementById('tech-filter');
 const clearFiltersBtn = document.getElementById('clear-filters');
 const jobCount = document.getElementById('job-count');
@@ -26,6 +28,8 @@ const prevPageBtn = document.getElementById('prev-page');
 const nextPageBtn = document.getElementById('next-page');
 const currentPageSpan = document.getElementById('current-page');
 const totalPagesSpan = document.getElementById('total-pages');
+const scrollTopBtn = document.getElementById('scroll-top');
+const clearSearchBtn = document.getElementById('clear-search');
 
 // Theme Management
 function initTheme() {
@@ -70,12 +74,43 @@ themeToggle.addEventListener('click', () => {
 // Initialize Theme
 initTheme();
 
+// Show Skeleton Loading
+function showSkeleton() {
+    jobsContainer.innerHTML = Array(6).fill(0).map(() => `
+        <div class="job-card skeleton-card">
+            <div class="job-card-header">
+                <div class="job-header-left" style="width: 100%">
+                    <div class="skeleton skeleton-text" style="width: 40%"></div>
+                    <div class="skeleton skeleton-title"></div>
+                </div>
+            </div>
+            <div class="job-meta-row">
+                <div class="skeleton skeleton-text" style="width: 30%"></div>
+            </div>
+            <div class="job-tech-stack">
+                <div class="skeleton skeleton-badge"></div>
+                <div class="skeleton skeleton-badge"></div>
+                <div class="skeleton skeleton-badge"></div>
+            </div>
+            <div class="job-card-footer">
+                <div class="skeleton skeleton-text" style="width: 30%"></div>
+                <div class="skeleton skeleton-badge" style="width: 80px"></div>
+            </div>
+        </div>
+    `).join('');
+    if (loadingState) loadingState.style.display = 'none';
+    if (paginationContainer) paginationContainer.style.display = 'none';
+}
+
 // Load jobs from JSON
 async function loadJobs() {
     try {
-        if (loadingState) loadingState.style.display = 'block';
+        showSkeleton();
         if (emptyState) emptyState.style.display = 'none';
         
+        // Simulate slight delay for skeleton effect (optional, can remove)
+        // await new Promise(resolve => setTimeout(resolve, 500)); 
+
         const response = await fetch('jobs.json');
         if (!response.ok) {
             throw new Error('Failed to load jobs.json');
@@ -84,16 +119,13 @@ async function loadJobs() {
         
         // Handle both old format (array) and new format (object with metadata)
         if (Array.isArray(data)) {
-            // Old format - backward compatibility
             allJobs = data;
             if (lastUpdated) {
                 lastUpdated.textContent = 'Unknown';
             }
         } else {
-            // New format with metadata
             allJobs = data.jobs || [];
             
-            // Show actual scrape time
             if (data.last_updated && lastUpdated) {
                 const updateDate = new Date(data.last_updated);
                 lastUpdated.textContent = updateDate.toLocaleString();
@@ -108,9 +140,9 @@ async function loadJobs() {
         // Apply filters
         applyFilters();
         
-        if (loadingState) loadingState.style.display = 'none';
     } catch (error) {
         console.error('Error loading jobs:', error);
+        jobsContainer.innerHTML = ''; // Clear skeleton
         if (loadingState) loadingState.style.display = 'none';
         if (emptyState) {
             emptyState.style.display = 'block';
@@ -124,7 +156,7 @@ async function loadJobs() {
 
 // Initialize filter dropdowns and tech tags
 function initializeFilters() {
-    // Get unique locations
+    // Locations
     const locations = [...new Set(allJobs.map(job => job.location).filter(Boolean))].sort();
     locationSelect.innerHTML = '<option value="">All Locations</option>';
     locations.forEach(loc => {
@@ -133,14 +165,23 @@ function initializeFilters() {
         option.textContent = loc;
         locationSelect.appendChild(option);
     });
+
+    // Sources
+    const sources = [...new Set(allJobs.map(job => job.source).filter(Boolean))].sort();
+    sourceSelect.innerHTML = '<option value="">All Sources</option>';
+    sources.forEach(src => {
+        const option = document.createElement('option');
+        option.value = src;
+        option.textContent = src.charAt(0).toUpperCase() + src.slice(1);
+        sourceSelect.appendChild(option);
+    });
     
-    // Get all tech stack items
+    // Tech Stack
     const allTech = new Set();
     allJobs.forEach(job => {
         job.tech_stack.forEach(tech => allTech.add(tech));
     });
     
-    // Create tech filter tags
     techFilter.innerHTML = `
         <div class="tech-search-wrapper" style="width: 100%; margin-bottom: 0.5rem;">
             <input type="text" id="tech-search" placeholder="Search technologies..." class="tech-search-input" style="width: 100%; padding: 0.5rem; font-size: 0.875rem; border: 1px solid var(--gray-200); border-radius: var(--radius-sm);">
@@ -210,6 +251,12 @@ function applyFilters() {
     if (locationValue) {
         filtered = filtered.filter(job => job.location === locationValue);
     }
+
+    // Source filter
+    const sourceValue = sourceSelect.value;
+    if (sourceValue) {
+        filtered = filtered.filter(job => job.source === sourceValue);
+    }
     
     // Saved filter
     if (savedFilterCheckbox && savedFilterCheckbox.checked) {
@@ -224,10 +271,33 @@ function applyFilters() {
     }
     
     filteredJobs = filtered;
-    currentPage = 1; // Reset to first page on filter change
+    currentPage = 1; 
     renderJobs();
     updateStats();
 }
+
+// Search with Debounce
+searchInput.addEventListener('input', () => {
+    clearTimeout(searchDebounceTimer);
+    
+    // Toggle clear button
+    if (searchInput.value) {
+        clearSearchBtn.style.display = 'block';
+    } else {
+        clearSearchBtn.style.display = 'none';
+    }
+
+    searchDebounceTimer = setTimeout(() => {
+        applyFilters();
+    }, 300);
+});
+
+// Clear Search
+clearSearchBtn.addEventListener('click', () => {
+    searchInput.value = '';
+    clearSearchBtn.style.display = 'none';
+    applyFilters();
+});
 
 // Calculate time ago
 function getTimeAgo(dateString) {
@@ -274,7 +344,6 @@ function copyJobLink(url, event) {
 
 // Show Toast
 function showToast(message, type = 'success') {
-    // Check if toast container exists, create if not
     let toastContainer = document.getElementById('toast-container');
     if (!toastContainer) {
         toastContainer = document.createElement('div');
@@ -301,12 +370,10 @@ function showToast(message, type = 'success') {
     
     toastContainer.appendChild(toast);
     
-    // Trigger animation
     requestAnimationFrame(() => {
         toast.classList.add('show');
     });
     
-    // Remove after 3 seconds
     setTimeout(() => {
         toast.classList.remove('show');
         setTimeout(() => {
@@ -328,7 +395,6 @@ function toggleSaveJob(jobId, event) {
     
     localStorage.setItem('savedJobs', JSON.stringify([...savedJobs]));
     
-    // Update button
     const button = event.currentTarget;
     const icon = button.querySelector('i');
     if (savedJobs.has(jobId)) {
@@ -340,9 +406,8 @@ function toggleSaveJob(jobId, event) {
         icon.classList.add('far');
         button.classList.remove('saved');
     }
-    updateStats(); // Ensure stats update when saving/unsaving
+    updateStats();
     
-    // If "Saved Only" is checked, re-apply filters to remove unsaved job from view
     if (savedFilterCheckbox && savedFilterCheckbox.checked) {
         applyFilters();
     }
@@ -356,12 +421,12 @@ function renderJobs() {
         } else {
             jobsContainer.innerHTML = '<div class="no-jobs">No jobs found matching your filters.</div>';
         }
+        if (paginationContainer) paginationContainer.style.display = 'none';
         return;
     }
     
     if (emptyState) emptyState.style.display = 'none';
     
-    // Sort jobs
     let sortedJobs = [...filteredJobs];
     if (currentSort === 'score') {
         sortedJobs.sort((a, b) => (b.hidden_score || 0) - (a.hidden_score || 0));
@@ -373,7 +438,6 @@ function renderJobs() {
         });
     }
     
-    // Pagination logic
     const totalPages = Math.ceil(sortedJobs.length / itemsPerPage);
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
@@ -432,7 +496,6 @@ function renderJobs() {
         `;
     }).join('');
     
-    // Update view class
     if (currentView === 'list') {
         jobsContainer.classList.add('list-view');
     } else {
@@ -444,49 +507,54 @@ function renderJobs() {
 
 function renderPagination(totalPages) {
     if (totalPages <= 1) {
-        paginationContainer.style.display = 'none';
+        if (paginationContainer) paginationContainer.style.display = 'none';
         return;
     }
 
-    paginationContainer.style.display = 'flex';
-    currentPageSpan.textContent = currentPage;
-    totalPagesSpan.textContent = totalPages;
+    if (paginationContainer) {
+        paginationContainer.style.display = 'flex';
+        currentPageSpan.textContent = currentPage;
+        totalPagesSpan.textContent = totalPages;
 
-    prevPageBtn.disabled = currentPage === 1;
-    nextPageBtn.disabled = currentPage === totalPages;
+        prevPageBtn.disabled = currentPage === 1;
+        nextPageBtn.disabled = currentPage === totalPages;
+    }
 }
 
 // Pagination Event Listeners
-prevPageBtn.addEventListener('click', () => {
-    if (currentPage > 1) {
-        currentPage--;
-        renderJobs();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-});
+if (prevPageBtn) {
+    prevPageBtn.addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            renderJobs();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    });
+}
 
-nextPageBtn.addEventListener('click', () => {
-    const totalPages = Math.ceil(filteredJobs.length / itemsPerPage);
-    if (currentPage < totalPages) {
-        currentPage++;
-        renderJobs();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-});
+if (nextPageBtn) {
+    nextPageBtn.addEventListener('click', () => {
+        const totalPages = Math.ceil(filteredJobs.length / itemsPerPage);
+        if (currentPage < totalPages) {
+            currentPage++;
+            renderJobs();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    });
+}
 
 // Update stats
 function updateStats() {
     const savedCount = savedJobs.size;
     jobCount.textContent = `${filteredJobs.length} job${filteredJobs.length !== 1 ? 's' : ''} found`;
     
-    // Update saved jobs count badge in filter
     if (savedCountBadge) {
         savedCountBadge.textContent = savedCount;
         savedCountBadge.style.display = savedCount > 0 ? 'inline-block' : 'none';
     }
 }
 
-// Escape HTML to prevent XSS
+// Escape HTML
 function escapeHtml(text) {
     const div = document.createElement('div');
     div.textContent = text;
@@ -496,10 +564,11 @@ function escapeHtml(text) {
 // Clear all filters
 function clearFilters() {
     searchInput.value = '';
+    clearSearchBtn.style.display = 'none';
     locationSelect.value = '';
+    sourceSelect.value = '';
     selectedTech.clear();
     document.querySelectorAll('.tech-tag').forEach(tag => tag.classList.remove('active'));
-    // Clear saved filter
     if (savedFilterCheckbox) {
         savedFilterCheckbox.checked = false;
     }
@@ -523,11 +592,11 @@ function handleView(viewType) {
 }
 
 // Event listeners
-if (searchInput) {
-    searchInput.addEventListener('input', applyFilters);
-}
 if (locationSelect) {
     locationSelect.addEventListener('change', applyFilters);
+}
+if (sourceSelect) {
+    sourceSelect.addEventListener('change', applyFilters);
 }
 if (savedFilterCheckbox) {
     savedFilterCheckbox.addEventListener('change', applyFilters);
@@ -536,14 +605,25 @@ if (clearFiltersBtn) {
     clearFiltersBtn.addEventListener('click', clearFilters);
 }
 
-// Sort options
 document.querySelectorAll('.sort-option').forEach(btn => {
     btn.addEventListener('click', () => handleSort(btn.dataset.sort));
 });
 
-// View options
 document.querySelectorAll('.view-option').forEach(btn => {
     btn.addEventListener('click', () => handleView(btn.dataset.view));
+});
+
+// Scroll to Top
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        scrollTopBtn.classList.add('visible');
+    } else {
+        scrollTopBtn.classList.remove('visible');
+    }
+});
+
+scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
 // Newsletter form
@@ -551,7 +631,8 @@ const newsletterForm = document.querySelector('.newsletter-form');
 if (newsletterForm) {
     newsletterForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        alert('Newsletter subscription coming soon!');
+        showToast('Thanks for subscribing!', 'success');
+        newsletterForm.reset();
     });
 }
 
