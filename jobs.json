@@ -1,1543 +1,1565 @@
 {
-  "last_updated": "2026-02-20T04:29:29.115156",
-  "total_jobs": 144,
+  "last_updated": "2026-02-21T04:19:39.788573",
+  "total_jobs": 143,
   "jobs": [
     {
       "id": "9e9c8a3eaa04115d2c9faf193dd78ac6",
       "company": "Log in",
       "title": "Director of Software & Product",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/snapmagic/jobs/vZrseMD-director-of-software-product",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:14:35.235738",
-      "hidden_score": 30
-    },
-    {
-      "id": "78387ad10115bfb1de505cc417ce9bcd",
-      "company": "Log in",
-      "title": "Data Analyst",
-      "location": "Remote",
-      "tech_stack": [
-        "python"
-      ],
-      "url": "https://www.ycombinator.com/companies/snapmagic/jobs/SkgVNHb-data-analyst",
-      "source": "workatastartup",
-      "posted_date": "2026-02-20T04:14:35.957138",
+      "posted_date": "2026-02-21T04:06:10.839338",
       "hidden_score": 30
     },
     {
       "id": "c5d0f5b240f73f95bb9927c32698fc3e",
       "company": "Log in",
       "title": "Senior Mobile SDK Engineer",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [
-        "python",
+        "react",
+        "javascript",
+        "rails",
+        "java",
+        "go",
         "typescript",
         "aws",
-        "java",
-        "rails",
-        "react",
-        "go",
-        "ruby",
-        "javascript",
-        "rest"
+        "rest",
+        "python",
+        "ruby"
       ],
       "url": "https://www.ycombinator.com/companies/tenjin/jobs/ZKTRwru-senior-mobile-sdk-engineer",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:14:36.602618",
+      "posted_date": "2026-02-21T04:06:11.431036",
       "hidden_score": 30
     },
     {
       "id": "719755d2b1f52a0638bba3c3784c098e",
       "company": "Log in",
       "title": "Senior Full-Stack Ruby on Rails Engineer",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [
-        "typescript",
-        "aws",
-        "rails",
         "kubernetes",
         "react",
-        "ruby",
         "docker",
-        "postgresql",
+        "rails",
         "javascript",
-        "rest"
+        "postgresql",
+        "typescript",
+        "aws",
+        "rest",
+        "ruby"
       ],
       "url": "https://www.ycombinator.com/companies/tenjin/jobs/ce5FhoG-senior-full-stack-ruby-on-rails-engineer",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:14:37.247377",
+      "posted_date": "2026-02-21T04:06:12.011336",
       "hidden_score": 30
     },
     {
-      "id": "00a6aa64bb5f6997417cd26ac20c8c7c",
+      "id": "9112b98ebf8343ed45b2a198a7c64fd5",
       "company": "Log in",
-      "title": "AI/ML Engineer",
-      "location": "India",
+      "title": "Senior Data Analyst",
+      "location": "Usa",
       "tech_stack": [
         "python",
-        "gcp",
-        "azure",
         "aws"
       ],
-      "url": "https://www.ycombinator.com/companies/noora-health/jobs/2B4RxLG-ai-ml-engineer",
+      "url": "https://www.ycombinator.com/companies/noora-health/jobs/umj5v3I-senior-data-analyst",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:14:37.891562",
+      "posted_date": "2026-02-21T04:06:12.579348",
       "hidden_score": 30
     },
     {
-      "id": "07e6b332bcc3b0d149bc49529bec87ab",
+      "id": "557b84df16fa22a2a789bfd3821a391c",
       "company": "Log in",
-      "title": "Product Development Engineer (Backend)",
-      "location": "India",
+      "title": "Product Development Engineer (Frontend)",
+      "location": "Usa",
       "tech_stack": [
-        "python",
-        "aws",
+        "react",
+        "javascript",
         "java",
-        "node",
-        "javascript"
+        "typescript",
+        "aws",
+        "python"
       ],
-      "url": "https://www.ycombinator.com/companies/noora-health/jobs/lXx434Q-product-development-engineer-backend",
+      "url": "https://www.ycombinator.com/companies/noora-health/jobs/R31qKQD-product-development-engineer-frontend",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:14:38.545439",
+      "posted_date": "2026-02-21T04:06:13.166954",
       "hidden_score": 30
     },
     {
       "id": "baaf95efac95725e77bdeef3e4e72c24",
       "company": "Log in",
       "title": "Founding Full Stack Engineer",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [
         "python",
+        "node",
         "go",
-        "typescript",
-        "node"
+        "typescript"
       ],
       "url": "https://www.ycombinator.com/companies/oximy/jobs/qs0aHNr-founding-full-stack-engineer",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:14:39.178498",
+      "posted_date": "2026-02-21T04:06:13.731856",
       "hidden_score": 30
     },
     {
       "id": "c38857046ad3ffe710956bba98e8d1ca",
       "company": "Log in",
       "title": "Software Engineer",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [
-        "python",
-        "typescript",
-        "redis",
-        "aws",
-        "postgres",
         "react",
-        "azure",
-        "node",
+        "postgres",
+        "redis",
+        "fastapi",
         "gcp",
+        "azure",
         "postgresql",
-        "fastapi"
+        "typescript",
+        "aws",
+        "python",
+        "node"
       ],
       "url": "https://www.ycombinator.com/companies/clicks/jobs/W2yd0eI-software-engineer",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:14:39.852247",
+      "posted_date": "2026-02-21T04:06:14.317968",
       "hidden_score": 30
     },
     {
       "id": "a28bc81e6615c92e2f65ccf5f04dd345",
       "company": "Log in",
       "title": "Robotics Engineer",
-      "location": "Ca",
+      "location": "Usa",
       "tech_stack": [
+        "c++",
         "python",
-        "rust",
-        "c++"
+        "rust"
       ],
       "url": "https://www.ycombinator.com/companies/lightberry/jobs/zMM4MQ4-robotics-engineer",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:14:41.542439",
-      "hidden_score": 30
-    },
-    {
-      "id": "dbb364a79150b719d70de1dd65d6e247",
-      "company": "Log in",
-      "title": "Engineering Intern",
-      "location": "Milan",
-      "tech_stack": [
-        "python",
-        "java",
-        "typescript",
-        "go"
-      ],
-      "url": "https://www.ycombinator.com/companies/leadbay/jobs/vlsKDGh-engineering-intern",
-      "source": "workatastartup",
-      "posted_date": "2026-02-20T04:14:44.396059",
-      "hidden_score": 30
-    },
-    {
-      "id": "34a5f4b52c3d5b4fbd39333ccfe21c85",
-      "company": "Log in",
-      "title": "Founding Engineer (Full-Stack)",
-      "location": "Remote",
-      "tech_stack": [
-        "vue",
-        "typescript",
-        "serverless",
-        "react",
-        "node",
-        "azure",
-        "postgresql"
-      ],
-      "url": "https://www.ycombinator.com/companies/uplane/jobs/itz3AlG-founding-engineer-full-stack",
-      "source": "workatastartup",
-      "posted_date": "2026-02-20T04:14:45.686972",
-      "hidden_score": 30
-    },
-    {
-      "id": "3f425ca8e6e2ba0f734e0132f84641a0",
-      "company": "Log in",
-      "title": "Software Engineer (Founding Team)",
-      "location": "Remote",
-      "tech_stack": [
-        "python",
-        "typescript",
-        "go"
-      ],
-      "url": "https://www.ycombinator.com/companies/manufact/jobs/x7AI7un-software-engineer-founding-team",
-      "source": "workatastartup",
-      "posted_date": "2026-02-20T04:14:48.913535",
-      "hidden_score": 30
-    },
-    {
-      "id": "78e8042519d570a91ea127f61c320ae8",
-      "company": "Log in",
-      "title": "Cloud Engineer (Infra / DevOps)",
-      "location": "Remote",
-      "tech_stack": [
-        "aws",
-        "azure",
-        "typescript"
-      ],
-      "url": "https://www.ycombinator.com/companies/manufact/jobs/L4qqo2K-cloud-engineer-infra-devops",
-      "source": "workatastartup",
-      "posted_date": "2026-02-20T04:14:49.586436",
+      "posted_date": "2026-02-21T04:06:15.703408",
       "hidden_score": 30
     },
     {
       "id": "c3dc08f6c541edf5bfa130c209d457c1",
       "company": "Log in",
       "title": "Backend Engineer",
-      "location": "New York",
+      "location": "Usa",
       "tech_stack": [
-        "gcp",
+        "azure",
+        "python",
+        "java",
+        "go"
+      ],
+      "url": "https://www.ycombinator.com/companies/leadbay/jobs/3uklpCZ-backend-engineer",
+      "source": "workatastartup",
+      "posted_date": "2026-02-21T04:06:18.103798",
+      "hidden_score": 30
+    },
+    {
+      "id": "dbb364a79150b719d70de1dd65d6e247",
+      "company": "Log in",
+      "title": "Engineering Intern",
+      "location": "Usa",
+      "tech_stack": [
+        "python",
+        "java",
+        "go",
+        "typescript"
+      ],
+      "url": "https://www.ycombinator.com/companies/leadbay/jobs/vlsKDGh-engineering-intern",
+      "source": "workatastartup",
+      "posted_date": "2026-02-21T04:06:18.685751",
+      "hidden_score": 30
+    },
+    {
+      "id": "78e8042519d570a91ea127f61c320ae8",
+      "company": "Log in",
+      "title": "Cloud Engineer (Infra / DevOps)",
+      "location": "Usa",
+      "tech_stack": [
         "azure",
         "aws",
-        "node"
+        "typescript"
       ],
-      "url": "https://www.ycombinator.com/companies/channel3/jobs/3DIAYYY-backend-engineer",
+      "url": "https://www.ycombinator.com/companies/manufact/jobs/L4qqo2K-cloud-engineer-infra-devops",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:14:50.244895",
+      "posted_date": "2026-02-21T04:06:21.612406",
+      "hidden_score": 30
+    },
+    {
+      "id": "3f425ca8e6e2ba0f734e0132f84641a0",
+      "company": "Log in",
+      "title": "Software Engineer (Founding Team)",
+      "location": "Usa",
+      "tech_stack": [
+        "python",
+        "go",
+        "typescript"
+      ],
+      "url": "https://www.ycombinator.com/companies/manufact/jobs/x7AI7un-software-engineer-founding-team",
+      "source": "workatastartup",
+      "posted_date": "2026-02-21T04:06:22.198146",
+      "hidden_score": 30
+    },
+    {
+      "id": "c0250b7d6b7cd6678344bee1ac944717",
+      "company": "Log in",
+      "title": "Founding Engineer Full Stack",
+      "location": "Usa",
+      "tech_stack": [
+        "kubernetes",
+        "nextjs",
+        "docker",
+        "tailwind",
+        "postgresql",
+        "go",
+        "typescript",
+        "aws"
+      ],
+      "url": "https://www.ycombinator.com/companies/pangolin/jobs/7DeBchl-founding-engineer-full-stack",
+      "source": "workatastartup",
+      "posted_date": "2026-02-21T04:06:24.229746",
       "hidden_score": 30
     },
     {
       "id": "59f62da19c8d37c4cb1cbf95d625c338",
       "company": "Log in",
       "title": "Forward Deployed Engineer",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [
         "python",
         "typescript"
       ],
       "url": "https://www.ycombinator.com/companies/effigov/jobs/PZMxj2A-forward-deployed-engineer",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:14:52.372853",
+      "posted_date": "2026-02-21T04:06:24.850429",
       "hidden_score": 30
     },
     {
       "id": "a9fa9d6808f4c83e1ac942534a89ec40",
       "company": "Log in",
       "title": "Robotics Data Infrastructure Engineer",
-      "location": "India",
+      "location": "Usa",
       "tech_stack": [
         "python",
-        "aws",
-        "node"
+        "aws"
       ],
       "url": "https://www.ycombinator.com/companies/verne-robotics/jobs/9SnPqFO-robotics-data-infrastructure-engineer",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:14:53.695474",
+      "posted_date": "2026-02-21T04:06:26.094138",
+      "hidden_score": 30
+    },
+    {
+      "id": "7a8a90a601d60c6693adc1d698efc078",
+      "company": "Log in",
+      "title": "Senior Software Engineer (Backend)",
+      "location": "Usa",
+      "tech_stack": [
+        "postgresql",
+        "go",
+        "typescript",
+        "aws",
+        "python",
+        "node"
+      ],
+      "url": "https://www.ycombinator.com/companies/third-chair/jobs/xWdFgKA-senior-software-engineer-backend",
+      "source": "workatastartup",
+      "posted_date": "2026-02-21T04:06:29.050989",
       "hidden_score": 30
     },
     {
       "id": "75e013bbfa398009a21f658848ebd24c",
       "company": "Log in",
       "title": "Founding Product Manager",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/harper/jobs/KfC6DN6-founding-product-manager",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:16:20.520410",
-      "hidden_score": 30
-    },
-    {
-      "id": "d7ade4f4a45e2aa0f58771b330b022fe",
-      "company": "Log in",
-      "title": "Head of Product",
-      "location": "Remote",
-      "tech_stack": [],
-      "url": "https://www.ycombinator.com/companies/arva-ai/jobs/64KMXaR-head-of-product",
-      "source": "workatastartup",
-      "posted_date": "2026-02-20T04:16:21.133953",
+      "posted_date": "2026-02-21T04:07:47.310707",
       "hidden_score": 30
     },
     {
       "id": "de7e83e189055b3c498667e15f740782",
       "company": "Log in",
       "title": "Product Operations",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/arva-ai/jobs/gEe9hEv-product-operations",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:16:21.797829",
+      "posted_date": "2026-02-21T04:07:47.931989",
+      "hidden_score": 30
+    },
+    {
+      "id": "d7ade4f4a45e2aa0f58771b330b022fe",
+      "company": "Log in",
+      "title": "Head of Product",
+      "location": "Usa",
+      "tech_stack": [],
+      "url": "https://www.ycombinator.com/companies/arva-ai/jobs/64KMXaR-head-of-product",
+      "source": "workatastartup",
+      "posted_date": "2026-02-21T04:07:48.514456",
+      "hidden_score": 30
+    },
+    {
+      "id": "d36643964143a103727b98c7e31eaf68",
+      "company": "Log in",
+      "title": "Founder’s Office (Generalist / Founder’s Associate)",
+      "location": "Usa",
+      "tech_stack": [],
+      "url": "https://www.ycombinator.com/companies/surebright/jobs/vIPBhHN-founder-s-office-generalist-founder-s-associate",
+      "source": "workatastartup",
+      "posted_date": "2026-02-21T04:07:49.071348",
       "hidden_score": 30
     },
     {
       "id": "9375d626061a5beabed8e676f0e0f424",
       "company": "Log in",
       "title": "Deployment Strategist",
-      "location": "New York",
+      "location": "Usa",
       "tech_stack": [
         "python"
       ],
       "url": "https://www.ycombinator.com/companies/david-ai/jobs/wXlgOpO-deployment-strategist",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:16:22.438670",
+      "posted_date": "2026-02-21T04:07:49.698635",
       "hidden_score": 30
     },
     {
       "id": "4f2e9b4fe3c749ed2c331c9f8d8fca14",
       "company": "Log in",
       "title": "Agent Success Manager",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [
         "python"
       ],
       "url": "https://www.ycombinator.com/companies/kastle/jobs/WLpz2DF-agent-success-manager",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:16:23.675093",
+      "posted_date": "2026-02-21T04:07:50.878393",
       "hidden_score": 30
     },
     {
       "id": "5827347fa0196092d02a89e9e980949d",
       "company": "Log in",
       "title": "Technical Account Manager",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/domu-technology-inc/jobs/bSoiDo9-technical-account-manager",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:16:24.305977",
+      "posted_date": "2026-02-21T04:07:51.522769",
       "hidden_score": 30
     },
     {
       "id": "f678b8ab7aeea2429247eaef5c7b90e3",
       "company": "Log in",
       "title": "Customer Success PM",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/every/jobs/il2HYLF-customer-success-pm",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:16:27.058881",
+      "posted_date": "2026-02-21T04:07:53.974584",
       "hidden_score": 30
     },
     {
       "id": "915131404c093bc127e5bda6e680f5b3",
       "company": "Log in",
       "title": "Technical Product Manager - Paris Office",
-      "location": "New York",
+      "location": "Usa",
       "tech_stack": [
         "go"
       ],
       "url": "https://www.ycombinator.com/companies/escape/jobs/Ag0v5iF-technical-product-manager-paris-office",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:16:27.936269",
+      "posted_date": "2026-02-21T04:07:55.213981",
       "hidden_score": 30
     },
     {
       "id": "0206fc4282b69246921d4f19287fca98",
       "company": "Log in",
       "title": "Product Lead",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/vooma/jobs/5yQGhzi-product-lead",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:16:29.422386",
+      "posted_date": "2026-02-21T04:07:56.414358",
       "hidden_score": 30
     },
     {
       "id": "da02159e7799ca5758bc54e88f661f88",
       "company": "Log in",
       "title": "EIR: Entrepreneur In Residence",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/landeed/jobs/Xt8mnKh-eir-entrepreneur-in-residence",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:16:31.400575",
-      "hidden_score": 30
-    },
-    {
-      "id": "6831f3fdda4bbc4ead59e0e4b28b35b6",
-      "company": "Log in",
-      "title": "Customer Solutions Engineer",
-      "location": "New York",
-      "tech_stack": [
-        "javascript",
-        "node"
-      ],
-      "url": "https://www.ycombinator.com/companies/axle/jobs/agrv5hG-customer-solutions-engineer",
-      "source": "workatastartup",
-      "posted_date": "2026-02-20T04:16:32.817798",
+      "posted_date": "2026-02-21T04:07:57.724319",
       "hidden_score": 30
     },
     {
       "id": "62c431b3b37bb7de4b57564ef0bc1520",
       "company": "Log in",
       "title": "Product Designer (part-time)",
-      "location": "Munich",
+      "location": "Usa",
       "tech_stack": [
+        "tailwind",
         "react",
-        "go",
-        "tailwind"
+        "go"
       ],
       "url": "https://www.ycombinator.com/companies/mercura/jobs/Kad25cx-product-designer-part-time",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:17:44.322602",
+      "posted_date": "2026-02-21T04:08:58.417296",
       "hidden_score": 30
     },
     {
       "id": "4e4ae8cb535acec8442535f7e4fdbb05",
       "company": "Log in",
       "title": "Founding Designer",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/telli/jobs/7k8HRXE-founding-designer",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:17:45.677911",
+      "posted_date": "2026-02-21T04:08:59.642782",
       "hidden_score": 30
     },
     {
       "id": "210ee3479c0f3e6c77bc524655193f87",
       "company": "Log in",
       "title": "Designer - The next design superstar of enterprise software in Silicon Valley!",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/stacksync/jobs/KTEm87p-designer-the-next-design-superstar-of-enterprise-software-in-silicon-valley",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:17:47.566631",
+      "posted_date": "2026-02-21T04:09:01.431840",
       "hidden_score": 30
     },
     {
       "id": "39e511a84e008bf6919a94fae254f89b",
       "company": "Log in",
       "title": "Videographer/Production Intern at 14.ai (San Francisco, Lower Haight)",
-      "location": "Ca",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/14-ai/jobs/dAgpDdI-videographer-production-intern-at-14-ai-san-francisco-lower-haight",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:17:48.235247",
+      "posted_date": "2026-02-21T04:09:02.013885",
       "hidden_score": 30
     },
     {
       "id": "84e7283dd470e131af50bf88fa0703b7",
       "company": "Log in",
       "title": "Agent+ Product Designer",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [
-        "css",
+        "javascript",
         "react",
-        "html",
-        "javascript"
+        "css",
+        "html"
       ],
       "url": "https://www.ycombinator.com/companies/tempo-2/jobs/3ofKkm2-agent-product-designer",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:17:51.173665",
+      "posted_date": "2026-02-21T04:09:04.909340",
       "hidden_score": 30
     },
     {
       "id": "e87159886528edea4331b024ac5974d5",
       "company": "Log in",
       "title": "Designer",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [
         "node"
       ],
       "url": "https://www.ycombinator.com/companies/vectorshift/jobs/0Vo8I0h-designer",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:17:52.518911",
+      "posted_date": "2026-02-21T04:09:05.457319",
       "hidden_score": 30
     },
     {
       "id": "8bbe8dcabc6df0f3c8523e841be7e703",
       "company": "Log in",
       "title": "UI/UX Lead",
-      "location": "India",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/landeed/jobs/kRhGqU1-ui-ux-lead",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:17:58.494746",
+      "posted_date": "2026-02-21T04:09:10.125863",
       "hidden_score": 30
     },
     {
       "id": "d7849331bb0fe3aae795b614ce399f42",
       "company": "Log in",
       "title": "Talent Recruiter",
-      "location": "Munich",
+      "location": "Usa",
       "tech_stack": [
         "go"
       ],
       "url": "https://www.ycombinator.com/companies/mercura/jobs/PSOd430-talent-recruiter",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:19:04.423051",
+      "posted_date": "2026-02-21T04:10:12.521492",
       "hidden_score": 30
     },
     {
       "id": "7c672191f7f0bc4a55ab4655c248efb1",
       "company": "Log in",
       "title": "Recruiting Lead",
-      "location": "Co",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/harper/jobs/9E6dwaG-recruiting-lead",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:19:05.043854",
+      "posted_date": "2026-02-21T04:10:13.176545",
+      "hidden_score": 30
+    },
+    {
+      "id": "abc6c97460f647a6133bb2f2b0333b67",
+      "company": "Log in",
+      "title": "People Partner",
+      "location": "Usa",
+      "tech_stack": [],
+      "url": "https://www.ycombinator.com/companies/happyrobot/jobs/gT1OBRa-people-partner",
+      "source": "workatastartup",
+      "posted_date": "2026-02-21T04:10:15.042712",
       "hidden_score": 30
     },
     {
       "id": "178672a2b382d5c770558ecb9994e704",
       "company": "Log in",
       "title": "Benefits Operations Specialist",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/every/jobs/qWHiPdn-benefits-operations-specialist",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:19:08.318096",
+      "posted_date": "2026-02-21T04:10:16.318101",
       "hidden_score": 30
     },
     {
       "id": "301f8e5226fda3aa36483aeec34001a4",
       "company": "Log in",
       "title": "Founding GTM Recruiter",
-      "location": "New York",
+      "location": "Usa",
       "tech_stack": [
         "go"
       ],
       "url": "https://www.ycombinator.com/companies/pylon-2/jobs/POlx8Qr-founding-gtm-recruiter",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:19:08.956962",
+      "posted_date": "2026-02-21T04:10:16.956510",
       "hidden_score": 30
     },
     {
       "id": "47777c2779f905ce84d1d0803a4311ff",
       "company": "Log in",
       "title": "Head of People",
-      "location": "Ca",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/salient/jobs/P5cDLb4-head-of-people",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:19:10.273382",
+      "posted_date": "2026-02-21T04:10:17.658943",
       "hidden_score": 30
     },
     {
       "id": "bcd427c9d6b2eea7908cbfabb1b29abd",
       "company": "Log in",
       "title": "Recruiter (San Francisco)",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [
         "aws"
       ],
       "url": "https://www.ycombinator.com/companies/infisical/jobs/Pf5q2TP-recruiter-san-francisco",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:19:11.786938",
+      "posted_date": "2026-02-21T04:10:19.624222",
       "hidden_score": 30
     },
     {
       "id": "d8e8208653024fd3f5fd64fa4159c921",
       "company": "Log in",
       "title": "Recruiter (US & Canada)",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [
         "aws"
       ],
       "url": "https://www.ycombinator.com/companies/infisical/jobs/EGwWKPL-recruiter-us-canada",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:19:12.422369",
-      "hidden_score": 30
-    },
-    {
-      "id": "833d0b3ee3824d98a4449d4d84e1ab48",
-      "company": "Log in",
-      "title": "Senior Technical Recruiter",
-      "location": "New York",
-      "tech_stack": [],
-      "url": "https://www.ycombinator.com/companies/permitflow/jobs/Qq7sYBi-senior-technical-recruiter",
-      "source": "workatastartup",
-      "posted_date": "2026-02-20T04:19:13.117893",
-      "hidden_score": 30
-    },
-    {
-      "id": "c43c404c48a8214892f2c5f5b097b519",
-      "company": "Log in",
-      "title": "Recruiter/Talent Partner - Philippines",
-      "location": "Remote",
-      "tech_stack": [],
-      "url": "https://www.ycombinator.com/companies/flagright/jobs/Zuh5JNR-recruiter-talent-partner-philippines",
-      "source": "workatastartup",
-      "posted_date": "2026-02-20T04:19:13.743471",
-      "hidden_score": 30
-    },
-    {
-      "id": "3b9f1ea3eac797831c437d5689191e63",
-      "company": "Log in",
-      "title": "Contract Technical Sourcer",
-      "location": "Remote",
-      "tech_stack": [],
-      "url": "https://www.ycombinator.com/companies/sully-ai/jobs/9VVYcuf-contract-technical-sourcer",
-      "source": "workatastartup",
-      "posted_date": "2026-02-20T04:19:15.066584",
-      "hidden_score": 30
-    },
-    {
-      "id": "67f34d34ae1e05df78255cc7b99a0291",
-      "company": "Log in",
-      "title": "Senior Talent Lead",
-      "location": "New York",
-      "tech_stack": [
-        "go"
-      ],
-      "url": "https://www.ycombinator.com/companies/heron-data/jobs/gE9GO3f-senior-talent-lead",
-      "source": "workatastartup",
-      "posted_date": "2026-02-20T04:19:15.730996",
-      "hidden_score": 30
-    },
-    {
-      "id": "796c59178eae1d0d2bd0e6d432e18d84",
-      "company": "Log in",
-      "title": "Recruiting Lead (Technical & GTM)",
-      "location": "New York",
-      "tech_stack": [
-        "go"
-      ],
-      "url": "https://www.ycombinator.com/companies/arketa/jobs/BfBoILQ-recruiting-lead-technical-gtm",
-      "source": "workatastartup",
-      "posted_date": "2026-02-20T04:19:16.385001",
-      "hidden_score": 30
-    },
-    {
-      "id": "9cb6a656d6844e076c44337c449e097a",
-      "company": "Log in",
-      "title": "Ops Manager - International People Ops",
-      "location": "Remote",
-      "tech_stack": [
-        "go"
-      ],
-      "url": "https://www.ycombinator.com/companies/posthog/jobs/fb2m80U-ops-manager-international-people-ops",
-      "source": "workatastartup",
-      "posted_date": "2026-02-20T04:19:17.037742",
-      "hidden_score": 30
-    },
-    {
-      "id": "5a968778441333f757f69ce9275af864",
-      "company": "Log in",
-      "title": "Recruiter (Go To Market)",
-      "location": "New York",
-      "tech_stack": [
-        "go"
-      ],
-      "url": "https://www.ycombinator.com/companies/candid-health/jobs/7clAU5C-recruiter-go-to-market",
-      "source": "workatastartup",
-      "posted_date": "2026-02-20T04:19:17.663397",
-      "hidden_score": 30
-    },
-    {
-      "id": "abed04efe4d774191219c0c620e95508",
-      "company": "Log in",
-      "title": "Technical Recruiter (Engineering)",
-      "location": "New York",
-      "tech_stack": [],
-      "url": "https://www.ycombinator.com/companies/candid-health/jobs/f4iWWS2-technical-recruiter-engineering",
-      "source": "workatastartup",
-      "posted_date": "2026-02-20T04:19:18.388434",
-      "hidden_score": 30
-    },
-    {
-      "id": "7a3a16a71877eb33a27be9ac8e0c2ed9",
-      "company": "Log in",
-      "title": "People Business Partner",
-      "location": "Remote",
-      "tech_stack": [
-        "go"
-      ],
-      "url": "https://www.ycombinator.com/companies/curri/jobs/6y8HKRV-people-business-partner",
-      "source": "workatastartup",
-      "posted_date": "2026-02-20T04:19:19.138590",
+      "posted_date": "2026-02-21T04:10:20.257362",
       "hidden_score": 30
     },
     {
       "id": "853ae4eb30403a63ef37f5b5595f9253",
       "company": "Log in",
       "title": "Founders Associate - People",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/fleek/jobs/oXwCVPJ-founders-associate-people",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:19:19.851413",
+      "posted_date": "2026-02-21T04:10:20.859779",
+      "hidden_score": 30
+    },
+    {
+      "id": "c43c404c48a8214892f2c5f5b097b519",
+      "company": "Log in",
+      "title": "Recruiter/Talent Partner - Philippines",
+      "location": "Usa",
+      "tech_stack": [],
+      "url": "https://www.ycombinator.com/companies/flagright/jobs/Zuh5JNR-recruiter-talent-partner-philippines",
+      "source": "workatastartup",
+      "posted_date": "2026-02-21T04:10:21.494770",
+      "hidden_score": 30
+    },
+    {
+      "id": "3b9f1ea3eac797831c437d5689191e63",
+      "company": "Log in",
+      "title": "Contract Technical Sourcer",
+      "location": "Usa",
+      "tech_stack": [],
+      "url": "https://www.ycombinator.com/companies/sully-ai/jobs/9VVYcuf-contract-technical-sourcer",
+      "source": "workatastartup",
+      "posted_date": "2026-02-21T04:10:22.109227",
+      "hidden_score": 30
+    },
+    {
+      "id": "67f34d34ae1e05df78255cc7b99a0291",
+      "company": "Log in",
+      "title": "Senior Talent Lead",
+      "location": "Usa",
+      "tech_stack": [
+        "go"
+      ],
+      "url": "https://www.ycombinator.com/companies/heron-data/jobs/gE9GO3f-senior-talent-lead",
+      "source": "workatastartup",
+      "posted_date": "2026-02-21T04:10:23.355240",
+      "hidden_score": 30
+    },
+    {
+      "id": "796c59178eae1d0d2bd0e6d432e18d84",
+      "company": "Log in",
+      "title": "Recruiting Lead (Technical & GTM)",
+      "location": "Usa",
+      "tech_stack": [
+        "go"
+      ],
+      "url": "https://www.ycombinator.com/companies/arketa/jobs/BfBoILQ-recruiting-lead-technical-gtm",
+      "source": "workatastartup",
+      "posted_date": "2026-02-21T04:10:24.012677",
+      "hidden_score": 30
+    },
+    {
+      "id": "9cb6a656d6844e076c44337c449e097a",
+      "company": "Log in",
+      "title": "Ops Manager - International People Ops",
+      "location": "Usa",
+      "tech_stack": [
+        "go"
+      ],
+      "url": "https://www.ycombinator.com/companies/posthog/jobs/fb2m80U-ops-manager-international-people-ops",
+      "source": "workatastartup",
+      "posted_date": "2026-02-21T04:10:24.648256",
+      "hidden_score": 30
+    },
+    {
+      "id": "abed04efe4d774191219c0c620e95508",
+      "company": "Log in",
+      "title": "Technical Recruiter (Engineering)",
+      "location": "Usa",
+      "tech_stack": [],
+      "url": "https://www.ycombinator.com/companies/candid-health/jobs/f4iWWS2-technical-recruiter-engineering",
+      "source": "workatastartup",
+      "posted_date": "2026-02-21T04:10:25.329206",
+      "hidden_score": 30
+    },
+    {
+      "id": "5a968778441333f757f69ce9275af864",
+      "company": "Log in",
+      "title": "Recruiter (Go To Market)",
+      "location": "Usa",
+      "tech_stack": [
+        "go"
+      ],
+      "url": "https://www.ycombinator.com/companies/candid-health/jobs/7clAU5C-recruiter-go-to-market",
+      "source": "workatastartup",
+      "posted_date": "2026-02-21T04:10:25.961568",
       "hidden_score": 30
     },
     {
       "id": "1e66615746a63c412189e261418f6ef5",
       "company": "Log in",
       "title": "Founding Talent",
-      "location": "New York",
+      "location": "Usa",
       "tech_stack": [
         "go"
       ],
       "url": "https://www.ycombinator.com/companies/chariot-2/jobs/JwfUYYk-founding-talent",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:19:20.510857",
+      "posted_date": "2026-02-21T04:10:27.336437",
       "hidden_score": 30
     },
     {
-      "id": "e00872840d86a16b1563706c3b8393ed",
+      "id": "dad52ef1409737f63ca8d47411159140",
       "company": "Log in",
-      "title": "Applications Scientist - Protein Design",
-      "location": "Ca",
+      "title": "Founding People Ops",
+      "location": "Usa",
       "tech_stack": [],
-      "url": "https://www.ycombinator.com/companies/tamarind-bio/jobs/IyQkQvA-applications-scientist-protein-design",
+      "url": "https://www.ycombinator.com/companies/hadrius/jobs/QRQjlLM-founding-people-ops",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:20:51.256920",
+      "posted_date": "2026-02-21T04:10:28.566177",
+      "hidden_score": 30
+    },
+    {
+      "id": "80c1ffbfbbfce3944f29d3bac8667c25",
+      "company": "Log in",
+      "title": "Application Scientist - Computational Chemistry",
+      "location": "Usa",
+      "tech_stack": [],
+      "url": "https://www.ycombinator.com/companies/tamarind-bio/jobs/skNUfVc-application-scientist-computational-chemistry",
+      "source": "workatastartup",
+      "posted_date": "2026-02-21T04:11:45.399571",
       "hidden_score": 30
     },
     {
       "id": "6a097c26b193657c1ab33a69e149d300",
       "company": "Log in",
       "title": "Licensed Mental Health Providers",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/lunajoy-health/jobs/FlF3cYz-licensed-mental-health-providers",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:20:52.525913",
+      "posted_date": "2026-02-21T04:11:46.575670",
       "hidden_score": 30
     },
     {
       "id": "6652696fc2c90b771654f627e87f4e2d",
       "company": "Log in",
       "title": "AI Researcher (Perception)",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/tavus/jobs/vbQL6ap-ai-researcher-perception",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:20:53.679131",
+      "posted_date": "2026-02-21T04:11:47.165563",
       "hidden_score": 30
     },
     {
       "id": "7a010985fb821636d33266529f96cb79",
       "company": "Log in",
       "title": "AI and Health Researcher",
-      "location": "Ca",
+      "location": "Usa",
       "tech_stack": [
         "react"
       ],
       "url": "https://www.ycombinator.com/companies/terra-api/jobs/QDqF49C-ai-and-health-researcher",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:20:55.746203",
+      "posted_date": "2026-02-21T04:11:48.364231",
       "hidden_score": 30
     },
     {
       "id": "af0e3ae15975f3ef71d5364a4c11294f",
       "company": "Log in",
       "title": "AI Research Engineer",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/prolific/jobs/7wIJxEg-ai-research-engineer",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:20:56.367728",
+      "posted_date": "2026-02-21T04:11:49.021315",
       "hidden_score": 30
     },
     {
       "id": "abe82fe4978750c79ff807c9ee8765c3",
       "company": "Log in",
       "title": "Formulation Scientist",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/clinikally/jobs/89NlOpp-formulation-scientist",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:20:58.063247",
+      "posted_date": "2026-02-21T04:11:50.192495",
       "hidden_score": 30
     },
     {
       "id": "f766b2b560b00208bfee8e4863ccd15d",
       "company": "Log in",
       "title": "Research Scientist, Voice",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [
         "python"
       ],
       "url": "https://www.ycombinator.com/companies/deepgram/jobs/0wGOyli-research-scientist-voice",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:20:59.260415",
-      "hidden_score": 30
-    },
-    {
-      "id": "d08fa49c46e88bd25638c157a387b755",
-      "company": "Log in",
-      "title": "Sr. Research Associate/Associate Scientist– mRNA Sciences (in SF, CA)",
-      "location": "Ca",
-      "tech_stack": [],
-      "url": "https://www.ycombinator.com/companies/parcelbio/jobs/OQPynJc-sr-research-associate-associate-scientist-mrna-sciences-in-sf-ca",
-      "source": "workatastartup",
-      "posted_date": "2026-02-20T04:20:59.877810",
-      "hidden_score": 30
-    },
-    {
-      "id": "06b11cbc157c07d3ef643b7edea5ec31",
-      "company": "Log in",
-      "title": "Biomarker Insights & Clinical Training Lead",
-      "location": "Ma",
-      "tech_stack": [
-        "python",
-        "rails"
-      ],
-      "url": "https://www.ycombinator.com/companies/siphox-health/jobs/Usmfh9C-biomarker-insights-clinical-training-lead",
-      "source": "workatastartup",
-      "posted_date": "2026-02-20T04:21:00.560832",
+      "posted_date": "2026-02-21T04:11:51.423515",
       "hidden_score": 30
     },
     {
       "id": "253caf580478ac822973e4dd4a538f7a",
       "company": "Log in",
       "title": "Thyroid Product Advisor (Endocrinologist) - Remote Position",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/siphox-health/jobs/I0Zr856-thyroid-product-advisor-endocrinologist-remote-position",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:21:01.316204",
+      "posted_date": "2026-02-21T04:11:52.141063",
+      "hidden_score": 30
+    },
+    {
+      "id": "06b11cbc157c07d3ef643b7edea5ec31",
+      "company": "Log in",
+      "title": "Biomarker Insights & Clinical Training Lead",
+      "location": "Usa",
+      "tech_stack": [
+        "rails",
+        "python"
+      ],
+      "url": "https://www.ycombinator.com/companies/siphox-health/jobs/Usmfh9C-biomarker-insights-clinical-training-lead",
+      "source": "workatastartup",
+      "posted_date": "2026-02-21T04:11:52.777297",
       "hidden_score": 30
     },
     {
       "id": "32bf7e125631b5b667654750868e1a7e",
       "company": "Log in",
       "title": "Fluid Simulation Engineer",
-      "location": "Hybrid",
+      "location": "Usa",
       "tech_stack": [
         "python"
       ],
       "url": "https://www.ycombinator.com/companies/deepsim-inc/jobs/GMbwZPS-fluid-simulation-engineer",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:21:02.045871",
+      "posted_date": "2026-02-21T04:11:53.380026",
       "hidden_score": 30
     },
     {
-      "id": "d8c8044ce502e44b5aced3acac9fb173",
+      "id": "d08fa49c46e88bd25638c157a387b755",
       "company": "Log in",
-      "title": "Protein Design Lead",
-      "location": "Ca",
+      "title": "Sr. Research Associate/Associate Scientist– mRNA Sciences (in SF, CA)",
+      "location": "Usa",
       "tech_stack": [],
-      "url": "https://www.ycombinator.com/companies/cleancard/jobs/n4ch2pJ-protein-design-lead",
+      "url": "https://www.ycombinator.com/companies/parcelbio/jobs/OQPynJc-sr-research-associate-associate-scientist-mrna-sciences-in-sf-ca",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:21:03.305491",
+      "posted_date": "2026-02-21T04:11:53.948934",
       "hidden_score": 30
     },
     {
       "id": "5daa3ca9dd48ffe4e158f519411b7c08",
       "company": "Log in",
       "title": "Head of Clinical Research at Sonia (W24)",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [
         "go"
       ],
       "url": "https://www.ycombinator.com/companies/sonia/jobs/EfS0STT-head-of-clinical-research-at-sonia-w24",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:21:04.097050",
+      "posted_date": "2026-02-21T04:11:55.522949",
       "hidden_score": 30
     },
     {
       "id": "f7947f758646799404392f3bd7a4d306",
       "company": "Log in",
       "title": "Member of Technical Staff - Plasma Physics",
-      "location": "Ca",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/maritime-fusion/jobs/sX8ipt6-member-of-technical-staff-plasma-physics",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:21:04.729993",
+      "posted_date": "2026-02-21T04:11:56.065449",
       "hidden_score": 30
     },
     {
       "id": "1a0e24145efa791a8c7e5f9b286c1fd8",
       "company": "Log in",
       "title": "Machine Learning Scientist",
-      "location": "Ca",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/relace/jobs/BiIbkUO-machine-learning-scientist",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:21:05.354671",
+      "posted_date": "2026-02-21T04:11:56.642685",
       "hidden_score": 30
     },
     {
       "id": "1dedd2632538c65d2a65ad07a66de019",
       "company": "Log in",
       "title": "Senior Geospatial Data Scientist",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [
         "python"
       ],
       "url": "https://www.ycombinator.com/companies/korrai/jobs/4KekRXl-senior-geospatial-data-scientist",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:21:06.116540",
-      "hidden_score": 30
-    },
-    {
-      "id": "49a934fdbbeeb7db22e9ea9b67c0f1a1",
-      "company": "Log in",
-      "title": "Principal Product Development Scientist",
-      "location": "Ca",
-      "tech_stack": [],
-      "url": "https://www.ycombinator.com/companies/notable-labs/jobs/kF9VM8qjw-principal-product-development-scientist",
-      "source": "workatastartup",
-      "posted_date": "2026-02-20T04:21:06.782060",
+      "posted_date": "2026-02-21T04:11:57.243698",
       "hidden_score": 30
     },
     {
       "id": "fed505e0326bf73181b66ed6afa2924d",
       "company": "Log in",
       "title": "Product Development Scientist / Senior Assay Development Scientist",
-      "location": "Ca",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/notable-labs/jobs/ti2HBnyyd-product-development-scientist-senior-assay-development-scientist",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:21:07.398526",
+      "posted_date": "2026-02-21T04:11:57.806033",
+      "hidden_score": 30
+    },
+    {
+      "id": "49a934fdbbeeb7db22e9ea9b67c0f1a1",
+      "company": "Log in",
+      "title": "Principal Product Development Scientist",
+      "location": "Usa",
+      "tech_stack": [],
+      "url": "https://www.ycombinator.com/companies/notable-labs/jobs/kF9VM8qjw-principal-product-development-scientist",
+      "source": "workatastartup",
+      "posted_date": "2026-02-21T04:11:58.413201",
       "hidden_score": 30
     },
     {
       "id": "1378db56b0988001a04896962d7e9801",
       "company": "Log in",
       "title": "Pharma/Biotech Subject Matter Expert",
-      "location": "New York",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/zoa-research/jobs/dpRBnxr-pharma-biotech-subject-matter-expert",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:21:08.015822",
+      "posted_date": "2026-02-21T04:11:58.997959",
       "hidden_score": 30
     },
     {
       "id": "f9f466a5fdeb01e51028e4895848b1ae",
       "company": "Log in",
       "title": "Organic Chemist",
-      "location": "Ca",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/yoneda-labs/jobs/KRzYfYi-organic-chemist",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:21:08.659161",
+      "posted_date": "2026-02-21T04:11:59.938044",
+      "hidden_score": 30
+    },
+    {
+      "id": "7bc8dbf30f97e5c8b0281443dc6ca194",
+      "company": "Log in",
+      "title": "Manager, Clinical Research (Oncology)",
+      "location": "Usa",
+      "tech_stack": [
+        "gcp"
+      ],
+      "url": "https://www.ycombinator.com/companies/ankr-health/jobs/Emb3Lrr-manager-clinical-research-oncology",
+      "source": "workatastartup",
+      "posted_date": "2026-02-21T04:12:00.730418",
       "hidden_score": 30
     },
     {
       "id": "b8aa25a333189882318026d2693fd542",
       "company": "Log in",
       "title": "Head of Operations",
-      "location": "Remote",
-      "tech_stack": [],
+      "location": "Usa",
+      "tech_stack": [
+        "go"
+      ],
       "url": "https://www.ycombinator.com/companies/snapmagic/jobs/0XkjQVQ-head-of-operations",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:22:24.435129",
+      "posted_date": "2026-02-21T04:13:17.051534",
       "hidden_score": 30
     },
     {
       "id": "f88de90703aa9538b71fc6edc6f56451",
       "company": "Log in",
       "title": "Chief of Staff to CEO",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [
         "go"
       ],
       "url": "https://www.ycombinator.com/companies/nucleo/jobs/mkp4lVw-chief-of-staff-to-ceo",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:22:25.166478",
+      "posted_date": "2026-02-21T04:13:17.637663",
       "hidden_score": 30
     },
     {
       "id": "63cd54717c932af8906c1a6d3ccfc291",
       "company": "Log in",
       "title": "Founding Mainframe Expert",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [
         "go"
       ],
       "url": "https://www.ycombinator.com/companies/hypercubic/jobs/n5LsK7d-founding-mainframe-expert",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:22:25.812599",
-      "hidden_score": 30
-    },
-    {
-      "id": "4d13e22652c018050484f25533b3634d",
-      "company": "Log in",
-      "title": "Business Development Associate",
-      "location": "Remote",
-      "tech_stack": [
-        "go"
-      ],
-      "url": "https://www.ycombinator.com/companies/uplane/jobs/BERohlj-business-development-associate",
-      "source": "workatastartup",
-      "posted_date": "2026-02-20T04:22:26.449498",
-      "hidden_score": 30
-    },
-    {
-      "id": "4fa60794014c3ddd9fd083717a56f6aa",
-      "company": "Log in",
-      "title": "Founder’s Associate Intern (Business) ; Full-time",
-      "location": "Remote",
-      "tech_stack": [
-        "go"
-      ],
-      "url": "https://www.ycombinator.com/companies/uplane/jobs/PAlqRJ2-founder-s-associate-intern-business-full-time",
-      "source": "workatastartup",
-      "posted_date": "2026-02-20T04:22:27.084045",
+      "posted_date": "2026-02-21T04:13:18.215544",
       "hidden_score": 30
     },
     {
       "id": "4600b5939487a2c34bb6b2ce223e7092",
       "company": "Log in",
       "title": "Special Projects Operator",
-      "location": "Remote",
-      "tech_stack": [],
+      "location": "Usa",
+      "tech_stack": [
+        "go"
+      ],
       "url": "https://www.ycombinator.com/companies/idler/jobs/2deTXUi-special-projects-operator",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:22:27.759831",
+      "posted_date": "2026-02-21T04:13:18.802836",
       "hidden_score": 30
     },
     {
       "id": "942abe654c2c1508e8eef5827ee2f4ad",
       "company": "Log in",
       "title": "Robotics Operator",
-      "location": "Remote",
-      "tech_stack": [],
+      "location": "Usa",
+      "tech_stack": [
+        "go"
+      ],
       "url": "https://www.ycombinator.com/companies/verne-robotics/jobs/7LFahea-robotics-operator",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:22:28.405255",
+      "posted_date": "2026-02-21T04:13:19.363687",
       "hidden_score": 30
     },
     {
       "id": "2e993f96dc79baf832ad5bfd3ddd20ad",
       "company": "Log in",
       "title": "Operations Associate – Data Samples & Customer Success",
-      "location": "Remote",
-      "tech_stack": [],
+      "location": "Usa",
+      "tech_stack": [
+        "go"
+      ],
       "url": "https://www.ycombinator.com/companies/sixtyfour/jobs/bIbgQkL-operations-associate-data-samples-customer-success",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:22:29.034236",
+      "posted_date": "2026-02-21T04:13:19.948952",
       "hidden_score": 30
     },
     {
       "id": "01567e56bfdbbd843d0f163e3d84d702",
       "company": "Log in",
       "title": "Founder's Associate Intern (Growth)",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [
         "go"
       ],
       "url": "https://www.ycombinator.com/companies/mercura/jobs/LTe2WWt-founder-s-associate-intern-growth",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:22:29.745364",
-      "hidden_score": 30
-    },
-    {
-      "id": "e0c1bb6f514a5be3e0ab05df32145723",
-      "company": "Log in",
-      "title": "Strategy and Operations Intern (Undergrad)",
-      "location": "Remote",
-      "tech_stack": [],
-      "url": "https://www.ycombinator.com/companies/afterquery/jobs/4q3X7AW-strategy-and-operations-intern-undergrad",
-      "source": "workatastartup",
-      "posted_date": "2026-02-20T04:22:31.094718",
+      "posted_date": "2026-02-21T04:13:21.162105",
       "hidden_score": 30
     },
     {
       "id": "a9033c8dba054f22c86e53d54c7bcae7",
       "company": "Log in",
       "title": "Strategic Projects Lead",
-      "location": "Remote",
-      "tech_stack": [],
+      "location": "Usa",
+      "tech_stack": [
+        "go"
+      ],
       "url": "https://www.ycombinator.com/companies/afterquery/jobs/wKJZW2E-strategic-projects-lead",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:22:31.709125",
+      "posted_date": "2026-02-21T04:13:21.786506",
       "hidden_score": 30
     },
     {
-      "id": "6c04208d2457152da858862cde346136",
+      "id": "e0c1bb6f514a5be3e0ab05df32145723",
       "company": "Log in",
-      "title": "AI Operations Analyst",
-      "location": "Remote",
-      "tech_stack": [],
-      "url": "https://www.ycombinator.com/companies/calltree/jobs/qNST1yz-ai-operations-analyst",
+      "title": "Strategy and Operations Intern (Undergrad)",
+      "location": "Usa",
+      "tech_stack": [
+        "go"
+      ],
+      "url": "https://www.ycombinator.com/companies/afterquery/jobs/4q3X7AW-strategy-and-operations-intern-undergrad",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:22:33.707116",
+      "posted_date": "2026-02-21T04:13:22.367599",
+      "hidden_score": 30
+    },
+    {
+      "id": "d312b8f02caf873f0b500b6df30eb943",
+      "company": "Log in",
+      "title": "Customer Intake Specialist",
+      "location": "Usa",
+      "tech_stack": [
+        "go"
+      ],
+      "url": "https://www.ycombinator.com/companies/harper/jobs/1WCFJFs-customer-intake-specialist",
+      "source": "workatastartup",
+      "posted_date": "2026-02-21T04:13:22.967236",
+      "hidden_score": 30
+    },
+    {
+      "id": "26bb73fd1754c240d44780777c86c74c",
+      "company": "Log in",
+      "title": "Senior Member of Technical Staff",
+      "location": "Usa",
+      "tech_stack": [
+        "go"
+      ],
+      "url": "https://www.ycombinator.com/companies/harper/jobs/TszfBKi-senior-member-of-technical-staff",
+      "source": "workatastartup",
+      "posted_date": "2026-02-21T04:13:23.571401",
       "hidden_score": 30
     },
     {
       "id": "a28c463ff6e5b5e481ecd8293c44b778",
       "company": "Log in",
       "title": "Account Executive – Marine Vertical",
-      "location": "Remote",
-      "tech_stack": [],
+      "location": "Usa",
+      "tech_stack": [
+        "go"
+      ],
       "url": "https://www.ycombinator.com/companies/salespatriot/jobs/OB8oXnW-account-executive-marine-vertical",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:22:35.093768",
-      "hidden_score": 30
-    },
-    {
-      "id": "b1e06117f25bbacb82f494acd1553375",
-      "company": "Log in",
-      "title": "Founding Ops",
-      "location": "New York",
-      "tech_stack": [],
-      "url": "https://www.ycombinator.com/companies/closure/jobs/n08FuTY-founding-ops",
-      "source": "workatastartup",
-      "posted_date": "2026-02-20T04:22:35.707710",
+      "posted_date": "2026-02-21T04:13:24.219854",
       "hidden_score": 30
     },
     {
       "id": "3765a1e74cf1bb9221083141bda3bed5",
       "company": "Log in",
       "title": "Founding Private Equity Strategist",
-      "location": "New York",
-      "tech_stack": [],
+      "location": "Usa",
+      "tech_stack": [
+        "go"
+      ],
       "url": "https://www.ycombinator.com/companies/keye/jobs/OFbSYE1-founding-private-equity-strategist",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:22:36.430197",
+      "posted_date": "2026-02-21T04:13:26.009112",
       "hidden_score": 30
     },
     {
-      "id": "ebc39c1de743f4f0a99eedf569fb489f",
+      "id": "293a10b5c49d3b427b52fc68ccf9d434",
       "company": "Log in",
-      "title": "General Manager, Data Operations",
-      "location": "New York",
-      "tech_stack": [],
-      "url": "https://www.ycombinator.com/companies/david-ai/jobs/jk323Mg-general-manager-data-operations",
+      "title": "AI Operations Associate",
+      "location": "Usa",
+      "tech_stack": [
+        "go"
+      ],
+      "url": "https://www.ycombinator.com/companies/telli/jobs/z0FUDT0-ai-operations-associate",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:22:39.486376",
+      "posted_date": "2026-02-21T04:13:27.336413",
       "hidden_score": 30
     },
     {
       "id": "ef925c35c128f3d474ce665f127e85db",
       "company": "Log in",
       "title": "Junior BizOps",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [
         "go"
       ],
       "url": "https://www.ycombinator.com/companies/saturn/jobs/j7H9t5L-junior-bizops",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:22:40.265117",
+      "posted_date": "2026-02-21T04:13:29.201214",
       "hidden_score": 30
     },
     {
       "id": "2a5c9a72020e4356142c0227e0e33b86",
       "company": "Log in",
       "title": "Enterprise Account Executive",
-      "location": "New York",
+      "location": "Usa",
       "tech_stack": [
         "go"
       ],
       "url": "https://www.ycombinator.com/companies/conveo/jobs/f6NzdFh-enterprise-account-executive",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:22:40.962489",
+      "posted_date": "2026-02-21T04:13:29.827234",
       "hidden_score": 30
     },
     {
-      "id": "b72081a60d1a80c7d6fda7b041724b76",
+      "id": "cc7fe62372d813e4da1c38bfe7e6ed26",
       "company": "Log in",
-      "title": "Revenue Operations (HubSpot & Sales Enablement) — London",
-      "location": "Remote",
-      "tech_stack": [],
-      "url": "https://www.ycombinator.com/companies/corgi-insurance/jobs/kwblFp3-revenue-operations-hubspot-sales-enablement-london",
+      "title": "Ex-Founder London Office",
+      "location": "Usa",
+      "tech_stack": [
+        "go"
+      ],
+      "url": "https://www.ycombinator.com/companies/corgi-insurance/jobs/UlhmDqF-ex-founder-london-office",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:22:43.075440",
+      "posted_date": "2026-02-21T04:13:31.848142",
+      "hidden_score": 30
+    },
+    {
+      "id": "2083761fad02b2442a0acef5a500981e",
+      "company": "Log in",
+      "title": "Operations Lead",
+      "location": "Usa",
+      "tech_stack": [
+        "go"
+      ],
+      "url": "https://www.ycombinator.com/companies/codes-health/jobs/OnvtRZt-operations-lead",
+      "source": "workatastartup",
+      "posted_date": "2026-02-21T04:13:33.096424",
       "hidden_score": 30
     },
     {
       "id": "551ef5b2ddff4cb2707ad9370c818a9b",
       "company": "Log in",
       "title": "GTM Intern (Founder’s Office)",
-      "location": "New York",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/oximy/jobs/ry2fPSG-gtm-intern-founder-s-office",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:24:09.728404",
+      "posted_date": "2026-02-21T04:14:50.788671",
       "hidden_score": 30
     },
     {
       "id": "89950b4959d1e9455ab60d3641d8f331",
       "company": "Log in",
       "title": "Events & Partnerships Associate (Contract)",
-      "location": "New York",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/oximy/jobs/SEYYyV3-events-partnerships-associate-contract",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:24:10.402021",
+      "posted_date": "2026-02-21T04:14:51.345054",
       "hidden_score": 30
     },
     {
       "id": "42844369d846fd2255a55405b34db992",
       "company": "Log in",
       "title": "(Senior) Business Development Representative (BDR)",
-      "location": "New York",
+      "location": "Usa",
       "tech_stack": [
         "go"
       ],
       "url": "https://www.ycombinator.com/companies/mercura/jobs/GAdrekx-senior-business-development-representative-bdr",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:24:13.657293",
+      "posted_date": "2026-02-21T04:14:54.501468",
       "hidden_score": 30
     },
     {
-      "id": "836642b3abd1924b07f1cba33f4a37b5",
+      "id": "7c13384fcdf5a2c042dceb0be7da83d5",
       "company": "Log in",
-      "title": "Customer Growth Associate",
-      "location": "New York",
+      "title": "Senior Account Executive, Banking",
+      "location": "Usa",
       "tech_stack": [],
-      "url": "https://www.ycombinator.com/companies/vendra/jobs/o8ZQUPG-customer-growth-associate",
+      "url": "https://www.ycombinator.com/companies/arva-ai/jobs/9SzIK0D-senior-account-executive-banking",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:24:18.665781",
+      "posted_date": "2026-02-21T04:14:58.988405",
       "hidden_score": 30
     },
     {
-      "id": "2c3bf7f3c48b85132b23020d602dc80e",
+      "id": "5f9d3235db200467d32469a5b2a19af4",
       "company": "Log in",
-      "title": "Senior Account Manager (Aerospace & Defense)",
-      "location": "New York",
+      "title": "Head of Business Development",
+      "location": "Usa",
       "tech_stack": [],
-      "url": "https://www.ycombinator.com/companies/vendra/jobs/j72DTa5-senior-account-manager-aerospace-defense",
+      "url": "https://www.ycombinator.com/companies/bucket-robotics/jobs/RwBQGru-head-of-business-development",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:24:19.322516",
+      "posted_date": "2026-02-21T04:15:00.374434",
       "hidden_score": 30
     },
     {
       "id": "efceadd3ae698492711d38e4fe275a6a",
       "company": "Log in",
       "title": "Client Officer",
-      "location": "New York",
+      "location": "Usa",
       "tech_stack": [
         "go"
       ],
       "url": "https://www.ycombinator.com/companies/conveo/jobs/KdhudrY-client-officer",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:24:20.094617",
+      "posted_date": "2026-02-21T04:15:01.029963",
       "hidden_score": 30
     },
     {
       "id": "bb78086d657bbb726cef17945c506e5e",
       "company": "Log in",
       "title": "Founding BDR – London (Path to Leadership)",
-      "location": "New York",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/corgi-insurance/jobs/mKBTdRD-founding-bdr-london-path-to-leadership",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:24:23.826874",
+      "posted_date": "2026-02-21T04:15:03.611606",
+      "hidden_score": 30
+    },
+    {
+      "id": "7d1544cd37d2d7ed4c0939cf7d9995b8",
+      "company": "Log in",
+      "title": "Founding Team Member - Sales",
+      "location": "Usa",
+      "tech_stack": [],
+      "url": "https://www.ycombinator.com/companies/corgi-insurance/jobs/KXbbIVo-founding-team-member-sales",
+      "source": "workatastartup",
+      "posted_date": "2026-02-21T04:15:04.533543",
       "hidden_score": 30
     },
     {
       "id": "081f8853e1c634a5a10439179216e60f",
       "company": "Log in",
       "title": "Founding SDR or AE (Cash + Equity + Comission)",
-      "location": "New York",
+      "location": "Usa",
       "tech_stack": [
         "go"
       ],
       "url": "https://www.ycombinator.com/companies/domu-technology-inc/jobs/EUpHM75-founding-sdr-or-ae-cash-equity-comission",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:24:24.473370",
+      "posted_date": "2026-02-21T04:15:05.129433",
       "hidden_score": 30
     },
     {
       "id": "26b796e3104f9cd8ba9278b64835983e",
       "company": "Log in",
       "title": "Head of Partnerships - Building out our network, and bringing in the revenue.",
-      "location": "New York",
+      "location": "Usa",
       "tech_stack": [
         "go"
       ],
       "url": "https://www.ycombinator.com/companies/stacksync/jobs/3scUbm3-head-of-partnerships-building-out-our-network-and-bringing-in-the-revenue",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:24:25.143067",
+      "posted_date": "2026-02-21T04:15:05.731222",
       "hidden_score": 30
     },
     {
       "id": "b514cbc7877e58bebc8d7cfa9320a372",
       "company": "Log in",
       "title": "Growth & Marketing Lead",
-      "location": "New York",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/justai/jobs/TIDWDOB-growth-marketing-lead",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:24:27.061831",
+      "posted_date": "2026-02-21T04:15:07.566467",
       "hidden_score": 30
     },
     {
       "id": "cd35dfcdf7b61b35d7665d2d78b92d2f",
       "company": "Log in",
       "title": "Campus Ambassador (US Colleges)",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/tsenta/jobs/OkBSuvH-campus-ambassador-us-colleges",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:25:57.773542",
+      "posted_date": "2026-02-21T04:16:31.223420",
       "hidden_score": 30
     },
     {
       "id": "04e0708c31b80e40f0b412d8dabc8771",
       "company": "Log in",
       "title": "Content Intern (Product + Founder Content)",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/oximy/jobs/3HVW6IN-content-intern-product-founder-content",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:25:58.411296",
+      "posted_date": "2026-02-21T04:16:31.815242",
       "hidden_score": 30
     },
     {
-      "id": "d17666dfb0794030dddeac50b172b374",
+      "id": "15ea8850ed50cfeccbb9550a715f1fca",
       "company": "Log in",
-      "title": "Social Media Content Creator – Video & Live Content",
-      "location": "Remote",
-      "tech_stack": [],
-      "url": "https://www.ycombinator.com/companies/brickwise/jobs/Rwfv8Up-social-media-content-creator-video-live-content",
+      "title": "Founding Growth",
+      "location": "Usa",
+      "tech_stack": [
+        "rest"
+      ],
+      "url": "https://www.ycombinator.com/companies/crustdata/jobs/9aF6iKj-founding-growth",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:25:59.113092",
+      "posted_date": "2026-02-21T04:16:32.574930",
       "hidden_score": 30
     },
     {
       "id": "f788a01e4414e924f90929d4c2776e45",
       "company": "Log in",
       "title": "GTM Lead",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/saturn/jobs/CwEKRvX-gtm-lead",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:26:00.674405",
+      "posted_date": "2026-02-21T04:16:33.224921",
       "hidden_score": 30
     },
     {
       "id": "3655d9ed9ce508663e4049e69f30c908",
       "company": "Log in",
       "title": "Head of Growth and Product Marketing - India",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [
         "go"
       ],
       "url": "https://www.ycombinator.com/companies/lighthouz-ai/jobs/Yf5Qn5D-head-of-growth-and-product-marketing-india",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:26:01.352398",
+      "posted_date": "2026-02-21T04:16:33.812797",
       "hidden_score": 30
     },
     {
       "id": "e53e261352693ab377c32df86ae0fc29",
       "company": "Log in",
       "title": "Growth",
-      "location": "New York",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/artisan/jobs/wd91V9O-growth",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:26:03.582481",
+      "posted_date": "2026-02-21T04:16:35.576142",
       "hidden_score": 30
     },
     {
       "id": "4428cbe78e76729a195924904e88759f",
       "company": "Log in",
       "title": "Marketing Generalist",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/furtherai/jobs/Y70e7Jk-marketing-generalist",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:26:04.306660",
+      "posted_date": "2026-02-21T04:16:36.206216",
       "hidden_score": 30
     },
     {
       "id": "6176039a106c37378cb0529f5211567c",
       "company": "Log in",
       "title": "Developer Advocate",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/greptile/jobs/klhAZ8N-developer-advocate",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:26:05.017396",
-      "hidden_score": 30
-    },
-    {
-      "id": "018df13f6b4e2e4fdceda7396a64c75f",
-      "company": "Log in",
-      "title": "Creative Content Designer",
-      "location": "Remote",
-      "tech_stack": [],
-      "url": "https://www.ycombinator.com/companies/happyrobot/jobs/bifDoer-creative-content-designer",
-      "source": "workatastartup",
-      "posted_date": "2026-02-20T04:26:05.828173",
+      "posted_date": "2026-02-21T04:16:36.816780",
       "hidden_score": 30
     },
     {
       "id": "dd6704c274bd9aca87c7352c877179f6",
       "company": "Log in",
       "title": "Growth Strategist",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [
         "go"
       ],
       "url": "https://www.ycombinator.com/companies/happyrobot/jobs/fKdt41A-growth-strategist",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:26:06.549543",
+      "posted_date": "2026-02-21T04:16:37.508570",
+      "hidden_score": 30
+    },
+    {
+      "id": "018df13f6b4e2e4fdceda7396a64c75f",
+      "company": "Log in",
+      "title": "Creative Content Designer",
+      "location": "Usa",
+      "tech_stack": [],
+      "url": "https://www.ycombinator.com/companies/happyrobot/jobs/bifDoer-creative-content-designer",
+      "source": "workatastartup",
+      "posted_date": "2026-02-21T04:16:38.162025",
       "hidden_score": 30
     },
     {
       "id": "0f04a76869a20f81205f29838c27beb4",
       "company": "Log in",
       "title": "Content Editor",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [
         "go"
       ],
       "url": "https://www.ycombinator.com/companies/alguna/jobs/TG59Jcg-content-editor",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:26:07.928133",
+      "posted_date": "2026-02-21T04:16:39.456212",
       "hidden_score": 30
     },
     {
       "id": "83bc1e5b44caf5cbaad92ca5ab13981b",
       "company": "Log in",
       "title": "Founding Creative & Brand Strategist in SF",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [
         "go",
         "rest"
       ],
       "url": "https://www.ycombinator.com/companies/hyperbound/jobs/9610dYS-founding-creative-brand-strategist-in-sf",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:26:08.645133",
+      "posted_date": "2026-02-21T04:16:40.239077",
       "hidden_score": 30
     },
     {
       "id": "6bd1c9787a9cb18c775026f9fc97d8b0",
       "company": "Log in",
       "title": "Senior Product Marketing Manager",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/artie/jobs/sOFeWnv-senior-product-marketing-manager",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:26:10.064592",
+      "posted_date": "2026-02-21T04:16:41.638501",
       "hidden_score": 30
     },
     {
       "id": "f3313d12f3bad1b7240ca32f8f929d22",
       "company": "Log in",
       "title": "Product Marketing Manager - PMM NYC, Hybrid",
-      "location": "New York",
+      "location": "Usa",
       "tech_stack": [
         "go"
       ],
       "url": "https://www.ycombinator.com/companies/escape/jobs/nD4nJ7o-product-marketing-manager-pmm-nyc-hybrid",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:26:10.678893",
+      "posted_date": "2026-02-21T04:16:42.214965",
       "hidden_score": 30
     },
     {
       "id": "9acf25cbef4d2af983a3abb1d181f5f2",
       "company": "Log in",
       "title": "Generalist Marketing Manager (Content & Field Marketing)",
-      "location": "New York",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/escape/jobs/PyebP9r-generalist-marketing-manager-content-field-marketing",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:26:11.287281",
+      "posted_date": "2026-02-21T04:16:42.778607",
       "hidden_score": 30
     },
     {
       "id": "17872b61366b8f91bc9f56916d780757",
       "company": "Log in",
       "title": "Head of Growth/Demand",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/vooma/jobs/nCWiQ8a-head-of-growth-demand",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:26:11.973107",
+      "posted_date": "2026-02-21T04:16:43.402347",
       "hidden_score": 30
     },
     {
-      "id": "e5ff4ced933b3f4c3fcad29543d19130",
+      "id": "1cba818f0e47ffdb81484d7bd5ee21dd",
       "company": "Log in",
-      "title": "Content Marketing Specialist",
-      "location": "New York",
-      "tech_stack": [
-        "rest",
-        "postgres"
-      ],
-      "url": "https://www.ycombinator.com/companies/stackai/jobs/NOC7E7N-content-marketing-specialist",
+      "title": "Content and Community Lead",
+      "location": "Usa",
+      "tech_stack": [],
+      "url": "https://www.ycombinator.com/companies/landeed/jobs/v2Wfj2O-content-and-community-lead",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:26:12.649015",
+      "posted_date": "2026-02-21T04:16:45.297999",
       "hidden_score": 30
     },
     {
       "id": "44678f71e7a537578a02ae9d25c9fe84",
       "company": "Log in",
       "title": "IP Enforcement Counsel (Media and Entertainment)",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/third-chair/jobs/uNijQ5j-ip-enforcement-counsel-media-and-entertainment",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:27:19.681645",
+      "posted_date": "2026-02-21T04:17:49.208492",
+      "hidden_score": 30
+    },
+    {
+      "id": "8da99cca82a9257443461c6b30c154a9",
+      "company": "Log in",
+      "title": "Legal Ops Lead",
+      "location": "Usa",
+      "tech_stack": [],
+      "url": "https://www.ycombinator.com/companies/landeed/jobs/MEoD32X-legal-ops-lead",
+      "source": "workatastartup",
+      "posted_date": "2026-02-21T04:17:49.745225",
       "hidden_score": 30
     },
     {
       "id": "21e926192f416e14d5c7959f1645827e",
       "company": "Log in",
       "title": "Head of Corporate Affairs, Public Policy and Government Relations (CPG)",
-      "location": "India",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/landeed/jobs/DVY3BMa-head-of-corporate-affairs-public-policy-and-government-relations-cpg",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:27:20.347962",
-      "hidden_score": 30
-    },
-    {
-      "id": "537d3485d7e9674ea95a627e31b1c605",
-      "company": "Log in",
-      "title": "Legal Associate",
-      "location": "India",
-      "tech_stack": [],
-      "url": "https://www.ycombinator.com/companies/landeed/jobs/TuXBTBn-legal-associate",
-      "source": "workatastartup",
-      "posted_date": "2026-02-20T04:27:20.917678",
+      "posted_date": "2026-02-21T04:17:50.289125",
       "hidden_score": 30
     },
     {
       "id": "49d78cdae32e57a50bd74603a7929476",
       "company": "Log in",
       "title": "General Counsel",
-      "location": "Ca",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/metriport/jobs/6j70bTx-general-counsel",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:27:21.562594",
+      "posted_date": "2026-02-21T04:17:50.797952",
       "hidden_score": 30
     },
     {
       "id": "72fdaa9ac1f86371f60c05a62f9050a4",
       "company": "Log in",
       "title": "AML Reporting Officer",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/authologic/jobs/0Wi6lD5-aml-reporting-officer",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:27:22.153695",
+      "posted_date": "2026-02-21T04:17:51.309218",
       "hidden_score": 30
     },
     {
       "id": "41d95c741187f35e431e278233e28b49",
       "company": "Log in",
       "title": "Legal and Product Engineer",
-      "location": "New York",
+      "location": "Usa",
       "tech_stack": [
         "python",
         "go",
@@ -1545,236 +1567,222 @@
       ],
       "url": "https://www.ycombinator.com/companies/solve-intelligence/jobs/SfeAq7J-legal-and-product-engineer",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:27:22.760252",
-      "hidden_score": 30
-    },
-    {
-      "id": "3ae21c29e1a4059815bddd08ae45d724",
-      "company": "Log in",
-      "title": "(Senior) Commercial Counsel - US",
-      "location": "New York",
-      "tech_stack": [],
-      "url": "https://www.ycombinator.com/companies/taktile/jobs/Mvx9aTQ-senior-commercial-counsel-us",
-      "source": "workatastartup",
-      "posted_date": "2026-02-20T04:27:24.001305",
+      "posted_date": "2026-02-21T04:17:51.857439",
       "hidden_score": 30
     },
     {
       "id": "c73301acd59ead3f9797a079669a3a0d",
       "company": "Log in",
       "title": "Immigration Lawyer",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/flint/jobs/xtvrpBu-immigration-lawyer",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:27:25.158949",
+      "posted_date": "2026-02-21T04:17:53.432247",
       "hidden_score": 30
     },
     {
       "id": "b44672a5abb1de23d03a5e62f63bc616",
       "company": "Log in",
       "title": "Senior Immigration Attorney",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/gale/jobs/n3hGsS6-senior-immigration-attorney",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:27:25.711294",
+      "posted_date": "2026-02-21T04:17:53.960829",
       "hidden_score": 30
     },
     {
       "id": "5ecb039f5c62232dc1828452049d7b59",
       "company": "Log in",
       "title": "Compliance Officer (BSA / AML Compliance)",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/elevate/jobs/fSjNj2E-compliance-officer-bsa-aml-compliance",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:27:26.300496",
+      "posted_date": "2026-02-21T04:17:54.464758",
       "hidden_score": 30
     },
     {
       "id": "ffe2242e47e86d275afd97f5e4c272b4",
       "company": "Log in",
       "title": "VP of ETF Wholesales",
-      "location": "Il",
+      "location": "Usa",
       "tech_stack": [
         "go"
       ],
       "url": "https://www.ycombinator.com/companies/corgi-insurance/jobs/cNcL8Gm-vp-of-etf-wholesales",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:28:00.390888",
+      "posted_date": "2026-02-21T04:18:22.487416",
+      "hidden_score": 30
+    },
+    {
+      "id": "1a4373c22f90351b01f517f35d5fda45",
+      "company": "Log in",
+      "title": "Controller",
+      "location": "Usa",
+      "tech_stack": [],
+      "url": "https://www.ycombinator.com/companies/corgi-insurance/jobs/8bTSfAc-controller",
+      "source": "workatastartup",
+      "posted_date": "2026-02-21T04:18:23.145287",
+      "hidden_score": 30
+    },
+    {
+      "id": "7ad06a0cfeee5fb928c15dfaa8fd8c4a",
+      "company": "Log in",
+      "title": "Revenue Operations Analyst",
+      "location": "Usa",
+      "tech_stack": [
+        "go"
+      ],
+      "url": "https://www.ycombinator.com/companies/happyrobot/jobs/fycMaEd-revenue-operations-analyst",
+      "source": "workatastartup",
+      "posted_date": "2026-02-21T04:18:23.820998",
       "hidden_score": 30
     },
     {
       "id": "efadd584f109af859891a15f716255f7",
       "company": "Log in",
       "title": "Head of Tax",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/every/jobs/yFBqU8h-head-of-tax",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:28:03.991191",
+      "posted_date": "2026-02-21T04:18:24.411806",
       "hidden_score": 30
     },
     {
       "id": "bed9289600a077f35e6da66b166585f7",
       "company": "Log in",
       "title": "Accountant",
-      "location": "India",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/landeed/jobs/tipcFfI-accountant",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:28:04.722326",
+      "posted_date": "2026-02-21T04:18:25.017171",
       "hidden_score": 30
     },
     {
       "id": "ae6615d94fa2486207f8e2f9de505651",
       "company": "Log in",
       "title": "Wealth & Investment Advisor — AI Product Consultant",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/goodfin/jobs/ElnnH2M-wealth-investment-advisor-ai-product-consultant",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:28:05.453447",
+      "posted_date": "2026-02-21T04:18:25.606672",
       "hidden_score": 30
     },
     {
       "id": "0b336a59eaa0f51308fcea3136ef2fac",
       "company": "Log in",
       "title": "Tax Advisor",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/goodfin/jobs/LRlIBHl-tax-advisor",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:28:06.123620",
+      "posted_date": "2026-02-21T04:18:26.192024",
       "hidden_score": 30
     },
     {
       "id": "21c56c69b654078fcf476921518aa0ab",
       "company": "Log in",
       "title": "Finance Lead",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/lunajoy-health/jobs/82qVwD6-finance-lead",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:28:06.768828",
+      "posted_date": "2026-02-21T04:18:26.781209",
       "hidden_score": 30
     },
     {
       "id": "f4527423c24f42af36a5ad6ecd4946a5",
       "company": "Log in",
       "title": "Finance Lead (Part-Time, 3-4 days/week)",
-      "location": "New York",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/formance/jobs/miJOSM3-finance-lead-part-time-3-4-days-week",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:28:07.425520",
+      "posted_date": "2026-02-21T04:18:27.362474",
       "hidden_score": 30
     },
     {
       "id": "53d118706d19cac70a799a2328e03cde",
       "company": "Log in",
       "title": "RevOps/FP&A Lead",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/lago/jobs/r8FjQKd-revops-fp-a-lead",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:28:08.210056",
+      "posted_date": "2026-02-21T04:18:28.005365",
       "hidden_score": 30
     },
     {
       "id": "f47d165b2976198f22b553bd760d89a6",
       "company": "Log in",
       "title": "Head of Finance",
-      "location": "New York",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/confido/jobs/FH4K2ot-head-of-finance",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:28:08.902891",
+      "posted_date": "2026-02-21T04:18:28.575965",
       "hidden_score": 30
     },
     {
       "id": "8f5b8e0dceeb71ef4b1ee6c75f9599ed",
       "company": "Log in",
       "title": "Accounting Solutions Expert",
-      "location": "New York",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/blue-onion/jobs/WPITk1Q-accounting-solutions-expert",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:28:10.205873",
+      "posted_date": "2026-02-21T04:18:29.143209",
       "hidden_score": 30
     },
     {
-      "id": "a3924146df66a46462c7d8da9b00a389",
+      "id": "4e57d3a367608205ba31ebbd84686334",
       "company": "Log in",
-      "title": "VP of Finance & Operations",
-      "location": "New York",
-      "tech_stack": [
-        "rails"
-      ],
-      "url": "https://www.ycombinator.com/companies/method-financial/jobs/EmRGzIo-vp-of-finance-operations",
-      "source": "workatastartup",
-      "posted_date": "2026-02-20T04:28:10.881204",
-      "hidden_score": 30
-    },
-    {
-      "id": "5a23b558e108bdb1399c47ff8f8f3f38",
-      "company": "Log in",
-      "title": "Financial Controller",
-      "location": "India",
+      "title": "Finance Manager",
+      "location": "Usa",
       "tech_stack": [],
-      "url": "https://www.ycombinator.com/companies/clinikally/jobs/OApC9kf-financial-controller",
+      "url": "https://www.ycombinator.com/companies/clinikally/jobs/tmwtZmS-finance-manager",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:28:12.123535",
+      "posted_date": "2026-02-21T04:18:30.310495",
       "hidden_score": 30
     },
     {
       "id": "00e8fc5e7b9fa57fe0bfb24bee092736",
       "company": "Log in",
       "title": "Executive - Accounts Payable (Finance Operations)",
-      "location": "India",
+      "location": "Usa",
       "tech_stack": [],
       "url": "https://www.ycombinator.com/companies/clinikally/jobs/Afdy6n8-executive-accounts-payable-finance-operations",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:28:12.802031",
-      "hidden_score": 30
-    },
-    {
-      "id": "707242c8bd34272e202225013ff94677",
-      "company": "Log in",
-      "title": "Closing & Financial Operations Associate",
-      "location": "San Francisco",
-      "tech_stack": [
-        "go",
-        "rest"
-      ],
-      "url": "https://www.ycombinator.com/companies/wefunder/jobs/K4PdwhG-closing-financial-operations-associate",
-      "source": "workatastartup",
-      "posted_date": "2026-02-20T04:28:15.388442",
+      "posted_date": "2026-02-21T04:18:30.870482",
       "hidden_score": 30
     },
     {
       "id": "07e7750557997adb83466a43832173d0",
       "company": "Log in",
       "title": "Senior Quant Researcher",
-      "location": "Remote",
+      "location": "Usa",
       "tech_stack": [
         "python"
       ],
       "url": "https://www.ycombinator.com/companies/algotest/jobs/3KNJ4oj-senior-quant-researcher",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:28:16.914009",
+      "posted_date": "2026-02-21T04:18:34.772532",
       "hidden_score": 30
     },
     {
-      "id": "619b399e369c48344eefa94fedd16bbe",
+      "id": "6ac0908b45bc8e5c66ff90b84bd2ce97",
       "company": "Log in",
-      "title": "Senior Finance Manager",
-      "location": "Hybrid",
+      "title": "Tally Expert",
+      "location": "Usa",
       "tech_stack": [],
-      "url": "https://www.ycombinator.com/companies/model-ml/jobs/gDIzVwt-senior-finance-manager",
+      "url": "https://www.ycombinator.com/companies/swipe-2/jobs/DZE1Pkr-tally-expert",
       "source": "workatastartup",
-      "posted_date": "2026-02-20T04:28:17.564434",
+      "posted_date": "2026-02-21T04:18:36.508305",
       "hidden_score": 30
     }
   ]
